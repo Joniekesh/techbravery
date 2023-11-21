@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+
+  .logo {
+    h2 {
+      cursor: pointer;
+      color: $primaryColor;
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .link {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $primaryColor;
+        background-color: #0f1c705d;
+        border-radius: 5px;
+      }
+    }
+    & .active {
+      color: $primaryColor;
+    }
+
+    button {
+      background-color: rgb(255, 148, 21);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: teal;
+      }
+    }
+  }
+}

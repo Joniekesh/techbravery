@@ -1,0 +1,15 @@
+.home {
+  height: calc(100vh - 50px);
+  width: 100%;
+  background: url("/assets/bg.jpg") center;
+  background-size: cover;
+  // background-position-x: 100%;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+}

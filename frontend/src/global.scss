@@ -1,0 +1,10 @@
+$myFont: Helvetica, sans-serif;
+$primaryColor: #0f1c70;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

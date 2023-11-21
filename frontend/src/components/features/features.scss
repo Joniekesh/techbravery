@@ -1,0 +1,21 @@
+.features {
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
+  background-color: rgba(0, 128, 128, 0.171);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h1 {
+    text-align: center;
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    width: 33%;
+  }
+}
