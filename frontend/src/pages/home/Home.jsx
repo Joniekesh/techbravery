@@ -15,11 +15,11 @@ const Home = () => {
           <button>Get a Quote</button>
         </div>
         <div className="heroImg">
-          <img src="../../src/assets/screen4.jpg" alt="" />
+          <img src="/assets/screen4.jpg" alt="" />
         </div>
       </div>
       <Welcome />
-      <Features />
+      {/* <Features /> */}
     </div>
   );
 };

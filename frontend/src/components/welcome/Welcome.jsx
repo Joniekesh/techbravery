@@ -30,7 +30,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -45,7 +45,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -60,7 +60,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -75,7 +75,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -90,7 +90,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -106,7 +106,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
         <div className="item">
@@ -121,7 +121,7 @@ const Welcome = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../../src/assets/screen4.jpg" alt="" />
+            <img src="/assets/screen4.jpg" alt="" />
           </div>
         </div>
       </div>
