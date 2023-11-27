@@ -15,7 +15,7 @@ const Home = () => {
           <button>Get a Quote</button>
         </div>
         <div className="heroImg">
-          <img src="/assets/screen4.jpg" alt="" />
+          <img src="/assets/bg1.jpg" alt="" />
         </div>
       </div>
       <Welcome />
