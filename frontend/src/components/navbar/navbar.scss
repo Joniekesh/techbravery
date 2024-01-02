@@ -29,16 +29,20 @@
       cursor: pointer;
       font-size: 20px;
       padding: 5px 10px;
+      border-radius: 5px;
+
       transition: all 0.3s ease;
 
       &:hover {
         color: $primaryColor;
         background-color: #0f1c705d;
-        border-radius: 5px;
+        border-bottom: 3px solid crimson;
       }
     }
     & .active {
       color: $primaryColor;
+      border-bottom: 3px solid crimson;
+      background-color: #0f1c705d;
     }
 
     button {
