@@ -138,7 +138,7 @@
       justify-content: center;
 
       button {
-        background-color: $primaryColor;
+        background-color: rgb(255, 183, 0);
         color: white;
         border: none;
         padding: 10px;
@@ -150,7 +150,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: teal;
+          background-color: $primaryColor;
         }
       }
     }
