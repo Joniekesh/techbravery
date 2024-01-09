@@ -27,14 +27,23 @@ const Navbar = () => {
             <FaArrowRight />
           </div>
         </button>
-        <span
-          className="hamburger"
-          onClick={() => setOpenMenu((prev) => !prev)}
-        >
-          <GiHamburgerMenu />
-        </span>
+        {openMenu ? (
+          <span
+            className="hamburger"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          >
+            X
+          </span>
+        ) : (
+          <span
+            className="hamburger"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          >
+            <GiHamburgerMenu />
+          </span>
+        )}
       </div>
-      {openMenu && <Menu setOpenMenu={setOpenMenu} />}
+      {openMenu && <Menu />}
     </div>
   );
 };

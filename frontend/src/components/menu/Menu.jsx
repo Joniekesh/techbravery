@@ -1,13 +1,19 @@
 import "./menu.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { FaArrowRight } from "react-icons/fa";
 
-const Menu = ({ setOpenMenu }) => {
+const Menu = () => {
   return (
     <div className="menu">
       <div className="container" data-aos="fade-left">
-        <span onClick={() => setOpenMenu((prev) => !prev)}>X</span>
         Menu Content
+        <button className="quoteBtn">
+          <div className="text">Get a Quote</div>
+          <div className="arrow">
+            <FaArrowRight />
+          </div>
+        </button>
       </div>
     </div>
   );
