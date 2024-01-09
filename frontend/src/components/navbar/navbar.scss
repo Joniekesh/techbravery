@@ -63,6 +63,11 @@
         height: 36px;
       }
 
+      @include mobile {
+        height: 30px;
+        font-size: 16px;
+      }
+
       .text {
         display: flex;
         align-items: center;
@@ -71,6 +76,10 @@
         padding: 10px;
         height: 100%;
         transition: all 0.8s ease;
+
+        @include mobile {
+          padding: 8px;
+        }
       }
 
       .arrow {
@@ -81,6 +90,10 @@
         padding: 10px;
         height: 100%;
         transition: all 0.8s ease;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &:hover .text {

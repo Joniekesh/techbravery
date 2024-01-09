@@ -3,6 +3,12 @@ $primaryColor: #002743;
 $myFontSize: 18px;
 $myWidth: 680px;
 
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: 768px) {
     @content;
