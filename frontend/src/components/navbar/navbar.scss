@@ -16,6 +16,10 @@
   background-color: black;
   color: white;
 
+  @include tablet900 {
+    padding: 20px;
+  }
+
   .logo {
     h2 {
       cursor: pointer;
@@ -27,19 +31,74 @@
     align-items: center;
     gap: 20px;
 
-    button {
-      background-color: rgb(255, 148, 21);
-      color: white;
+    @include tablet1000 {
+      gap: 8px;
+    }
+
+    @include tablet900 {
+      display: none;
+    }
+  }
+
+  .rightContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .quoteBtn {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       border: none;
-      padding: 10px 20px;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 18px;
       font-weight: 500;
-      transition: all 0.3s ease;
+      height: 42px;
+      overflow: hidden;
+      color: white;
 
-      &:hover {
+      @include tablet900 {
+        height: 36px;
+      }
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 148, 21);
+        padding: 10px;
+        height: 100%;
+        transition: all 0.8s ease;
+      }
+
+      .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: teal;
+        padding: 10px;
+        height: 100%;
+        transition: all 0.8s ease;
+      }
+
+      &:hover .text {
+        background-color: teal;
+      }
+
+      &:hover .arrow {
+        background-color: rgb(255, 148, 21);
+      }
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+
+      @include tablet900 {
+        display: flex;
       }
     }
   }

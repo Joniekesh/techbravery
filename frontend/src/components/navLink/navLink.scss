@@ -5,16 +5,17 @@
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 5px;
-
   transition: all 0.3s ease;
 
+  @include tablet1000 {
+    font-size: 18px;
+  }
+
   &:hover {
-    background-color: $primaryColor;
-    border-bottom: 3px solid crimson;
+    background-color: teal;
   }
 
   &.active {
-    border-bottom: 3px solid crimson;
-    background-color: $primaryColor;
+    background-color: teal;
   }
 }
