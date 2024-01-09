@@ -43,7 +43,7 @@ const Navbar = () => {
           </span>
         )}
       </div>
-      {openMenu && <Menu />}
+      {openMenu && <Menu setOpenMenu={setOpenMenu} />}
     </div>
   );
 };
