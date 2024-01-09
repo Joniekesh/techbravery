@@ -2,10 +2,9 @@ import "./navbar.scss";
 import { links } from "../../utils/links";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavLink from "../navLink/NavLink";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
-
   return (
     <div className="navbar">
       <Link to="/" className="logo">
@@ -13,14 +12,7 @@ const Navbar = () => {
       </Link>
       <div className="links">
         {links.map((link) => (
-          <Link
-            to={link.url}
-            key={link.id}
-            onClick={() => setActive(link.name)}
-            className={link.name === active ? "link active" : "link"}
-          >
-            {link.name}
-          </Link>
+          <NavLink link={link} key={link.id} />
         ))}
         <button>Get a Quote</button>
       </div>

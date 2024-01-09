@@ -1,5 +1,28 @@
+@import "../../global.scss";
+
 .footer {
   height: 100vh;
-  background-color: teal;
+  background-color: $primaryColor;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .usefullinks {
+    padding: 20px 50px;
+  }
+
+  .socials {
+    background-color: black;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .sociallinks {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
 }

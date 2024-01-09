@@ -1,0 +1,20 @@
+@import "../../global.scss";
+
+.link {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primaryColor;
+    border-bottom: 3px solid crimson;
+  }
+
+  &.active {
+    border-bottom: 3px solid crimson;
+    background-color: $primaryColor;
+  }
+}
