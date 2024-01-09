@@ -110,6 +110,10 @@
       font-size: 24px;
       cursor: pointer;
 
+      @include mobile {
+        font-size: 30px;
+      }
+
       @include tablet900 {
         display: flex;
       }
