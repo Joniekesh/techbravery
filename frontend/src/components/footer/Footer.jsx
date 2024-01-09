@@ -10,7 +10,6 @@ const Footer = () => {
       <div className="usefullinks">Footer</div>
       <div className="socials">
         <Link to="/">TechBravery</Link>
-        <span className="privacy">Privacy Policy 2024 All Rights Reserved</span>
         <div className="sociallinks">
           <a href="http://facebook.com" target="_blank">
             <FaFacebook />
@@ -28,6 +27,7 @@ const Footer = () => {
             <FaYoutube />
           </a>
         </div>
+        <span className="privacy">Privacy Policy 2024 All Rights Reserved</span>
       </div>
     </div>
   );
