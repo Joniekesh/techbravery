@@ -39,6 +39,8 @@ const Menu = ({ setOpenMenu }) => {
                       key={inner.id}
                     >
                       {inner.name}
+                      {inner.position}
+                      <img src={inner.pic} alt="" />
                     </Link>
                   ))}
                 </>
