@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="usefullinks">Footer</div>
       <div className="socials">
         <Link to="/">TechBravery</Link>
-        <span>Privacy Policy 2024 All Rights Reserved</span>
+        <span className="privacy">Privacy Policy 2024 All Rights Reserved</span>
         <div className="sociallinks">
           <a href="http://facebook.com" target="_blank">
             <FaFacebook />
