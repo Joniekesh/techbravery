@@ -69,11 +69,13 @@
 
         .innerTitle {
           margin-left: 20px;
-          padding: 8px;
-          font-size: 13px;
+          padding: 12px;
+          font-size: 14px;
 
           &:hover {
             color: green;
+            background-color: rgb(189, 189, 189);
+            border-radius: 6px;
           }
         }
       }
