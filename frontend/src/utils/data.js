@@ -21,19 +21,19 @@ export const items = [
     id: 4,
     title: "Cutting-Edge Technologies",
     desc: "Our team stays ahead of the curve by keeping up with the latest industry trends and technologies. We leverage the power of HTML5, CSS3, JavaScript frameworks, and CMS platforms to deliver cutting-edge websites that are both visually stunning and technologically advanced.",
-    img: "/assets/bg2.jpg",
+    img: "/assets/img8.jpg",
   },
   {
     id: 5,
     title: "Collaborative Partnership",
     desc: "We believe in building lasting relationships with our clients. We value open communication, transparency, and collaboration throughout the entire development process. Your satisfaction is our top priority, and we work tirelessly to ensure your project is delivered on time and within budget.",
-    img: "/assets/img3.jpg",
+    img: "/assets/img10.jpg",
   },
   {
     id: 6,
     title: "Results-Driven Approach",
     desc: "We don't just build websites; we build strategies to drive results. Our team of digital strategists will work closely with you to understand your business goals and develop a comprehensive plan to maximize your online presence. From search engine optimization (SEO) to conversion rate optimization (CRO), we employ data-driven techniques to achieve measurable success.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/img11.jpg",
   },
   {
     id: 7,
