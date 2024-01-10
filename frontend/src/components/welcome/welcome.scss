@@ -68,7 +68,6 @@
     .item {
       display: flex;
       align-items: center;
-      align-items: center;
       gap: 10px;
       padding: 10px;
       border-radius: 10px;
@@ -89,11 +88,19 @@
           font-size: 26px;
           font-weight: bold;
           color: $primaryColor;
+
+          @include mobile {
+            text-align: center;
+          }
         }
 
         p {
           font-size: 18px;
           line-height: 1.6;
+
+          @include mobile {
+            text-align: center;
+          }
         }
       }
 
@@ -134,6 +141,10 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     .btn {

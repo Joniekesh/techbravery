@@ -3,7 +3,7 @@ export const items = [
     id: 1,
     title: "Unleash Your Digital Vision",
     desc: "We believe in turning your ideas into reality. Our team ofcreative wizards works closely with you to understand your unique vision and translate it into a visually stunning and fully functional website that reflects your brand identity.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/img2.jpg",
   },
   {
     id: 2,
