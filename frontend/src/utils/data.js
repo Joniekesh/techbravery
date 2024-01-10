@@ -15,7 +15,7 @@ export const items = [
     id: 3,
     title: "Customized Solutions",
     desc: "No two businesses are alike, and we understand that. Our web development solutions are custom-tailored to meet your specific needs and objectives. Whether you require an e-commerce platform, a content management system, or a sleek portfolio website, we have the expertise to bring your vision to life.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/img5.jpg",
   },
   {
     id: 4,
