@@ -39,6 +39,6 @@ export const items = [
     id: 7,
     title: "Ongoing Support",
     desc: " Ongoing Support: Our commitment to your success doesn't end at launch. We provide ongoing support and maintenance services to ensure your website remains secure, up-to-date, and optimized for peak performance. We are always just a call or email away whenever you need us.",
-    img: "/assets/img4.jpg",
+    img: "/assets/img7.jpg",
   },
 ];
