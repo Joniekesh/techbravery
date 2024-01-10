@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = ({ setOpenMenu }) => {
-  const [serviceToggle, setServiceToggle] = useState(false);
+  const [serviceToggle, setServiceToggle] = useState(true);
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
 
@@ -36,7 +36,12 @@ const Menu = ({ setOpenMenu }) => {
             {serviceToggle && (
               <>
                 {services.map((service) => (
-                  <Link key={service.id} to={service.url} className="title">
+                  <Link
+                    key={service.id}
+                    to={service.url}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
                     {service.name}
                   </Link>
                 ))}
@@ -56,7 +61,11 @@ const Menu = ({ setOpenMenu }) => {
             {worksToggle && (
               <>
                 {works.map((work) => (
-                  <Link key={work.id} className="title">
+                  <Link
+                    key={work.id}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
                     {work.name}
                   </Link>
                 ))}

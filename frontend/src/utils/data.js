@@ -21,13 +21,13 @@ export const items = [
     id: 4,
     title: "Cutting-Edge Technologies",
     desc: "Our team stays ahead of the curve by keeping up with the latest industry trends and technologies. We leverage the power of HTML5, CSS3, JavaScript frameworks, and CMS platforms to deliver cutting-edge websites that are both visually stunning and technologically advanced.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/bg2.jpg",
   },
   {
     id: 5,
     title: "Collaborative Partnership",
     desc: "We believe in building lasting relationships with our clients. We value open communication, transparency, and collaboration throughout the entire development process. Your satisfaction is our top priority, and we work tirelessly to ensure your project is delivered on time and within budget.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/img3.jpg",
   },
   {
     id: 6,
@@ -39,6 +39,6 @@ export const items = [
     id: 7,
     title: "Ongoing Support",
     desc: " Ongoing Support: Our commitment to your success doesn't end at launch. We provide ongoing support and maintenance services to ensure your website remains secure, up-to-date, and optimized for peak performance. We are always just a call or email away whenever you need us.",
-    img: "/assets/screen4.jpg",
+    img: "/assets/img4.jpg",
   },
 ];
