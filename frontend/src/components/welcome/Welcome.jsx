@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // ..
 AOS.init({
   // throttleDelay: 300,
-  // duration: 2000,
+  duration: 2000,
 });
 
 const Welcome = () => {
