@@ -13,25 +13,57 @@ const Quote = () => {
           <ul>
             <li>
               <div>
-                <p>Monday</p>
-                <time>12:00 pm</time>
+                <p>1. We will prepare a proposal</p>
+                <span>
+                  Required scope, timeline and aproximate price will be included
+                  if you provide detailed information about the project.
+                </span>
               </div>
             </li>
             <li>
               <div>
-                <p>Tuesday</p>
-                <time>1:00 pm</time>
+                <p>2. Together we discuss it</p>
+                <span>
+                  Let's get acquainted and discuss all the possible variants and
+                  options. Google Hangout or Skype usually works great.{" "}
+                </span>
               </div>
             </li>
             <li>
               <div>
-                <p>Wednesday</p>
-                <time>12:00 pm</time>
+                <p>Let's start building</p>
+                <span>
+                  When the contract is signed and all goals are set, we can
+                  start the first sprint.
+                </span>
               </div>
             </li>
           </ul>
         </div>
-        <div className="right">right</div>
+        <div className="right">
+          <p>
+            Write us a few words about your project and we will prepare a
+            proposal for you within{" "}
+            <span style={{ fontWeight: "bold" }}>24</span> hours
+          </p>
+          <form>
+            <input type="text" placeholder="Your name" />
+            <input type="email" placeholder="Your email" />
+            <input type="text" placeholder="Your phone" />
+            <input type="text" placeholder="Your company" />
+            <input type="text" placeholder="Approx. budget" />
+            <div className="optional">
+              <span>Optional</span>
+              <textarea
+                cols="30"
+                rows="8"
+                placeholder="Project details"
+              ></textarea>
+            </div>
+            <input type="file" />
+            <button>Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
