@@ -12,7 +12,7 @@ const verifyToken = (req, res, next) => {
     const user = await User.findById(payload.id);
 
     if (!user) {
-      next(createError(404, "User not found."));
+      return next(createError(404, "User not found."));
     }
 
     req.user = user;
@@ -23,9 +23,11 @@ const verifyToken = (req, res, next) => {
 
 const admin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
-    next();
+    return next();
   } else {
-    next(createError(401, "You are not authorized to access this route."));
+    return next(
+      createError(401, "You are not authorized to access this route.")
+    );
   }
 };
 

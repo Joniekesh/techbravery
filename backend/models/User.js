@@ -19,12 +19,27 @@ const UserSchema = new mongoose.Schema(
       unique: true,
       maxLength: 50,
     },
+    country: {
+      type: String,
+      maxLength: 50,
+    },
     password: {
       type: String,
+      minLength: 6,
+      maxLength: 100,
       required: true,
     },
     phone: {
       type: String,
+    },
+    lastlogin: {
+      type: Date,
+      default: Date.now,
+    },
+    role: {
+      type: String,
+      enum: ["User", "Admin", "SuperAdmin"],
+      default: "User",
     },
     isAdmin: {
       type: Boolean,

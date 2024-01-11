@@ -20,7 +20,7 @@ const Navbar = () => {
           <NavLink link={link} key={link.id} />
         ))}
       </div>
-      <div className="rightContainer">
+      <Link to="/quote" className="rightContainer">
         <button className="quoteBtn">
           <div className="text">Get a Quote</div>
           <div className="arrow">
@@ -42,7 +42,7 @@ const Navbar = () => {
             <GiHamburgerMenu />
           </span>
         )}
-      </div>
+      </Link>
       {openMenu && <Menu setOpenMenu={setOpenMenu} />}
     </div>
   );

@@ -2,10 +2,11 @@ import "./welcome.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { items } from "../../utils/data";
+import { Link } from "react-router-dom";
 // ..
 AOS.init({
   // throttleDelay: 300,
-  duration: 2000,
+  // duration: 2000,
 });
 
 const Welcome = () => {
@@ -50,9 +51,9 @@ const Welcome = () => {
           today for a free consultation and let us help you leave a lasting
           impression in the digital world!
         </p>
-        <div className="btn">
+        <Link to="/quote" className="btn">
           <button>Get a Quote</button>
-        </div>
+        </Link>
       </div>
     </div>
   );

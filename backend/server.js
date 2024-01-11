@@ -5,7 +5,9 @@ import cookieParser from "cookie-parser";
 
 // Routes
 import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/user.js";
 import projectRoutes from "./routes/project.js";
+import valueRoutes from "./routes/value.js";
 
 dotenv.config();
 connectDB();
@@ -16,7 +18,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/values", valueRoutes);
 
 const PORT = process.env.PORT || 5000;
 

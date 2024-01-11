@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Features from "../../components/features/Features";
 import Welcome from "../../components/welcome/Welcome";
 import "./home.scss";
@@ -12,7 +13,9 @@ const Home = () => {
             <br />
             Delivering Next-Level Software Development!
           </p>
-          <button>Get a Quote</button>
+          <Link to="/quote">
+            <button>Get a Quote</button>
+          </Link>
         </div>
         <div className="heroImg">
           <img src="/assets/bg2.jpg" alt="" />
