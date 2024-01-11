@@ -2,7 +2,7 @@ export const items = [
   {
     id: 1,
     title: "Unleash Your Digital Vision",
-    desc: "We believe in turning your ideas into reality. Our team ofcreative wizards works closely with you to understand your unique vision and translate it into a visually stunning and fully functional website that reflects your brand identity.",
+    desc: "We believe in turning your ideas into reality. Our team of creative wizards works closely with you to understand your unique vision and translate it into a visually stunning and fully functional website that reflects your brand identity.",
     img: "/assets/img2.jpg",
   },
   {
