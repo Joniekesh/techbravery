@@ -3,14 +3,14 @@
 .quote {
   width: 100vw;
   height: max-content;
-  background: url("../../../public/assets/img8.jpg") center;
+  background: url("/assets/img8.jpg") center;
   color: white;
   margin-top: 70px;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  //   overflow-x: hidden;
 
   @include tablet900 {
     padding: 10px;
