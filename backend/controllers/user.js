@@ -1,9 +1,36 @@
 import User from "../models/User.js";
 import createError from "../utils/createError.js";
+import bcrypt from "bcryptjs";
 
 // Update User (Admin) only
 export const updateUser = async (req, res, next) => {
+  const { firstname, lastname, email, password, country, phone, isAdmin } =
+    req.body;
+
   try {
+    // let user = await User.findById(req.params.id);
+
+    // if (!user) {
+    //   return next(createError(404, "User not found."));
+    // }
+
+    // user.firstname = firstname || user.firstname;
+    // user.lastname = lastname || user.lastname;
+    // user.email = email || user.email;
+    // user.country = country || user.country;
+    // user.phone = phone || user.phone;
+    // user.isAdmin = isAdmin;
+
+    // if (password) {
+    //   const salt = await bcrypt.genSaltSync(10);
+    //   const hashedPassword = await bcrypt.hashSync(password, salt);
+    //   user.password = hashedPassword;
+    // }
+
+    // await user.save();
+
+    // return res.status(200).json(user);
+
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       {
