@@ -317,7 +317,7 @@ export const technologies = [
       },
       {
         id: 2,
-        name: "Google Cloud platform",
+        name: "Google Cloud Platform",
         url: "/",
       },
     ],
