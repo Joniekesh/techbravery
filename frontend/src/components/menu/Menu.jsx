@@ -24,12 +24,16 @@ const Menu = ({ setOpenMenu, width }) => {
   return (
     <div className="menu" style={{ display: width > 900 && "none" }}>
       <div className="container" data-aos="fade-left">
-        <div className="top" onClick={() => setOpenMenu((prev) => !prev)}>
+        <Link
+          to="/"
+          className="top"
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
           <span className="homeIcon">
             <IoHome />
           </span>
           <span>TechBravery</span>
-        </div>
+        </Link>
         <div className="menuItems">
           <div className="item">
             <div className="itemTitle">
