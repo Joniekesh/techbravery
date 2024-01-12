@@ -53,7 +53,11 @@ const Menu = ({ setOpenMenu }) => {
               <span>OUR SERVICES</span>
               <span
                 className="icon"
-                onClick={() => setServiceToggle((prev) => !prev)}
+                onClick={() => {
+                  setServiceToggle((prev) => !prev);
+                  setWorksToggle(false);
+                  setTeamToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
@@ -128,7 +132,11 @@ const Menu = ({ setOpenMenu }) => {
               <span>OUR WORKS</span>
               <span
                 className="icon"
-                onClick={() => setWorksToggle((prev) => !prev)}
+                onClick={() => {
+                  setWorksToggle((prev) => !prev);
+                  setServiceToggle(false);
+                  setTeamToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
@@ -152,7 +160,11 @@ const Menu = ({ setOpenMenu }) => {
               <span>TEAM MEMBERS</span>
               <span
                 className="icon"
-                onClick={() => setTeamToggle((prev) => !prev)}
+                onClick={() => {
+                  setTeamToggle((prev) => !prev);
+                  setWorksToggle(false);
+                  setServiceToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
