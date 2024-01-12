@@ -10,6 +10,7 @@
   overflow-y: scroll;
 
   .container {
+    position: relative;
     background-color: $primaryColor;
     color: white;
     display: flex;
@@ -138,8 +139,10 @@
       height: 42px;
       overflow: hidden;
       color: white;
-      margin-bottom: 20px;
       width: max-content;
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
 
       //   @include tablet900 {
       //     height: 36px;

@@ -185,16 +185,16 @@ const Menu = ({ setOpenMenu }) => {
               )}
             </div>
           </div>
-          <button
-            className="quoteBtn"
-            onClick={() => setOpenMenu((prev) => !prev)}
-          >
-            <div className="text">Get a Quote</div>
-            <div className="arrow">
-              <FaArrowRight />
-            </div>
-          </button>
         </div>
+        <button
+          className="quoteBtn"
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          <div className="text">Get a Quote</div>
+          <div className="arrow">
+            <FaArrowRight />
+          </div>
+        </button>
       </div>
     </div>
   );
