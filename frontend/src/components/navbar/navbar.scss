@@ -10,7 +10,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 999;
+  z-index: 3;
   -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   background-color: black;
@@ -40,75 +40,83 @@
     }
   }
 
-  .rightContainer {
+  .right {
     display: flex;
     align-items: center;
     gap: 20px;
 
-    .quoteBtn {
-      padding: 0;
+    .rightContainer {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      border: none;
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 500;
-      height: 42px;
-      overflow: hidden;
-      color: white;
+      gap: 20px;
 
-      @include tablet900 {
-        height: 36px;
-      }
-
-      @include mobile {
+      .quoteBtn {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
         font-size: 18px;
-      }
+        font-weight: 500;
+        height: 42px;
+        overflow: hidden;
+        color: white;
 
-      .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(255, 148, 21);
-        padding: 10px;
-        height: 100%;
-        transition: all 0.8s ease;
+        @include tablet900 {
+          height: 36px;
+        }
 
         @include mobile {
-          padding: 8px;
+          font-size: 18px;
         }
-      }
 
-      .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: teal;
-        padding: 10px;
-        height: 100%;
-        transition: all 0.8s ease;
+        .text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgb(255, 148, 21);
+          padding: 10px;
+          height: 100%;
+          transition: all 0.8s ease;
 
-        @include mobile {
-          display: none;
+          @include mobile {
+            padding: 8px;
+          }
         }
-      }
 
-      &:hover .text {
-        background-color: teal;
-      }
+        .arrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: teal;
+          padding: 10px;
+          height: 100%;
+          transition: all 0.8s ease;
 
-      &:hover .arrow {
-        background-color: rgb(255, 148, 21);
+          @include mobile {
+            display: none;
+          }
+        }
+
+        &:hover .text {
+          background-color: teal;
+        }
+
+        &:hover .arrow {
+          background-color: rgb(255, 148, 21);
+        }
       }
     }
 
-    .hamburger {
+    .hamburger,
+    .cancel {
       display: none;
       font-size: 24px;
       cursor: pointer;
-      z-index: 1100;
+      z-index: 5;
+      color: white;
 
       @include mobile {
         font-size: 30px;

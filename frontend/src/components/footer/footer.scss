@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .footer {
-  height: 100vh;
+  height: max-content;
   width: 100vw;
   background-color: $primaryColor;
   color: white;
@@ -11,6 +11,33 @@
 
   .usefullinks {
     padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include mobile {
+      display: none;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        font-weight: bold;
+        padding: 5px;
+      }
+
+      span {
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+          color: green;
+        }
+      }
+    }
   }
 
   .socials {

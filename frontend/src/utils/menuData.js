@@ -162,6 +162,16 @@ export const industries = [
     name: "Agriculture and Farming",
     url: "/",
   },
+  {
+    id: 16,
+    name: "Food and Restruant",
+    url: "/",
+  },
+  {
+    id: 17,
+    name: "Chat Solutions",
+    url: "/",
+  },
 ];
 
 export const technologies = [

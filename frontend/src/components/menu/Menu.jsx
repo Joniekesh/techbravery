@@ -14,7 +14,7 @@ import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Menu = ({ setOpenMenu }) => {
+const Menu = ({ setOpenMenu, width }) => {
   const [serviceToggle, setServiceToggle] = useState(false);
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
@@ -22,7 +22,7 @@ const Menu = ({ setOpenMenu }) => {
   const [industryToggle, setIndustryToggle] = useState(false);
 
   return (
-    <div className="menu">
+    <div className="menu" style={{ display: width > 900 && "none" }}>
       <div className="container" data-aos="fade-left">
         <div className="top" onClick={() => setOpenMenu((prev) => !prev)}>
           <span className="homeIcon">
