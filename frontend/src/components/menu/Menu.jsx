@@ -9,14 +9,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = ({ setOpenMenu }) => {
-  const [serviceToggle, setServiceToggle] = useState(true);
+  const [serviceToggle, setServiceToggle] = useState(false);
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
 
   return (
     <div className="menu">
       <div className="container" data-aos="fade-left">
-        <div className="top">
+        <div className="top" onClick={() => setOpenMenu((prev) => !prev)}>
           <span className="homeIcon">
             <IoHome />
           </span>
@@ -25,7 +25,32 @@ const Menu = ({ setOpenMenu }) => {
         <div className="menuItems">
           <div className="item">
             <div className="itemTitle">
-              <h2>Our Services</h2>
+              <span>WHO WE ARE</span>
+              <span
+                className="icon"
+                // onClick={() => setServiceToggle((prev) => !prev)}
+              >
+                <RxCaretDown />
+              </span>
+            </div>
+            {/* {serviceToggle && (
+              <>
+                {services.map((service) => (
+                  <Link
+                    key={service.id}
+                    to={service.url}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </>
+            )} */}
+          </div>
+          <div className="item">
+            <div className="itemTitle">
+              <span>OUR SERVICES</span>
               <span
                 className="icon"
                 onClick={() => setServiceToggle((prev) => !prev)}
@@ -50,7 +75,57 @@ const Menu = ({ setOpenMenu }) => {
           </div>
           <div className="item">
             <div className="itemTitle">
-              <h2>Our Works</h2>
+              <span>INDUSTRIES</span>
+              <span
+                className="icon"
+                // onClick={() => setServiceToggle((prev) => !prev)}
+              >
+                <RxCaretDown />
+              </span>
+            </div>
+            {/* {serviceToggle && (
+              <>
+                {services.map((service) => (
+                  <Link
+                    key={service.id}
+                    to={service.url}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </>
+            )} */}
+          </div>
+          <div className="item">
+            <div className="itemTitle">
+              <span>TECHNOLOGIES</span>
+              <span
+                className="icon"
+                // onClick={() => setServiceToggle((prev) => !prev)}
+              >
+                <RxCaretDown />
+              </span>
+            </div>
+            {/* {serviceToggle && (
+              <>
+                {services.map((service) => (
+                  <Link
+                    key={service.id}
+                    to={service.url}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </>
+            )} */}
+          </div>
+          <div className="item">
+            <div className="itemTitle">
+              <span>OUR WORKS</span>
               <span
                 className="icon"
                 onClick={() => setWorksToggle((prev) => !prev)}
@@ -74,7 +149,7 @@ const Menu = ({ setOpenMenu }) => {
           </div>
           <div className="item">
             <div className="itemTitle">
-              <h2>Team Members</h2>
+              <span>TEAM MEMBERS</span>
               <span
                 className="icon"
                 onClick={() => setTeamToggle((prev) => !prev)}
@@ -98,13 +173,16 @@ const Menu = ({ setOpenMenu }) => {
               )}
             </div>
           </div>
+          <button
+            className="quoteBtn"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          >
+            <div className="text">Get a Quote</div>
+            <div className="arrow">
+              <FaArrowRight />
+            </div>
+          </button>
         </div>
-        <button className="quoteBtn">
-          <div className="text">Get a Quote</div>
-          <div className="arrow">
-            <FaArrowRight />
-          </div>
-        </button>
       </div>
     </div>
   );

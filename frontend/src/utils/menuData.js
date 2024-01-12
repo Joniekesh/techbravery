@@ -26,12 +26,12 @@ export const services = [
   },
   {
     id: 6,
-    name: "Front-end Development",
+    name: "Frontend Development",
     url: "/",
   },
   {
     id: 7,
-    name: "Back-end Development",
+    name: "Backend Development",
     url: "/",
   },
   {
@@ -74,27 +74,27 @@ export const services = [
     name: "Content Creation",
     url: "/",
   },
+  {
+    id: 16,
+    name: "Progressive Web Apps",
+    url: "/",
+  },
+  {
+    id: 17,
+    name: "Startups",
+    url: "/",
+  },
 ];
 
 export const works = [
   {
     id: 1,
-    name: "Jonie Chat",
+    name: "Web Applications",
     url: "/",
   },
   {
     id: 2,
-    name: "Jonie POS",
-    url: "/",
-  },
-  {
-    id: 3,
-    name: "Jonie Shopy",
-    url: "/",
-  },
-  {
-    id: 4,
-    name: "Jonie AI",
+    name: "Android/iOS Applications",
     url: "/",
   },
 ];
