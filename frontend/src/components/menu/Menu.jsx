@@ -3,7 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { FaArrowRight } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
-import { services, teams, technologies, works } from "../../utils/menuData";
+import {
+  industries,
+  services,
+  teams,
+  technologies,
+  works,
+} from "../../utils/menuData";
 import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,6 +19,7 @@ const Menu = ({ setOpenMenu }) => {
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
   const [technologyToggle, setTechnologyToggle] = useState(false);
+  const [industryToggle, setIndustryToggle] = useState(false);
 
   return (
     <div className="menu">
@@ -59,6 +66,7 @@ const Menu = ({ setOpenMenu }) => {
                   setWorksToggle(false);
                   setTeamToggle(false);
                   setTechnologyToggle(false);
+                  setIndustryToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -84,25 +92,31 @@ const Menu = ({ setOpenMenu }) => {
               <span>INDUSTRIES</span>
               <span
                 className="icon"
-                // onClick={() => setServiceToggle((prev) => !prev)}
+                onClick={() => {
+                  setIndustryToggle((prev) => !prev);
+                  setTeamToggle(false);
+                  setWorksToggle(false);
+                  setServiceToggle(false);
+                  setTechnologyToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
             </div>
-            {/* {serviceToggle && (
+            {industryToggle && (
               <>
-                {services.map((service) => (
+                {industries.map((industry) => (
                   <Link
-                    key={service.id}
-                    to={service.url}
+                    key={industry.id}
+                    to={industry.url}
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
                   >
-                    {service.name}
+                    {industry.name}
                   </Link>
                 ))}
               </>
-            )} */}
+            )}
           </div>
           <div className="item">
             <div className="itemTitle">
@@ -114,6 +128,7 @@ const Menu = ({ setOpenMenu }) => {
                   setTeamToggle(false);
                   setWorksToggle(false);
                   setServiceToggle(false);
+                  setIndustryToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -157,6 +172,7 @@ const Menu = ({ setOpenMenu }) => {
                   setServiceToggle(false);
                   setTeamToggle(false);
                   setTechnologyToggle(false);
+                  setIndustryToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -186,6 +202,7 @@ const Menu = ({ setOpenMenu }) => {
                   setWorksToggle(false);
                   setServiceToggle(false);
                   setTechnologyToggle(false);
+                  setIndustryToggle(false);
                 }}
               >
                 <RxCaretDown />

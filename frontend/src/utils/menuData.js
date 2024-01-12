@@ -86,6 +86,84 @@ export const services = [
   },
 ];
 
+export const industries = [
+  {
+    id: 1,
+    name: "Technology and Software",
+    url: "/",
+  },
+  {
+    id: 2,
+    name: "Finance and Banking",
+    url: "/",
+  },
+  {
+    id: 3,
+    name: "Healthcare and Life Sciences",
+    url: "/",
+  },
+  {
+    id: 4,
+    name: "E-commerce and Retail",
+    url: "/",
+  },
+  {
+    id: 5,
+    name: "Education and E-learning",
+    url: "/",
+  },
+  {
+    id: 6,
+    name: "Media and Entertainment",
+    url: "/",
+  },
+  {
+    id: 7,
+    name: "Travel and Hospitality",
+    url: "/",
+  },
+  {
+    id: 8,
+    name: "Real Estate and Property",
+    url: "/",
+  },
+  {
+    id: 9,
+    name: "Manufacturing and Engineering",
+    url: "/",
+  },
+  {
+    id: 10,
+    name: "Energy and Utilities",
+    url: "/",
+  },
+  {
+    id: 11,
+    name: "Transportation and Logistics",
+    url: "/",
+  },
+  {
+    id: 12,
+    name: "Government and Public Sector",
+    url: "/",
+  },
+  {
+    id: 13,
+    name: "Non Profit and Social Impact",
+    url: "/",
+  },
+  {
+    id: 14,
+    name: "Automotive and Transportation",
+    url: "/",
+  },
+  {
+    id: 15,
+    name: "Agriculture and Farming",
+    url: "/",
+  },
+];
+
 export const technologies = [
   {
     id: 1,
