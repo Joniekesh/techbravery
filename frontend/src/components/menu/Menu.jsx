@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { FaArrowRight } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
-import { services, teams, works } from "../../utils/menuData";
+import { services, teams, technologies, works } from "../../utils/menuData";
 import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,6 +12,7 @@ const Menu = ({ setOpenMenu }) => {
   const [serviceToggle, setServiceToggle] = useState(false);
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
+  const [technologyToggle, setTechnologyToggle] = useState(false);
 
   return (
     <div className="menu">
@@ -57,6 +58,7 @@ const Menu = ({ setOpenMenu }) => {
                   setServiceToggle((prev) => !prev);
                   setWorksToggle(false);
                   setTeamToggle(false);
+                  setTechnologyToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -107,25 +109,43 @@ const Menu = ({ setOpenMenu }) => {
               <span>TECHNOLOGIES</span>
               <span
                 className="icon"
-                // onClick={() => setServiceToggle((prev) => !prev)}
+                onClick={() => {
+                  setTechnologyToggle((prev) => !prev);
+                  setTeamToggle(false);
+                  setWorksToggle(false);
+                  setServiceToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
             </div>
-            {/* {serviceToggle && (
+            {technologyToggle && (
               <>
-                {services.map((service) => (
-                  <Link
-                    key={service.id}
-                    to={service.url}
-                    className="title"
-                    onClick={() => setOpenMenu((prev) => !prev)}
-                  >
-                    {service.name}
-                  </Link>
+                {technologies.map((technology) => (
+                  <>
+                    <Link
+                      key={technology.id}
+                      to={technology.url}
+                      className="name"
+                      onClick={() => setOpenMenu((prev) => !prev)}
+                    >
+                      {technology.name}
+                    </Link>
+                    <>
+                      {technology.data.map((item) => (
+                        <span
+                          className="title"
+                          key={item.id}
+                          onClick={() => setOpenMenu((prev) => !prev)}
+                        >
+                          <Link to={item.url}>{item.name}</Link>
+                        </span>
+                      ))}
+                    </>
+                  </>
                 ))}
               </>
-            )} */}
+            )}
           </div>
           <div className="item">
             <div className="itemTitle">
@@ -136,6 +156,7 @@ const Menu = ({ setOpenMenu }) => {
                   setWorksToggle((prev) => !prev);
                   setServiceToggle(false);
                   setTeamToggle(false);
+                  setTechnologyToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -164,6 +185,7 @@ const Menu = ({ setOpenMenu }) => {
                   setTeamToggle((prev) => !prev);
                   setWorksToggle(false);
                   setServiceToggle(false);
+                  setTechnologyToggle(false);
                 }}
               >
                 <RxCaretDown />

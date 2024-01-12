@@ -86,6 +86,166 @@ export const services = [
   },
 ];
 
+export const technologies = [
+  {
+    id: 1,
+    name: "Backend",
+    data: [
+      {
+        id: 1,
+        name: "NodeJS",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: ".NET",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "PHP",
+        url: "/",
+      },
+      {
+        id: 4,
+        name: "Django",
+        url: "/",
+      },
+      {
+        id: 5,
+        name: "Java/SpringBoot",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "FrontEnd",
+    data: [
+      {
+        id: 1,
+        name: "React",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "Angular",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "Full Stack",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Mobile",
+    data: [
+      {
+        id: 1,
+        name: "Android",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "iOS",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "React Native",
+        url: "/",
+      },
+      {
+        id: 4,
+        name: "Java",
+        url: "/",
+      },
+      {
+        id: 5,
+        name: "Flutter",
+        url: "/",
+      },
+      {
+        id: 6,
+        name: "Hybrid",
+        url: "/",
+      },
+      {
+        id: 7,
+        name: "Ionic",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Ecommerce",
+    data: [
+      {
+        id: 1,
+        name: "WooCommerce",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "CMS",
+    data: [
+      {
+        id: 1,
+        name: "WordPress",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "Drupal",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Databases",
+    data: [
+      {
+        id: 1,
+        name: "MongoDB",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "MySQL",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "Postgres",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: "Cloud Platforms",
+    data: [
+      {
+        id: 1,
+        name: "Amazon Web Services",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "Google Cloud platform",
+        url: "/",
+      },
+    ],
+  },
+];
+
 export const works = [
   {
     id: 1,
