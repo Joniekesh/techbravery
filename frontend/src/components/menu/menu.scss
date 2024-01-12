@@ -77,12 +77,14 @@
           padding: 10px;
           font-size: 14px;
           border-left: 2px solid teal;
+          color: rgb(168, 168, 168);
 
           &:hover {
             color: green;
-            background-color: rgb(189, 189, 189);
-            border-radius: 6px;
-            border-left: 3px solid green;
+            // background-color: rgb(189, 189, 189);
+            // border-radius: 6px;
+            // border-left: 3px solid green;
+            color: white;
           }
         }
 
