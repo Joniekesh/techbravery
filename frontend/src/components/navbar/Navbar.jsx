@@ -27,22 +27,24 @@ const Navbar = () => {
             <FaArrowRight />
           </div>
         </button>
-        {openMenu ? (
-          <span
-            className="hamburger"
-            onClick={() => setOpenMenu((prev) => !prev)}
-          >
-            X
-          </span>
-        ) : (
-          <span
-            className="hamburger"
-            onClick={() => setOpenMenu((prev) => !prev)}
-          >
-            <GiHamburgerMenu />
-          </span>
-        )}
       </Link>
+      {openMenu ? (
+        <span
+          className="hamburger"
+          style={{ zIndex: 1100, fontSize: "24px", cursor: "pointer" }}
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          X
+        </span>
+      ) : (
+        <span
+          className="hamburger"
+          style={{ zIndex: 1100, fontSize: "24px", cursor: "pointer" }}
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          <GiHamburgerMenu />
+        </span>
+      )}
       {openMenu && <Menu setOpenMenu={setOpenMenu} />}
     </div>
   );
