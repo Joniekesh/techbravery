@@ -41,7 +41,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
       padding: 20px;
 
       .item {
@@ -80,6 +80,7 @@
             color: green;
             background-color: rgb(189, 189, 189);
             border-radius: 6px;
+            border-left: 3px solid green;
           }
         }
 
