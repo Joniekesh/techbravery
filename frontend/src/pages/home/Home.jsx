@@ -43,6 +43,7 @@ const Home = () => {
         className="homeContainer"
         style={{
           backgroundImage: `url(${data[currentSlide].bg})`,
+          transition: "background-image 5s ease-in-out",
         }}
       >
         <div className="heroText">
