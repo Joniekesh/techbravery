@@ -50,6 +50,12 @@
         width: 100%;
       }
 
+      @include mobile {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+      }
+
       .left {
         flex: 1;
 
@@ -80,6 +86,10 @@
             width: 1px;
             padding-top: 10px;
             background-color: teal;
+
+            @include mobile {
+              margin-left: -30px;
+            }
 
             &::after {
               content: "";
