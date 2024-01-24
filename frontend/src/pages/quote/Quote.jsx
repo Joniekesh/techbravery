@@ -65,7 +65,11 @@ const Quote = () => {
                   placeholder="Project details"
                 ></textarea>
               </div>
-              <input type="file" />
+              <label htmlFor="fileUpload">
+                <img src="/assets/uploadicon.jpg" alt="" />
+                <span>Upload</span>
+              </label>
+              <input type="file" id="fileUpload" style={{ display: "none" }} />
               <button>Send</button>
             </form>
           </div>
