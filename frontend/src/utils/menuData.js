@@ -1,3 +1,10 @@
+export const aboutus = [
+  {
+    id: 1,
+    name: "About Us",
+  },
+];
+
 export const services = [
   {
     id: 1,

@@ -15,6 +15,10 @@
     color: $textDark;
     padding: 50px;
 
+    @include tablet {
+      padding: 50px 10px 10px 10px;
+    }
+
     h1 {
     }
 

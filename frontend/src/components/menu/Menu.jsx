@@ -4,6 +4,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import { FaArrowRight } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import {
+  aboutus,
   industries,
   services,
   teams,
@@ -15,6 +16,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = ({ setOpenMenu, width }) => {
+  const [aboutUsToggle, setAboutUsToggle] = useState(false);
   const [serviceToggle, setServiceToggle] = useState(false);
   const [worksToggle, setWorksToggle] = useState(false);
   const [teamToggle, setTeamToggle] = useState(false);
@@ -40,25 +42,32 @@ const Menu = ({ setOpenMenu, width }) => {
               <span>WHO WE ARE</span>
               <span
                 className="icon"
-                // onClick={() => setServiceToggle((prev) => !prev)}
+                onClick={() => {
+                  setAboutUsToggle((prev) => !prev);
+                  setServiceToggle(false);
+                  setWorksToggle(false);
+                  setTeamToggle(false);
+                  setTechnologyToggle(false);
+                  setIndustryToggle(false);
+                }}
               >
                 <RxCaretDown />
               </span>
             </div>
-            {/* {serviceToggle && (
+            {aboutUsToggle && (
               <>
-                {services.map((service) => (
+                {aboutus.map((about) => (
                   <Link
-                    key={service.id}
-                    to={service.url}
+                    key={about.id}
+                    to="/aboutus"
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
                   >
-                    {service.name}
+                    {about.name}
                   </Link>
                 ))}
               </>
-            )} */}
+            )}
           </div>
           <div className="item">
             <div className="itemTitle">
@@ -71,6 +80,7 @@ const Menu = ({ setOpenMenu, width }) => {
                   setTeamToggle(false);
                   setTechnologyToggle(false);
                   setIndustryToggle(false);
+                  setAboutUsToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -102,6 +112,7 @@ const Menu = ({ setOpenMenu, width }) => {
                   setWorksToggle(false);
                   setServiceToggle(false);
                   setTechnologyToggle(false);
+                  setAboutUsToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -133,6 +144,7 @@ const Menu = ({ setOpenMenu, width }) => {
                   setWorksToggle(false);
                   setServiceToggle(false);
                   setIndustryToggle(false);
+                  setAboutUsToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -176,6 +188,7 @@ const Menu = ({ setOpenMenu, width }) => {
                   setTeamToggle(false);
                   setTechnologyToggle(false);
                   setIndustryToggle(false);
+                  setAboutUsToggle(false);
                 }}
               >
                 <RxCaretDown />
@@ -207,6 +220,7 @@ const Menu = ({ setOpenMenu, width }) => {
                   setServiceToggle(false);
                   setTechnologyToggle(false);
                   setIndustryToggle(false);
+                  setAboutUsToggle(false);
                 }}
               >
                 <RxCaretDown />
