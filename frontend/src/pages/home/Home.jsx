@@ -11,7 +11,7 @@ const Home = () => {
           <p className="title">
             <span>TechBravery:</span>
             <br />
-            Delivering Next-Level Software Development!
+            Delivering Next-Level Software Solutions!
           </p>
           <Link to="/quote">
             <button>Get a Quote</button>

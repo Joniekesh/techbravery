@@ -81,7 +81,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 {services.map((service) => (
                   <Link
                     key={service.id}
-                    to={service.url}
+                    to="/services"
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
                   >
@@ -112,7 +112,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 {industries.map((industry) => (
                   <Link
                     key={industry.id}
-                    to={industry.url}
+                    to="/works"
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
                   >
@@ -144,7 +144,6 @@ const Menu = ({ setOpenMenu, width }) => {
                   <>
                     <Link
                       key={technology.id}
-                      to={technology.url}
                       className="name"
                       onClick={() => setOpenMenu((prev) => !prev)}
                     >
@@ -157,7 +156,7 @@ const Menu = ({ setOpenMenu, width }) => {
                           key={item.id}
                           onClick={() => setOpenMenu((prev) => !prev)}
                         >
-                          <Link to={item.url}>{item.name}</Link>
+                          <Link to="/works">{item.name}</Link>
                         </span>
                       ))}
                     </>
@@ -186,6 +185,7 @@ const Menu = ({ setOpenMenu, width }) => {
               <>
                 {works.map((work) => (
                   <Link
+                    to="/works"
                     key={work.id}
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
