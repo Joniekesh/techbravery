@@ -4,7 +4,7 @@
   height: max-content;
   width: 100%;
   padding: 50px;
-  background-color: white;
+  background-color: $textLight;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -55,7 +55,7 @@
   h2 {
     font-weight: bold;
     font-size: 30px;
-    color: $primaryColor;
+    color: $bgPrimary;
     text-align: center;
   }
 
@@ -87,7 +87,7 @@
         h3 {
           font-size: 26px;
           font-weight: bold;
-          color: $primaryColor;
+          color: $bgPrimary;
 
           @include mobile {
             text-align: center;
@@ -130,7 +130,7 @@
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    border: 2px solid $primaryColor;
+    border: 2px solid $bgPrimary;
     border-radius: 10px;
     padding: 4px;
 
@@ -165,7 +165,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $primaryColor;
+          background-color: $bgPrimary;
         }
       }
     }

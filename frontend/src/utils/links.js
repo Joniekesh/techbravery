@@ -6,21 +6,26 @@ export const links = [
   },
   {
     id: 2,
+    name: "Who We Are",
+    url: "/aboutus",
+  },
+  {
+    id: 3,
     name: "Services",
     url: "/services",
   },
   {
-    id: 3,
+    id: 4,
     name: "Our Works",
     url: "/works",
   },
   {
-    id: 4,
+    id: 5,
     name: "Store",
     url: "/store",
   },
   {
-    id: 5,
+    id: 6,
     name: "Contact",
     url: "/contact",
   },

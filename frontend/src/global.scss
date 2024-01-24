@@ -1,7 +1,9 @@
-$myFont: Helvetica, sans-serif;
-$primaryColor: #002743;
-$myFontSize: 18px;
-$myWidth: 680px;
+$fgColor: gray;
+$bgPrimary: #002743;
+$bgLight: white;
+$bgDark: #000;
+$textDark: #333;
+$textLight: #fff;
 
 @mixin mobile {
   @media (max-width: 600px) {

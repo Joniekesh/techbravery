@@ -1,14 +1,10 @@
 @import "../../global.scss";
 
-.services {
+.aboutUs {
   min-height: calc(100vh - 50px);
   width: 100%;
   margin-top: 40px;
   line-height: 1.7;
-
-  // background: url("/assets/servicebg3.jpg") center;
-  // background-size: cover;
-  // background-position-x: 100%;
 
   .container {
     display: flex;
@@ -20,7 +16,6 @@
     padding: 50px;
 
     h1 {
-      margin-bottom: 20px;
     }
 
     p {
@@ -28,12 +23,6 @@
         font-size: 24px;
         font-weight: bold;
         color: teal;
-      }
-
-      .visit {
-        border-bottom: 2px solid teal;
-        color: $bgPrimary;
-        font-weight: bold;
       }
     }
   }

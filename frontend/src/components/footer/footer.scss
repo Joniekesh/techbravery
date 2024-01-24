@@ -3,8 +3,8 @@
 .footer {
   height: max-content;
   width: 100vw;
-  background-color: $primaryColor;
-  color: white;
+  background-color: $bgPrimary;
+  color: $textLight;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,7 +41,7 @@
   }
 
   .socials {
-    background-color: black;
+    background-color: $bgDark;
     padding: 20px 50px;
     display: flex;
     align-items: center;

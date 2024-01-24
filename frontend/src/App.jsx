@@ -8,6 +8,7 @@ import Store from "./pages/store/Store";
 import Works from "./pages/works/Works";
 import Home from "./pages/home/Home";
 import Quote from "./pages/quote/Quote";
+import AboutUs from "./pages/aboutUs/AboutUs";
 
 const App = () => {
   const Layout = () => {
@@ -48,6 +49,10 @@ const App = () => {
         {
           path: "/quote",
           element: <Quote />,
+        },
+        {
+          path: "/aboutus",
+          element: <AboutUs />,
         },
       ],
     },

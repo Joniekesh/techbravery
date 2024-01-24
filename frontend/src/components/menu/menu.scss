@@ -11,8 +11,8 @@
 
   .container {
     position: relative;
-    background-color: $primaryColor;
-    color: white;
+    background-color: $bgPrimary;
+    color: $textLight;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -84,7 +84,7 @@
             // background-color: rgb(189, 189, 189);
             // border-radius: 6px;
             // border-left: 3px solid green;
-            color: white;
+            color: $textLight;
           }
         }
 
@@ -147,7 +147,7 @@
       font-weight: 500;
       height: 42px;
       overflow: hidden;
-      color: white;
+      color: $textLight;
       width: max-content;
       position: absolute;
       bottom: 20px;
@@ -184,6 +184,16 @@
         padding: 10px;
         height: 100%;
         transition: all 0.8s ease;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       &:hover .text {

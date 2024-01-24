@@ -233,7 +233,9 @@ const Menu = ({ setOpenMenu, width }) => {
           className="quoteBtn"
           onClick={() => setOpenMenu((prev) => !prev)}
         >
-          <div className="text">Get a Quote</div>
+          <Link to="/quote" className="text">
+            Get a Quote
+          </Link>
           <div className="arrow">
             <FaArrowRight />
           </div>

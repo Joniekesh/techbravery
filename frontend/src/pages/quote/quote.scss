@@ -4,7 +4,7 @@
   width: 100vw;
   height: max-content;
   background: url("/assets/img8.jpg") center;
-  color: white;
+  color: $textLight;
   margin-top: 70px;
   padding: 20px;
   display: flex;
@@ -21,7 +21,7 @@
     justify-content: space-between;
     gap: 30px;
     background-color: rgb(232, 243, 255);
-    color: #333;
+    color: $textDark;
     padding: 20px;
     border-radius: 10px;
 
@@ -39,7 +39,7 @@
 
       h2 {
         width: 350px;
-        color: $primaryColor;
+        color: $bgPrimary;
 
         @include tablet900 {
           width: 100%;
@@ -92,7 +92,7 @@
 
             p {
               margin-bottom: 5px;
-              color: $primaryColor;
+              color: $bgPrimary;
               font-weight: bold;
               font-size: 14px;
             }
@@ -119,7 +119,7 @@
         rgb(0, 37, 84) 11.2%,
         rgba(0, 37, 84, 0.32) 100.2%
       );
-      color: white;
+      color: $textLight;
 
       @include mobile {
         width: 100%;
@@ -171,7 +171,7 @@
           width: 100%;
           padding: 10px;
           background-color: teal;
-          color: white;
+          color: $textLight;
           border: none;
           border-radius: 5px;
           font-weight: bold;
