@@ -38,19 +38,19 @@ const Menu = ({ setOpenMenu, width }) => {
         </Link>
         <div className="menuItems">
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setAboutUsToggle((prev) => !prev);
+                setServiceToggle(false);
+                setWorksToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+              }}
+            >
               <span>WHO WE ARE</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setAboutUsToggle((prev) => !prev);
-                  setServiceToggle(false);
-                  setWorksToggle(false);
-                  setTeamToggle(false);
-                  setTechnologyToggle(false);
-                  setIndustryToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
@@ -70,19 +70,19 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setServiceToggle((prev) => !prev);
+                setWorksToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+              }}
+            >
               <span>OUR SERVICES</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setServiceToggle((prev) => !prev);
-                  setWorksToggle(false);
-                  setTeamToggle(false);
-                  setTechnologyToggle(false);
-                  setIndustryToggle(false);
-                  setAboutUsToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
@@ -102,19 +102,19 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setIndustryToggle((prev) => !prev);
+                setTeamToggle(false);
+                setWorksToggle(false);
+                setServiceToggle(false);
+                setTechnologyToggle(false);
+                setAboutUsToggle(false);
+              }}
+            >
               <span>INDUSTRIES</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setIndustryToggle((prev) => !prev);
-                  setTeamToggle(false);
-                  setWorksToggle(false);
-                  setServiceToggle(false);
-                  setTechnologyToggle(false);
-                  setAboutUsToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
@@ -134,19 +134,19 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setTechnologyToggle((prev) => !prev);
+                setTeamToggle(false);
+                setWorksToggle(false);
+                setServiceToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+              }}
+            >
               <span>TECHNOLOGIES</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setTechnologyToggle((prev) => !prev);
-                  setTeamToggle(false);
-                  setWorksToggle(false);
-                  setServiceToggle(false);
-                  setIndustryToggle(false);
-                  setAboutUsToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
@@ -178,19 +178,19 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setWorksToggle((prev) => !prev);
+                setServiceToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+              }}
+            >
               <span>OUR WORKS</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setWorksToggle((prev) => !prev);
-                  setServiceToggle(false);
-                  setTeamToggle(false);
-                  setTechnologyToggle(false);
-                  setIndustryToggle(false);
-                  setAboutUsToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
@@ -210,19 +210,19 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
           <div className="item">
-            <div className="itemTitle">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setTeamToggle((prev) => !prev);
+                setWorksToggle(false);
+                setServiceToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+              }}
+            >
               <span>TEAM MEMBERS</span>
-              <span
-                className="icon"
-                onClick={() => {
-                  setTeamToggle((prev) => !prev);
-                  setWorksToggle(false);
-                  setServiceToggle(false);
-                  setTechnologyToggle(false);
-                  setIndustryToggle(false);
-                  setAboutUsToggle(false);
-                }}
-              >
+              <span className="icon">
                 <RxCaretDown />
               </span>
             </div>
