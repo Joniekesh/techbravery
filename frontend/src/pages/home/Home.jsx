@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Features from "../../components/features/Features";
 import Welcome from "../../components/welcome/Welcome";
 import { useEffect, useState } from "react";
+import Testimonials from "../../components/testimonials/Testimonials";
 
 const data = [
   {
@@ -61,7 +62,8 @@ const Home = () => {
         </div>
       </div>
       <Welcome />
-      {/* <Features /> */}
+      <Features />
+      <Testimonials />
     </div>
   );
 };

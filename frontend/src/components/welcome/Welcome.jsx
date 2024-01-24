@@ -18,12 +18,12 @@ const Welcome = () => {
       <div className="desc">
         <p>
           Unlock the true potential of your online presence with our premier web
-          development agency. At Tech Bravery Solutions, we pride ourselves on
-          delivering stunning websites that captivate audiences, drive
-          conversions, and elevate your brand to new heights. With our expert
-          team of developers, designers, and digital strategists, we are
-          committed to crafting tailor-made solutions that exceed your
-          expectations.
+          development agency. At Techbravery Software Solutions, we pride
+          ourselves on delivering stunning secure and responsive websites that
+          captivate audiences, drive conversions, and elevate your brand to new
+          heights. With our expert team of developers, designers, and digital
+          strategists, we are committed to crafting tailor-made solutions that
+          exceed your expectations.
         </p>
       </div>
       <h2>Why Choose Us?</h2>
