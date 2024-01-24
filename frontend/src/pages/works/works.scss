@@ -1,0 +1,22 @@
+@import "../../global.scss";
+
+.works {
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  margin-top: 40px;
+  line-height: 1.7;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: $textDark;
+    padding: 50px;
+
+    @include tablet {
+      padding: 50px 20px 20px 20px;
+    }
+  }
+}
