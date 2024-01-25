@@ -1,9 +1,47 @@
+@import "../../global.scss";
+
 .testimonials {
   height: 100vh;
-  width: 100%;
-  padding: 50px;
-  //   background-color: rgba(0, 128, 128, 0.171);
+  width: 100vw;
+  background-color: #2e475d;
+  color: $textLight;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .container {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+    .top {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    gap: 20px;
+    overflow: auto;
+    z-index: 2;
+  }
+
+  .slanted-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: teal;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  }
 }
