@@ -6,9 +6,14 @@ import NavLink from "../navLink/NavLink";
 import { FaArrowRight } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "../menu/Menu";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/actions/AuthAction";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { currentUser } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
 
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
@@ -21,6 +26,10 @@ const Navbar = () => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className="navbar">
@@ -52,6 +61,11 @@ const Navbar = () => {
           <span className="cancel" onClick={() => setOpenMenu((prev) => !prev)}>
             <GiHamburgerMenu />
           </span>
+        )}
+        {currentUser && (
+          <button className="logoutBtn" onClick={handleLogout}>
+            Logout{" "}
+          </button>
         )}
       </div>
       {openMenu && <Menu setOpenMenu={setOpenMenu} width={width} />}

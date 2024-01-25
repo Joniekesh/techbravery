@@ -33,10 +33,10 @@ const UserSchema = new mongoose.Schema(
     phone: {
       type: String,
     },
-    lastlogin: {
-      type: Date,
-      default: Date.now,
-    },
+    // lastlogin: {
+    //   type: Date,
+    //   default: Date.now,
+    // },
     role: {
       type: String,
       enum: ["User", "Admin", "SuperAdmin"],
@@ -51,6 +51,18 @@ const UserSchema = new mongoose.Schema(
     },
     resetPasswordExpire: {
       type: String,
+    },
+
+    lastloginDetails: {
+      time: String,
+      ip: String,
+      os: String,
+      location: String,
+      timezone: String,
+      language: String,
+      browser: String,
+      device: String,
+      date: { type: Date, default: Date.now },
     },
   },
   { timestamps: true }

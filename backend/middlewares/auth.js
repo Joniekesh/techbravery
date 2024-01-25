@@ -21,8 +21,17 @@ const verifyToken = (req, res, next) => {
   });
 };
 
+const superAdmin = (req, res, next) => {
+  if (req.user && req.user.role === "SuperAdmin") {
+    return next();
+  } else {
+    return next(
+      createError(401, "You are not authorized to access this route.")
+    );
+  }
+};
 const admin = (req, res, next) => {
-  if (req.user && req.user.isAdmin) {
+  if (req.user && req.user.role === "Admin") {
     return next();
   } else {
     return next(
@@ -31,4 +40,4 @@ const admin = (req, res, next) => {
   }
 };
 
-export { verifyToken, admin };
+export { verifyToken, superAdmin, admin };

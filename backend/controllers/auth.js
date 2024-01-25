@@ -33,8 +33,10 @@ export const register = async (req, res, next) => {
 
 // Login
 export const login = async (req, res, next) => {
+  const { email, lastloginDetails } = req.body;
+
   try {
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOne({ email });
 
     if (!user) {
       return next(createError(404, "User not found!"));
@@ -51,7 +53,17 @@ export const login = async (req, res, next) => {
     const updatedUser = await User.findOneAndUpdate(
       user._id,
       {
-        $set: { lastlogin: Date.now() },
+        $set: {
+          "lastloginDetails.time": lastloginDetails.time,
+          "lastloginDetails.ip": lastloginDetails.ip,
+          "lastloginDetails.op": lastloginDetails.os,
+          "lastloginDetails.location": lastloginDetails.location,
+          "lastloginDetails.timezone": lastloginDetails.timezone,
+          "lastloginDetails.language": lastloginDetails.language,
+          "lastloginDetails.browser": lastloginDetails.browser,
+          "lastloginDetails.device": lastloginDetails.device,
+          "lastloginDetails.date": Date.now(),
+        },
       },
       { new: true }
     );
@@ -159,6 +171,17 @@ export const resetPassword = async (req, res, next) => {
     await user.save();
 
     return res.status(200).json("Password successfully updated.");
+  } catch (err) {
+    next(err);
+  }
+};
+
+// Logout
+export const logout = async (req, res, next) => {
+  try {
+    res.clearCookie("accessToken");
+
+    res.status(200).json("Logged out successfully");
   } catch (err) {
     next(err);
   }
