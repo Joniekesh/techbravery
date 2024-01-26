@@ -14,33 +14,35 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="usefullinks">
-        <div className="items">
-          <p>Technologies</p>
-          {technologies.map((technology) => (
-            <>
-              {technology.data.map((item) => (
-                <span key={item.id}>{item.name}</span>
-              ))}
-            </>
-          ))}
-        </div>
-        <div className="items">
-          <p>Industries</p>
-          {industries.map((industry) => (
-            <span key={industry.id}>{industry.name}</span>
-          ))}
-        </div>
-        <div className="items">
-          <p>Services</p>
-          {services.map((service) => (
-            <span key={service.id}>{service.name}</span>
-          ))}
-        </div>
-        <div className="items">
-          <p>Our Works</p>
-          {works.map((work) => (
-            <span key={work.id}>{work.name}</span>
-          ))}
+        <div className="linksContainer">
+          <div className="items">
+            <p>Technologies</p>
+            {technologies.map((technology) => (
+              <>
+                {technology.data.map((item) => (
+                  <span key={item.id}>{item.name}</span>
+                ))}
+              </>
+            ))}
+          </div>
+          <div className="items">
+            <p>Industries</p>
+            {industries.map((industry) => (
+              <span key={industry.id}>{industry.name}</span>
+            ))}
+          </div>
+          <div className="items">
+            <p>Services</p>
+            {services.map((service) => (
+              <span key={service.id}>{service.name}</span>
+            ))}
+          </div>
+          <div className="items">
+            <p>Our Works</p>
+            {works.map((work) => (
+              <span key={work.id}>{work.name}</span>
+            ))}
+          </div>
         </div>
       </div>
       <div className="socials">

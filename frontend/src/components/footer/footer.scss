@@ -1,40 +1,47 @@
 @import "../../global.scss";
 
 .footer {
-  height: max-content;
+  height: 100vh;
   width: 100vw;
-  background-color: $bgPrimary;
   color: $textLight;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  @include mobile {
+    height: max-content;
+  }
+
   .usefullinks {
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    background-color: $bgPrimary;
 
     @include mobile {
       display: none;
     }
 
-    .items {
+    .linksContainer {
+      padding: 20px 50px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       gap: 10px;
 
-      p {
-        font-weight: bold;
-        padding: 5px;
-      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-      span {
-        font-size: 12px;
-        cursor: pointer;
+        p {
+          font-weight: bold;
+          padding: 5px;
+        }
 
-        &:hover {
-          color: green;
+        span {
+          font-size: 12px;
+          cursor: pointer;
+
+          &:hover {
+            color: green;
+          }
         }
       }
     }
