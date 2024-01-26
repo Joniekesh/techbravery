@@ -15,9 +15,7 @@ const Testimonials = () => {
           </p>
         </div>
       </div>
-      <div className="sliderDiv">
-        <Slider />
-      </div>
+      <Slider />
       <div class="slanted-line"></div>
     </div>
   );
