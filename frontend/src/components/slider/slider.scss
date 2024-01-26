@@ -5,12 +5,17 @@
   overflow: hidden;
   position: relative;
   width: 100vw;
-  height: 300px; /* Set your desired height */
-}
+  height: 400px; /* Set your desired height */
 
-.slide-container {
-  display: flex;
-  gap: 20px;
-  animation: slide 10s linear infinite;
-  width: calc((300px + 20px) * 3);
+  .slide-container {
+    display: flex;
+    gap: 20px;
+    animation: slide 10s linear infinite;
+    width: calc((300px + 30px) * 3);
+    animation-play-state: running;
+  }
+
+  &:hover .slide-container {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
 }
