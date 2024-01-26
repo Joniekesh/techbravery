@@ -4,7 +4,7 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 300px; /* Set your desired height */
 }
 
@@ -12,5 +12,5 @@
   display: flex;
   gap: 20px;
   animation: slide 10s linear infinite;
-  width: calc((400px + 20px) * 3);
+  width: calc((300px + 20px) * 3);
 }
