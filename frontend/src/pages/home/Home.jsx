@@ -4,6 +4,7 @@ import Features from "../../components/features/Features";
 import Welcome from "../../components/welcome/Welcome";
 import { useEffect, useState } from "react";
 import Testimonials from "../../components/testimonials/Testimonials";
+import Slider from "../../components/slider/Slider";
 
 const data = [
   {
@@ -63,7 +64,7 @@ const Home = () => {
       </div>
       <Welcome />
       <Features />
-      <Testimonials />
+      <Testimonials autoplayInterval={2000} />
     </div>
   );
 };

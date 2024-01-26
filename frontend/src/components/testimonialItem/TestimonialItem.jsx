@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 const TestimonialItem = ({ item }) => {
   return (
-    <div className="testimonialItem">
+    <div className="slide">
       <div className="circle circle1"></div>
       <div className="circle circle2"></div>
       <div className="testimonialContainer">
         <div className="top">
           <div className="left">
-            <img src="/assets/myprofilepic.jpg" alt="" />
+            <img src={item.img} alt="" />
           </div>
           <div className="right">
             <div className="icons">

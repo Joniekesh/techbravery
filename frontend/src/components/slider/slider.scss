@@ -1,0 +1,16 @@
+@import "../../global.scss";
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px; /* Set your desired height */
+}
+
+.slide-container {
+  display: flex;
+  gap: 20px;
+  animation: slide 10s linear infinite;
+  width: calc((400px + 20px) * 3);
+}
