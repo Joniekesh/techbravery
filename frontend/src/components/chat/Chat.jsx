@@ -26,6 +26,7 @@ const Chat = ({ setOpenChat, setActive }) => {
           <span className="admin">Admin</span>
           <div className="image">
             <img src="/assets/myprofilepic.jpg" alt="" />
+            <span className="online"></span>
           </div>
         </div>
         <div className="chatbox">

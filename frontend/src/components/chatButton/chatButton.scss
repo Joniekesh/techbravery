@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .chatButton {
   position: fixed;
   right: 0;
@@ -11,6 +13,11 @@
   border-radius: 50%;
   background-color: crimson;
   animation: blink 2s infinite;
+
+  @include mobile {
+    height: 50px;
+    width: 50px;
+  }
 
   img {
     width: 100%;

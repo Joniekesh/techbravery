@@ -1,0 +1,41 @@
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .chatBoxItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(199, 199, 199);
+    padding: 10px;
+    max-width: 300px;
+    border-radius: 0 20px 20px 20px;
+
+    // .text {
+    // }
+
+    .time {
+      font-size: 12px;
+      font-weight: bold;
+      align-self: flex-end;
+    }
+
+    &.current {
+      align-self: flex-end;
+      background-color: teal;
+      color: white;
+      border-radius: 20px 0 20px 20px;
+    }
+
+    &.current .time {
+      color: rgb(195, 195, 195);
+    }
+
+    img {
+      width: 98%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
