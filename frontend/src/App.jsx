@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -21,8 +22,15 @@ import SuperAdmin from "./pages/superAdmin/SuperAdmin";
 import Admin from "./pages/admin/Admin";
 import User from "./pages/user/User";
 import { useSelector } from "react-redux";
+import Profile from "./pages/profile/Profile";
+import Orders from "./pages/orders/Orders";
+import ChatButton from "./components/chatButton/ChatButton";
+import Chat from "./components/chat/Chat";
 
 const App = () => {
+  const [openChat, setOpenChat] = useState(false);
+  const [active, setActive] = useState(false);
+
   const { currentUser, loading } = useSelector((state) => state.auth);
 
   const Private = ({ children }) => {
@@ -33,6 +41,14 @@ const App = () => {
     return (
       <>
         <ToastContainer />
+        {openChat && (
+          <Chat
+            setOpenChat={setOpenChat}
+            active={active}
+            setActive={setActive}
+          />
+        )}
+        <ChatButton setOpenChat={setOpenChat} setActive={setActive} />
         <div>
           <Navbar />
           <Outlet />
@@ -100,6 +116,22 @@ const App = () => {
           element: (
             <Private>
               <User />,
+            </Private>
+          ),
+        },
+        {
+          path: "/Profile",
+          element: (
+            <Private>
+              <Profile />,
+            </Private>
+          ),
+        },
+        {
+          path: "/Orders",
+          element: (
+            <Private>
+              <Orders />,
             </Private>
           ),
         },

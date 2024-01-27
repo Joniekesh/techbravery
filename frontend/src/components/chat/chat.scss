@@ -1,0 +1,160 @@
+@import "../../global.scss";
+.chat {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .chatContainer {
+    position: fixed;
+    background-color: $bgLight;
+    width: 350px;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    z-index: 10;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #2e475d;
+      color: $textLight;
+      height: 70px;
+      padding: 10px;
+
+      .icon {
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      .admin {
+        font-size: 20px;
+      }
+
+      .image {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .chatbox {
+      height: calc(100vh - 140px);
+      overflow-y: auto;
+      padding: 10px;
+
+      &::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #2e475d; /* color of the tracking area */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: orange; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 1px solid #2e475d; /* creates padding around scroll thumb */
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $textLight;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      border-radius: 30px;
+      justify-content: space-between;
+      overflow: hidden;
+      gap: 10px;
+      padding: 10px;
+
+      .sendContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        border: 2px solid #2e475d;
+        flex: 16;
+        border-radius: 30px;
+        padding: 10px;
+        max-height: 150px;
+
+        .imageFile {
+          height: 30px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: teal;
+            transform: scale(1.02);
+            font-weight: bold;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 100%;
+          font-size: 16px;
+          border: none;
+          outline: none;
+        }
+
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #2e475d;
+          margin-right: 10px;
+          font-size: 20px;
+        }
+      }
+
+      button {
+        flex: 1;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #2e475d;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: teal;
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
