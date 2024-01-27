@@ -61,18 +61,7 @@ const Navbar = () => {
             </div>
           </button>
         </Link>
-        {openMenu ? (
-          <span
-            className="hamburger"
-            onClick={() => setOpenMenu((prev) => !prev)}
-          >
-            X
-          </span>
-        ) : (
-          <span className="cancel" onClick={() => setOpenMenu((prev) => !prev)}>
-            <GiHamburgerMenu />
-          </span>
-        )}
+
         {currentUser && (
           <div className="authenticated">
             <div
@@ -91,6 +80,18 @@ const Navbar = () => {
               <span className="count">3</span>
             </div>
           </div>
+        )}
+        {openMenu ? (
+          <span
+            className="hamburger"
+            onClick={() => setOpenMenu((prev) => !prev)}
+          >
+            X
+          </span>
+        ) : (
+          <span className="cancel" onClick={() => setOpenMenu((prev) => !prev)}>
+            <GiHamburgerMenu />
+          </span>
         )}
       </div>
       {toggle && (
