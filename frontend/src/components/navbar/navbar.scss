@@ -197,6 +197,20 @@
       }
     }
 
+    .authBtn {
+      cursor: pointer;
+      border: none;
+      padding: 10px;
+      background-color: teal;
+      color: white;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
     .logoutBtn {
       cursor: pointer;
       border: none;

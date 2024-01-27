@@ -249,10 +249,10 @@ const Menu = ({ setOpenMenu, width }) => {
         >
           <Link to="/quote" className="text">
             Get a Quote
+            <div className="arrow">
+              <FaArrowRight />
+            </div>
           </Link>
-          <div className="arrow">
-            <FaArrowRight />
-          </div>
         </button>
       </div>
     </div>

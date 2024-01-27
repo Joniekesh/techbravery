@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/AuthAction";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { currentUser, loading, error } = useSelector((state) => state.auth);
@@ -41,11 +42,17 @@ const Login = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Enter email" />
-        <input type="text" placeholder="Enter password" />
+        <input type="password" placeholder="Enter password" />
+        <div className="action">
+          <Link to="/forgotpassword">
+            <span>Forgot password?</span>
+          </Link>
+          <Link to="/register">
+            <span>Don't Have an Account?</span>
+          </Link>
+        </div>
         <button type="submit">{loading ? "Loading..." : "LOGIN"}</button>
       </form>
-      {/* {currentUser && <span>{currentUser.lastloginDetails.time}</span>}
-      {error && toast.error(error)} */}
     </div>
   );
 };

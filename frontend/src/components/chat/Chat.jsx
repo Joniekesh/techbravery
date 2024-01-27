@@ -5,12 +5,16 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import { FaArrowLeftLong, FaFileImage, FaPaperclip } from "react-icons/fa6";
 import { IoSendSharp } from "react-icons/io5";
 import ChatBox from "../chatbox/ChatBox";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Chat = ({ setOpenChat, setActive }) => {
   const handleClick = () => {
     setOpenChat((prev) => !prev);
     setActive((prev) => !prev);
   };
+
+  const { currentUser } = useSelector((state) => state.auth);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,23 +33,37 @@ const Chat = ({ setOpenChat, setActive }) => {
             <span className="online"></span>
           </div>
         </div>
-        <div className="chatbox">
-          <ChatBox />
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className="sendContainer">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <label htmlFor="imageFile" className="imageFile">
-              <FaPaperclip />
-            </label>
-            <input type="file" id="imageFile" style={{ display: "none" }} />
+        {currentUser ? (
+          <div className="chatbox">
+            <ChatBox />
           </div>
-          <div type="submit">
+        ) : (
+          <div className="denied">
             <span>
-              <IoSendSharp />
+              OOPS! <br /> Please Sign In to view your messages or talk to an
+              Admin!
             </span>
+            <Link to="/login">
+              <button>Sign In</button>
+            </Link>
           </div>
-        </form>
+        )}
+        {currentUser && (
+          <form onSubmit={handleSubmit}>
+            <div className="sendContainer">
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+              <label htmlFor="imageFile" className="imageFile">
+                <FaPaperclip />
+              </label>
+              <input type="file" id="imageFile" style={{ display: "none" }} />
+            </div>
+            <div type="submit">
+              <span>
+                <IoSendSharp />
+              </span>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );

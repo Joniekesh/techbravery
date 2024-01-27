@@ -26,6 +26,9 @@ import Profile from "./pages/profile/Profile";
 import Orders from "./pages/orders/Orders";
 import ChatButton from "./components/chatButton/ChatButton";
 import Chat from "./components/chat/Chat";
+import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
+import Register from "./pages/register/Register";
+import ResetPassword from "./pages/resetPassword/ResetPassword";
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
@@ -62,6 +65,18 @@ const App = () => {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/forgotpassword",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/resetpassword",
+      element: <ResetPassword />,
     },
     {
       path: "/",

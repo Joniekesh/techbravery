@@ -62,7 +62,7 @@ const Navbar = () => {
           </button>
         </Link>
 
-        {currentUser && (
+        {currentUser ? (
           <div className="authenticated">
             <div
               className="dropdown"
@@ -80,6 +80,10 @@ const Navbar = () => {
               <span className="count">3</span>
             </div>
           </div>
+        ) : (
+          <Link to="/login">
+            <button className="authBtn">Sign In</button>
+          </Link>
         )}
         {openMenu ? (
           <span
