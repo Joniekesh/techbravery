@@ -58,6 +58,10 @@
       align-items: center;
       gap: 20px;
 
+      @include mobile {
+        display: none;
+      }
+
       .quoteBtn {
         padding: 0;
         display: flex;
