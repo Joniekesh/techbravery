@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .chatBox {
   display: flex;
   flex-direction: column;
@@ -5,37 +7,55 @@
 
   .chatBoxItem {
     display: flex;
-    flex-direction: column;
     gap: 10px;
-    background-color: rgb(199, 199, 199);
-    padding: 10px;
     max-width: 300px;
-    border-radius: 0 20px 20px 20px;
 
-    // .text {
-    // }
+    .left {
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
 
-    .time {
-      font-size: 12px;
-      font-weight: bold;
-      align-self: flex-end;
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 300px;
+      background-color: rgb(186, 186, 186);
+      padding: 10px;
+      border-radius: 0 20px 20px 20px;
+
+      .text {
+      }
+
+      img {
+        width: 98%;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+
+      .time {
+        align-self: flex-end;
+        font-size: 12px;
+        font-weight: bold;
+      }
     }
 
     &.current {
       align-self: flex-end;
+    }
+
+    &.current .right {
       background-color: teal;
       color: white;
       border-radius: 20px 0 20px 20px;
     }
 
-    &.current .time {
-      color: rgb(195, 195, 195);
-    }
-
-    img {
-      width: 98%;
-      object-fit: cover;
-      border-radius: 5px;
+    &.current .right .time {
+      color: rgb(191, 191, 191);
     }
   }
 }

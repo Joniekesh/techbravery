@@ -40,9 +40,11 @@ const Chat = ({ setOpenChat, setActive }) => {
             </label>
             <input type="file" id="imageFile" style={{ display: "none" }} />
           </div>
-          <button type="submit">
-            <IoSendSharp />
-          </button>
+          <div type="submit">
+            <span>
+              <IoSendSharp />
+            </span>
+          </div>
         </form>
       </div>
     </div>

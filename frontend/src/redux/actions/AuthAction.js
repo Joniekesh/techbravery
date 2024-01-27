@@ -11,9 +11,13 @@ import { toast } from "react-toastify";
 export const login = (data) => async (dispatch) => {
   dispatch(loginRequest());
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/login", data, {
-      withCredentials: true,
-    });
+    const res = await axios.post(
+      "https://techbravery.onrender.com/api/auth/login",
+      data,
+      {
+        withCredentials: true,
+      }
+    );
     if (res.status === 200) {
       dispatch(loginSuccess(res.data));
     }
