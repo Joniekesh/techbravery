@@ -9,8 +9,6 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/user.js";
 import projectRoutes from "./routes/project.js";
 import valueRoutes from "./routes/value.js";
-import chatRoutes from "./routes/chat.js";
-import messageRoutes from "./routes/message.js";
 
 dotenv.config();
 connectDB();
@@ -30,8 +28,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/values", valueRoutes);
-app.use("/api/chats", chatRoutes);
-app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT || 5000;
 
