@@ -78,6 +78,7 @@ const App = () => {
       path: "/resetpassword/:resetToken",
       element: <ResetPassword />,
     },
+
     {
       path: "/",
       element: <Layout />,
