@@ -110,8 +110,8 @@ export const forgotPassword = async (req, res, next) => {
     await user.save();
 
     // Create Reset URL to email to provided email address
-    // const resetUrl = `http://localhost:5173/resetpassword/${resetToken}`;
-    const resetUrl = `https://techbravery.netlify.app/resetpassword/${resetToken}`;
+    const resetUrl = `http://localhost:5173/resetpassword/${resetToken}`;
+    // const resetUrl = `https://techbravery.netlify.app/resetpassword/${resetToken}`;
 
     //HTML Message
     const message = `
