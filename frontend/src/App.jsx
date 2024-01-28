@@ -28,7 +28,6 @@ import ChatButton from "./components/chatButton/ChatButton";
 import Chat from "./components/chat/Chat";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Register from "./pages/register/Register";
-import ResetPassword from "./pages/resetPassword/ResetPassword";
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
@@ -73,10 +72,6 @@ const App = () => {
     {
       path: "/forgotpassword",
       element: <ForgotPassword />,
-    },
-    {
-      path: "/resetpassword/:resetToken",
-      element: <ResetPassword />,
     },
 
     {
