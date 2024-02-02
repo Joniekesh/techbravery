@@ -18,8 +18,8 @@ export const login = (data) => async (dispatch) => {
   dispatch(loginRequest());
   try {
     const res = await axios.post(
-      // "https://techbravery.onrender.com/api/auth/login",
-      "http://localhost:5000/api/auth/login",
+      "https://techbravery.onrender.com/api/auth/login",
+      // "http://localhost:5000/api/auth/login",
       data,
       {
         withCredentials: true,
@@ -41,8 +41,8 @@ export const register = (data) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const res = await axios.post(
-      // "https://techbravery.onrender.com/api/auth/login",
-      "http://localhost:5000/api/auth",
+      "https://techbravery.onrender.com/api/auth/login",
+      // "http://localhost:5000/api/auth",
       data,
       {
         withCredentials: true,
