@@ -17,14 +17,7 @@ import { getChats } from "./ChatActions";
 export const login = (data) => async (dispatch) => {
   dispatch(loginRequest());
   try {
-    const res = await axios.post(
-      "https://techbravery.onrender.com/api/auth/login",
-      // "http://localhost:5000/api/auth/login",
-      data,
-      {
-        withCredentials: true,
-      }
-    );
+    const res = await makeRequest.post("/auth/login", data);
     if (res.status === 200) {
       dispatch(loginSuccess(res.data));
       dispatch(getChats());
@@ -40,14 +33,7 @@ export const login = (data) => async (dispatch) => {
 export const register = (data) => async (dispatch) => {
   dispatch(registerRequest());
   try {
-    const res = await axios.post(
-      "https://techbravery.onrender.com/api/auth/login",
-      // "http://localhost:5000/api/auth",
-      data,
-      {
-        withCredentials: true,
-      }
-    );
+    const res = await makeRequest.post("/auth", data);
     if (res.status === 201) {
       dispatch(registerSuccess());
     }
