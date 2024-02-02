@@ -10,6 +10,9 @@ import {
 } from "../reducers/AuthReducer";
 import { makeRequest } from "../../utils/makeRequest";
 import { toast } from "react-toastify";
+import { clearMessages } from "../reducers/MessageReducer";
+import { clearChats, clearCurrentChat } from "../reducers/ChatReducer";
+import { getChats } from "./ChatActions";
 
 export const login = (data) => async (dispatch) => {
   dispatch(loginRequest());
@@ -24,8 +27,9 @@ export const login = (data) => async (dispatch) => {
     );
     if (res.status === 200) {
       dispatch(loginSuccess(res.data));
+      dispatch(getChats());
+      toast.success("Login succesfull", { theme: "colored" });
     }
-    toast.success("Login succesfull", { theme: "colored" });
   } catch (err) {
     dispatch(loginFailure(err.response.data));
     console.log(err);
@@ -37,8 +41,8 @@ export const register = (data) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const res = await axios.post(
-      "https://techbravery.onrender.com/api/auth/login",
-      // "http://localhost:5000/api/auth",
+      // "https://techbravery.onrender.com/api/auth/login",
+      "http://localhost:5000/api/auth",
       data,
       {
         withCredentials: true,
@@ -60,6 +64,9 @@ export const logout = () => async (dispatch) => {
     const res = await makeRequest.post("/auth/logout");
     if (res.status === 200) {
       dispatch(logoutUser());
+      dispatch(clearMessages());
+      dispatch(clearCurrentChat());
+      dispatch(clearChats());
       toast.success(res.data, { theme: "colored" });
     }
   } catch (err) {

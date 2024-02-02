@@ -1,0 +1,45 @@
+.chatItem {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  gap: 10px;
+
+  &:hover {
+    background-color: teal;
+    color: white;
+    transform: scale(1.01);
+  }
+
+  .left {
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .middle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+
+    .name {
+      font-weight: bold;
+    }
+
+    .lastMessage {
+      font-size: 14px;
+    }
+  }
+
+  .right {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

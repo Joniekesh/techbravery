@@ -7,7 +7,10 @@ const Features = () => {
       <h1>Featured Projects</h1>
       <div className="items">
         {features.map((feature) => (
-          <div className="feature animate__animated animate__slideInRight">
+          <div
+            className="feature animate__animated animate__slideInRight"
+            key={feature.id}
+          >
             <h2>{feature.title}</h2>
             <p>{feature.desc}</p>
           </div>

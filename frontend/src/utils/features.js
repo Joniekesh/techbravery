@@ -36,7 +36,7 @@ export const features = [
     url: "url",
   },
   {
-    id: 1,
+    id: 7,
     title: "Feature One",
     desc: "Feature description",
     url: "url",

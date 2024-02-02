@@ -18,11 +18,11 @@ const Footer = () => {
           <div className="items">
             <p>Technologies</p>
             {technologies.map((technology) => (
-              <>
+              <div key={technology.id}>
                 {technology.data.map((item) => (
                   <span key={item.id}>{item.name}</span>
                 ))}
-              </>
+              </div>
             ))}
           </div>
           <div className="items">

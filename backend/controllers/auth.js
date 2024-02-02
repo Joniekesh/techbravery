@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { sendEmail } from "../utils/sendEmail.js";
 import crypto from "crypto";
+import Chat from "../models/Chat.js";
 
 // Register
 export const register = async (req, res, next) => {
@@ -25,7 +26,18 @@ export const register = async (req, res, next) => {
     }
 
     const savedUser = await newUser.save();
-    res.status(201).json(savedUser);
+
+    if (savedUser) {
+      const superAdmin = await User.findOne({ role: "SuperAdmin" });
+
+      if (superAdmin) {
+        const newChat = new Chat({ members: [savedUser._id, superAdmin._id] });
+        const createdChat = await newChat.save();
+        return res.status(200).json(createdChat);
+      } else {
+        return res.status(200).json(savedUser);
+      }
+    }
   } catch (err) {
     next(err);
   }
@@ -110,8 +122,8 @@ export const forgotPassword = async (req, res, next) => {
     await user.save();
 
     // Create Reset URL to email to provided email address
-    // const resetUrl = `http://localhost:5173/resetpassword/${resetToken}`;
-    const resetUrl = `https://techbravery.netlify.app/resetpassword/${resetToken}`;
+    const resetUrl = `http://localhost:5173/resetpassword/${resetToken}`;
+    // const resetUrl = `https://techbravery.netlify.app/resetpassword/${resetToken}`;
 
     //HTML Message
     const message = `

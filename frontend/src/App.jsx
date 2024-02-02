@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -21,19 +21,26 @@ import Login from "./pages/login/Login";
 import SuperAdmin from "./pages/superAdmin/SuperAdmin";
 import Admin from "./pages/admin/Admin";
 import User from "./pages/user/User";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Profile from "./pages/profile/Profile";
 import Orders from "./pages/orders/Orders";
 import ChatButton from "./components/chatButton/ChatButton";
 import Chat from "./components/chat/Chat";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Register from "./pages/register/Register";
+import { getChats } from "./redux/actions/ChatActions";
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
   const [active, setActive] = useState(false);
 
+  const dispatch = useDispatch();
+
   const { currentUser, loading } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    dispatch(getChats());
+  }, [dispatch]);
 
   const Private = ({ children }) => {
     return !loading && currentUser ? children : <Navigate to="/login" />;
