@@ -13,7 +13,7 @@ import { clearCurrentChat } from "../../redux/reducers/ChatReducer";
 import ChatList from "../chatList/ChatList";
 import { clearMessages } from "../../redux/reducers/MessageReducer";
 
-const Chat = ({ setOpenChat, setActive }) => {
+const Chat = ({ setOpenChat, setActive, users, socket }) => {
   const [text, setText] = useState("");
   const [file, setFile] = useState(null);
 
@@ -46,7 +46,12 @@ const Chat = ({ setOpenChat, setActive }) => {
     };
 
     dispatch(createMessage(newMessage));
-    // currentChat?._id && dispatch(getMessages(currentChat?._id));
+
+    socket?.emit("sendMessage", {
+      sender: currentUser._id,
+      receiver: friend._id,
+      text,
+    });
 
     setText("");
   };
@@ -68,10 +73,14 @@ const Chat = ({ setOpenChat, setActive }) => {
           <span className="admin">
             {friend?.firstname} {friend?.lastname}
           </span>
-          {/* <div className="image">
-            <img src="/assets/myprofilepic.jpg" alt="" />
-            <span className="online"></span>
-          </div> */}
+          {friend && (
+            <div className="image">
+              <img src="/assets/myprofilepic.jpg" alt="" />
+              {users.some((user) => user.userId === friend?._id) && (
+                <span className="online"></span>
+              )}
+            </div>
+          )}
           <span className="closeBtn">
             <IoMdClose onClick={handleClick} />
           </span>
@@ -80,9 +89,9 @@ const Chat = ({ setOpenChat, setActive }) => {
           !currentChat && chats.length > 0 ? (
             <ChatList currentChat={currentChat} />
           ) : (
-            <>
+            <div className="majorContent">
               <div className="chatbox">
-                <ChatBox />
+                <ChatBox socket={socketS} />
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="sendContainer">
@@ -109,7 +118,7 @@ const Chat = ({ setOpenChat, setActive }) => {
                   </span>
                 </button>
               </form>
-            </>
+            </div>
           )
         ) : (
           <div className="denied">

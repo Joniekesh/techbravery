@@ -43,15 +43,27 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Enter email" />
         <input type="password" placeholder="Enter password" />
-        <div className="action">
-          <Link to="/forgotpassword">
-            <span>Forgot password?</span>
-          </Link>
-          <Link to="/register">
-            <span>Don't Have an Account?</span>
+        <div className="rDiv">
+          <div className="remember">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </div>
+          <Link to="/forgotpassword" className="forgot">
+            <span>Forgort Password?</span>
           </Link>
         </div>
         <button type="submit">{loading ? "Loading..." : "LOGIN"}</button>
+        <div className="action">
+          <span>Don't Have an Account?</span>
+          <Link to="/register" className="reg">
+            <span>Register</span>
+          </Link>
+        </div>
+        <span className="or">OR</span>
+        <div className="google">
+          <img src="/assets/googleIcon.png" alt="" />
+          <span>Sign In with Google</span>
+        </div>
       </form>
     </div>
   );

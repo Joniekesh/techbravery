@@ -30,13 +30,30 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Register from "./pages/register/Register";
 import { getChats } from "./redux/actions/ChatActions";
 
+import { io } from "socket.io-client";
+
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
   const [active, setActive] = useState(false);
+  const [socket, setSocket] = useState(null);
+  const [users, setUsers] = useState([]);
+
+  console.log(users);
 
   const dispatch = useDispatch();
 
   const { currentUser, loading } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    setSocket(io("ws://localhost:8900"));
+  }, []);
+
+  useEffect(() => {
+    socket?.emit("addUser", currentUser?._id);
+    socket?.on("getUsers", (users) => {
+      setUsers(users.filter((user) => user.userId !== null));
+    });
+  }, [currentUser?._id, socket]);
 
   useEffect(() => {
     dispatch(getChats());
@@ -55,6 +72,8 @@ const App = () => {
             setOpenChat={setOpenChat}
             active={active}
             setActive={setActive}
+            users={users}
+            socket={socket}
           />
         )}
         <ChatButton setOpenChat={setOpenChat} setActive={setActive} />

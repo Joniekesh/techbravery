@@ -391,3 +391,21 @@ export const teams = [
     url: "/",
   },
 ];
+
+export const digitalProducts = [
+  {
+    id: 1,
+    name: "Electronic Books",
+    url: "/store",
+  },
+  {
+    id: 2,
+    name: "Tunky Websites",
+    url: "/store",
+  },
+  {
+    id: 3,
+    name: "Wordpress plugins",
+    url: "/store",
+  },
+];

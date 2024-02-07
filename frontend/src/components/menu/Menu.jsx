@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import {
   aboutus,
+  digitalProducts,
   industries,
   services,
   teams,
@@ -22,6 +23,7 @@ const Menu = ({ setOpenMenu, width }) => {
   const [teamToggle, setTeamToggle] = useState(false);
   const [technologyToggle, setTechnologyToggle] = useState(false);
   const [industryToggle, setIndustryToggle] = useState(false);
+  const [digitalStoreToggle, setDigitalStoreToggle] = useState(false);
 
   return (
     <div className="menu" style={{ display: width > 900 && "none" }}>
@@ -47,6 +49,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTeamToggle(false);
                 setTechnologyToggle(false);
                 setIndustryToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>WHO WE ARE</span>
@@ -79,6 +82,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTechnologyToggle(false);
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>OUR SERVICES</span>
@@ -105,7 +109,40 @@ const Menu = ({ setOpenMenu, width }) => {
             <div
               className="itemTitle"
               onClick={() => {
-                setIndustryToggle((prev) => !prev);
+                setDigitalStoreToggle((prev) => !prev);
+                setWorksToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+                setServiceToggle(false);
+              }}
+            >
+              <span>DIGITAL STORE</span>
+              <span className="icon">
+                <RxCaretDown />
+              </span>
+            </div>
+            {digitalStoreToggle && (
+              <>
+                {digitalProducts.map((product) => (
+                  <Link
+                    key={product.id}
+                    to={product.url}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {product.name}
+                  </Link>
+                ))}
+              </>
+            )}
+          </div>
+          <div className="item">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setDigitalStoreToggle((prev) => !prev);
                 setTeamToggle(false);
                 setWorksToggle(false);
                 setServiceToggle(false);
@@ -143,6 +180,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setServiceToggle(false);
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>TECHNOLOGIES</span>
@@ -187,6 +225,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTechnologyToggle(false);
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>OUR WORKS</span>
@@ -219,6 +258,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTechnologyToggle(false);
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>TEAM MEMBERS</span>

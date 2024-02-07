@@ -52,11 +52,17 @@ const Register = () => {
         <input type="password" placeholder="Enter password" />
         <input type="password" placeholder="Repeat password" />
         <div className="action">
-          <Link to="/login">
-            <span>Already Have an Account?</span>
+          <span>Already Have an Account?</span>
+          <Link to="/login" className="log">
+            Login
           </Link>
         </div>
         <button type="submit">{loading ? "Loading..." : "REGISTER"}</button>
+        <span className="or">OR</span>
+        <div className="google">
+          <img src="/assets/googleIcon.png" alt="" />
+          <span>Sign In with Google</span>
+        </div>
       </form>
     </div>
   );

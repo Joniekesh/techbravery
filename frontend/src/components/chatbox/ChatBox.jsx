@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { format } from "timeago.js";
 import { getMessages } from "../../redux/actions/MessageAction";
 
-const ChatBox = () => {
+const ChatBox = ({ socket }) => {
   const messageRef = useRef();
   const { currentUser } = useSelector((state) => state.auth);
 
