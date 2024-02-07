@@ -91,7 +91,7 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
           ) : (
             <div className="majorContent">
               <div className="chatbox">
-                <ChatBox socket={socketS} />
+                <ChatBox socket={socket} />
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="sendContainer">
