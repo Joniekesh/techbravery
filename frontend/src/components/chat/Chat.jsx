@@ -87,7 +87,7 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
         </div>
         {currentUser ? (
           !currentChat && chats.length > 0 ? (
-            <ChatList currentChat={currentChat} />
+            <ChatList currentChat={currentChat} users={users} />
           ) : (
             <div className="majorContent">
               <div className="chatbox">

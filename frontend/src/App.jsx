@@ -38,14 +38,12 @@ const App = () => {
   const [socket, setSocket] = useState(null);
   const [users, setUsers] = useState([]);
 
-  console.log(users);
-
   const dispatch = useDispatch();
 
   const { currentUser, loading } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    setSocket(io("ws://localhost:8900"));
+    setSocket(io("ws://techbraverysocket.onrender.com"));
   }, []);
 
   useEffect(() => {
