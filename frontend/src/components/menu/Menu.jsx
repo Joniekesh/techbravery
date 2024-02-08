@@ -142,12 +142,13 @@ const Menu = ({ setOpenMenu, width }) => {
             <div
               className="itemTitle"
               onClick={() => {
-                setDigitalStoreToggle((prev) => !prev);
+                setIndustryToggle((prev) => !prev);
                 setTeamToggle(false);
                 setWorksToggle(false);
                 setServiceToggle(false);
                 setTechnologyToggle(false);
                 setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
               }}
             >
               <span>INDUSTRIES</span>

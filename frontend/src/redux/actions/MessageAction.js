@@ -30,8 +30,6 @@ export const createMessage = (data) => async (dispatch) => {
     if (res.status === 200) {
       dispatch(createMessageSuccess(res.data));
       dispatch(getChats());
-      // dispatch(getMessages(res.chatId));
-      // dispatch(getCurrentChat(res.data.chatId));
     }
   } catch (err) {
     err.response && dispatch(createMessageFailure(err.response.data));
