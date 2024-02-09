@@ -25,13 +25,26 @@
   }
 
   .logo {
-    h2 {
-      cursor: pointer;
+    height: 70px;
+    overflow: hidden;
+    background-color: transparent;
 
-      &:hover {
-        color: teal;
-      }
+    img {
+      object-fit: contain;
+      font-weight: bold;
+      font-size: 100px;
+      height: 100%;
+      width: 100%;
+      font-size: 50px;
+      font-size: 50px;
     }
+    // h2 {
+    //   cursor: pointer;
+
+    //   &:hover {
+    //     color: teal;
+    //   }
+    // }
   }
 
   .links {

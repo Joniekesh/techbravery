@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="/" className="logo">
-        <h2>TechBravery</h2>
+        <img src="/assets/logo2.jpg" alt="" />
       </Link>
       <div className="links">
         {links.map((link) => (
