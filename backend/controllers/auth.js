@@ -83,11 +83,12 @@ export const login = async (req, res, next) => {
     const token = jwt.sign({ id: updatedUser._id }, process.env.JWT);
     const { password, ...other } = updatedUser._doc;
 
-    res
+    return res
       .cookie("accessToken", token, {
-        httpOnly: true,
+        httpOnly: false,
         secure: true,
         sameSite: "none",
+        expires: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
       })
       .status(200)
       .json(other);

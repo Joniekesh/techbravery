@@ -53,7 +53,7 @@ export const logout = () => async (dispatch) => {
       dispatch(clearMessages());
       dispatch(clearCurrentChat());
       dispatch(clearChats());
-      toast.success(res.data, { theme: "colored" });
+      // toast.success(res.data, { theme: "colored" });
     }
   } catch (err) {
     console.log(err);
