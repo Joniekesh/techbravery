@@ -31,8 +31,6 @@ import Register from "./pages/register/Register";
 import { getChats } from "./redux/actions/ChatActions";
 
 import { io } from "socket.io-client";
-import { Cookies } from "react-cookie";
-import { logout } from "./redux/actions/AuthAction";
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
@@ -41,15 +39,6 @@ const App = () => {
   const [users, setUsers] = useState([]);
 
   const dispatch = useDispatch();
-
-  const cookies = new Cookies();
-  const cookieValue = cookies.get("accessToken");
-
-  useEffect(() => {
-    if (!cookieValue) {
-      dispatch(logout());
-    }
-  }, [cookieValue, dispatch]);
 
   const { currentUser, loading } = useSelector((state) => state.auth);
 
