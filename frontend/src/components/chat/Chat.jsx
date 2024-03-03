@@ -12,6 +12,7 @@ import { createMessage, getMessages } from "../../redux/actions/MessageAction";
 import { clearCurrentChat } from "../../redux/reducers/ChatReducer";
 import ChatList from "../chatList/ChatList";
 import { clearMessages } from "../../redux/reducers/MessageReducer";
+import { toast } from "react-toastify";
 
 const Chat = ({ setOpenChat, setActive, users, socket }) => {
   const [text, setText] = useState("");
@@ -42,6 +43,10 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!file || !text) {
+      return toast.error("Image or text is required", { themed: "colored" });
+    }
 
     const formData = new FormData();
     formData.append("file", file);
