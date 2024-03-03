@@ -44,8 +44,8 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!file || !text) {
-      return toast.error("Image or text is required", { themed: "colored" });
+    if (file === "" || !text === "") {
+      return toast.error("Image or text is required", { theme: "colored" });
     }
 
     const formData = new FormData();
