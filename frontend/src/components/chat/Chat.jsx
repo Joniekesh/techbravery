@@ -16,6 +16,9 @@ import { clearMessages } from "../../redux/reducers/MessageReducer";
 const Chat = ({ setOpenChat, setActive, users, socket }) => {
   const [text, setText] = useState("");
   const [file, setFile] = useState(null);
+  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+
+  console.log(uploadedImageUrl);
 
   const chatRef = useRef();
 
@@ -37,12 +40,28 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
     setActive((prev) => !prev);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "upload");
+
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/joniekesh/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await response.json();
+    setUploadedImageUrl(data.secure_url);
 
     const newMessage = {
       chatId: currentChat?._id,
       text,
+      img: uploadedImageUrl,
     };
 
     dispatch(createMessage(newMessage));
@@ -54,6 +73,7 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
     });
 
     setText("");
+    setFile("");
   };
 
   // console.log(currentChat?._id);
@@ -125,6 +145,7 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
                     type="file"
                     id="imageFile"
                     style={{ display: "none" }}
+                    onChange={(e) => setFile(e.target.files[0])}
                   />
                 </div>
                 <button type="submit">
