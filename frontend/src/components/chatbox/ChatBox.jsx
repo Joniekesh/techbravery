@@ -18,6 +18,8 @@ const ChatBox = ({ socket }) => {
     messageRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  console.log(messages);
+
   useEffect(() => {
     currentChat && dispatch(getMessages(currentChat?._id));
   }, [currentChat?._id, dispatch]);
@@ -39,14 +41,14 @@ const ChatBox = ({ socket }) => {
                 }
                 ref={messageRef}
               >
-                {!currentUser && (
+                {currentUser._id !== message.sender && (
                   <div className="left">
-                    <img src="/assets/myprofilepic.jpg" alt="" />
+                    <img src="/assets/avatar.jpg" alt="" />
                   </div>
                 )}
                 <div className="right">
                   <p className="text">{message.text}</p>
-                  {message.img && <img src="/assets/bg2.jpg" alt="" />}
+                  {message.img && <img src="/assets/avatar.jpg" alt="" />}
                   <span className="time">{format(message.createdAt)}</span>
                 </div>
               </div>

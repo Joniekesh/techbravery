@@ -62,25 +62,40 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
     <div className="chat">
       <div className="chatContainer" data-aos="fade-top">
         <div className="top">
-          <span className="icon">
-            <FaArrowLeftLong
-              onClick={() => {
-                dispatch(clearCurrentChat());
-                dispatch(clearMessages());
-              }}
-            />
-          </span>
-          <span className="admin">
-            {friend?.firstname} {friend?.lastname}
-          </span>
-          {friend && (
-            <div className="image">
-              <img src="/assets/myprofilepic.jpg" alt="" />
-              {users.some((user) => user.userId === friend?._id) && (
-                <span className="online"></span>
+          <div className="groupItems">
+            <span className="icon">
+              <FaArrowLeftLong
+                onClick={() => {
+                  dispatch(clearCurrentChat());
+                  dispatch(clearMessages());
+                }}
+              />
+            </span>
+
+            {friend && (
+              <div className="image">
+                <img src="/assets/avatar.jpg" alt="" />
+                {users.some((user) => user.userId === friend?._id) && (
+                  <span className="online"></span>
+                )}
+              </div>
+            )}
+            <div className="texts">
+              {currentUser.role === "SuperAdmin" ? (
+                <span className="name">
+                  {friend?.firstname} {friend?.lastname}
+                </span>
+              ) : (
+                <span className="name">Support</span>
+              )}
+              {currentUser.role !== "SuperAdmin" && (
+                <div className="response">
+                  <span className="dot"></span>
+                  <span className="replyText">We reply immediately</span>
+                </div>
               )}
             </div>
-          )}
+          </div>
           <span className="closeBtn">
             <IoMdClose onClick={handleClick} />
           </span>

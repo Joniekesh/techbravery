@@ -15,22 +15,24 @@ const ChatItem = ({ current, users }) => {
 
   return (
     <div className="chatItem" onClick={() => dispatch(getCurrentChat(current))}>
-      <div className="left">
-        <img src="/assets/myprofilepic.jpg" alt="" />
-        {users.some((user) => user.userId === client._id) && (
-          <span className="online"></span>
-        )}
-      </div>
-      <div className="middle">
-        <span className="name">
-          {client?.firstname} {client?.lastname}
-        </span>
-        {current?.latestMessage && (
-          <span className="lastMessage">
-            {current?.latestMessage?.substring(0, 30) +
-              (current?.latestMessage?.length > 30 ? "..." : "")}
+      <div className="l">
+        <div className="left">
+          <img src="/assets/avatar.jpg" alt="" />
+          {users.some((user) => user.userId === client._id) && (
+            <span className="online"></span>
+          )}
+        </div>
+        <div className="middle">
+          <span className="name">
+            {client?.firstname} {client?.lastname}
           </span>
-        )}
+          {current?.latestMessage && (
+            <span className="lastMessage">
+              {current?.latestMessage?.substring(0, 30) +
+                (current?.latestMessage?.length > 30 ? "..." : "")}
+            </span>
+          )}
+        </div>
       </div>
       <div className="right">11 mins ago</div>
     </div>

@@ -34,46 +34,74 @@
       height: 70px;
       padding: 10px;
 
-      .icon {
-        cursor: pointer;
-        font-size: 24px;
-
-        &:hover {
-          color: crimson;
-        }
-      }
-
-      .admin {
-        font-size: 20px;
-      }
-
-      .image {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
+      .groupItems {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        gap: 5px;
 
-        .online {
-          position: absolute;
-          top: 2px;
-          left: 28px;
+        .icon {
+          cursor: pointer;
+          font-size: 24px;
+
+          &:hover {
+            color: crimson;
+          }
+        }
+
+        .image {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 8px;
-          width: 8px;
-          border-radius: 50%;
-          background-color: green;
+          position: relative;
+
+          .online {
+            position: absolute;
+            top: 2px;
+            left: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: green;
+          }
+
+          img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
         }
 
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          object-fit: cover;
+        .texts {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .name {
+            font-weight: bold;
+            font-size: 15px;
+          }
+
+          .response {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            .dot {
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background-color: green;
+            }
+
+            .replyText {
+              font-size: 11px;
+            }
+          }
         }
       }
 

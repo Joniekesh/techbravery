@@ -14,42 +14,48 @@
     transform: scale(1.01);
   }
 
-  .left {
-    position: relative;
-
-    .online {
-      position: absolute;
-      top: 2px;
-      left: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 8px;
-      width: 8px;
-      border-radius: 50%;
-      background-color: green;
-    }
-
-    img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
-
-  .middle {
+  .l {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3px;
+    align-items: center;
+    gap: 10px;
 
-    .name {
-      font-weight: bold;
+    .left {
+      position: relative;
+
+      .online {
+        position: absolute;
+        top: 2px;
+        left: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: green;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
     }
 
-    .lastMessage {
-      font-size: 14px;
+    .middle {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3px;
+
+      .name {
+        font-weight: bold;
+      }
+
+      .lastMessage {
+        font-size: 14px;
+      }
     }
   }
 
