@@ -147,11 +147,13 @@
         height: 70px;
         display: flex;
         align-items: center;
-        border-radius: 30px;
+        // border-radius: 30px;
         justify-content: space-between;
         overflow: hidden;
         gap: 10px;
         padding: 10px;
+        background-color: #2e475d;
+
         // background-color: lightgray;
 
         .sendContainer {

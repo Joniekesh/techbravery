@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { Toaster } from "sonner";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -31,6 +32,7 @@ import Register from "./pages/register/Register";
 import { getChats } from "./redux/actions/ChatActions";
 
 import { io } from "socket.io-client";
+import ResetPassword from "./pages/resetPassword/ResetPassword";
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
@@ -65,6 +67,7 @@ const App = () => {
     return (
       <>
         <ToastContainer />
+        <Toaster position="top-right" richColors />
         {openChat && (
           <Chat
             setOpenChat={setOpenChat}
@@ -96,6 +99,10 @@ const App = () => {
     {
       path: "/forgotpassword",
       element: <ForgotPassword />,
+    },
+    {
+      path: "/resetpassword/:resetToken",
+      element: <ResetPassword />,
     },
 
     {

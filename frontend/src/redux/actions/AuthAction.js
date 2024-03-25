@@ -1,4 +1,3 @@
-import axios from "axios";
 import {
   loginFailure,
   loginRequest,
@@ -9,7 +8,8 @@ import {
   registerSuccess,
 } from "../reducers/AuthReducer";
 import { makeRequest } from "../../utils/makeRequest";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { clearMessages } from "../reducers/MessageReducer";
 import { clearChats, clearCurrentChat } from "../reducers/ChatReducer";
 import { getChats } from "./ChatActions";
@@ -21,12 +21,12 @@ export const login = (data) => async (dispatch) => {
     if (res.status === 200) {
       dispatch(loginSuccess(res.data));
       dispatch(getChats());
-      toast.success("Login succesfull", { theme: "colored" });
+      toast.success("Login succesfull");
     }
   } catch (err) {
     dispatch(loginFailure(err.response.data));
     console.log(err);
-    toast.error(err.response.data, { theme: "colored" });
+    toast.error(err.response.data);
   }
 };
 
@@ -37,11 +37,11 @@ export const register = (data) => async (dispatch) => {
     if (res.status === 201) {
       dispatch(registerSuccess());
     }
-    toast.success("Registeration succesfull", { theme: "colored" });
+    toast.success("Registeration succesfull");
   } catch (err) {
     dispatch(registerFailure(err.response.data));
     console.log(err);
-    toast.error(err.response.data, { theme: "colored" });
+    toast.error(err.response.data);
   }
 };
 
@@ -57,6 +57,6 @@ export const logout = () => async (dispatch) => {
     }
   } catch (err) {
     console.log(err);
-    toast.error(err.response.data, { theme: "colored" });
+    toast.error(err.response.data);
   }
 };

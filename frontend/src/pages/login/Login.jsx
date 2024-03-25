@@ -7,6 +7,7 @@ import { login } from "../../redux/actions/AuthAction";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import { Toaster } from "sonner";
 
 const Login = () => {
   const { currentUser, loading, error } = useSelector((state) => state.auth);
@@ -39,6 +40,8 @@ const Login = () => {
 
   return (
     <div className="login">
+      <Toaster position="top-right" richColors />
+
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Enter email" />
