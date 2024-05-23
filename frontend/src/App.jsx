@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Toaster } from "sonner";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -33,16 +33,17 @@ import { getChats } from "./redux/actions/ChatActions";
 
 import { io } from "socket.io-client";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
+import { makeRequest } from "./utils/makeRequest";
+import { getCurrentChat } from "./redux/reducers/ChatReducer";
 
 const App = () => {
-  const [openChat, setOpenChat] = useState(false);
-  const [active, setActive] = useState(false);
   const [socket, setSocket] = useState(null);
   const [users, setUsers] = useState([]);
 
   const dispatch = useDispatch();
 
   const { currentUser, loading } = useSelector((state) => state.auth);
+  const { openChat, chats } = useSelector((state) => state.chat);
 
   useEffect(() => {
     setSocket(io("ws://localhost:8900"));
@@ -57,7 +58,8 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getChats());
-  }, [dispatch]);
+    currentUser?.role !== "SuperAdmin" && dispatch(getCurrentChat(chats[0]));
+  }, [dispatch, currentUser]);
 
   const Private = ({ children }) => {
     return !loading && currentUser ? children : <Navigate to="/login" />;
@@ -68,16 +70,8 @@ const App = () => {
       <>
         <ToastContainer />
         <Toaster position="top-right" richColors />
-        {openChat && (
-          <Chat
-            setOpenChat={setOpenChat}
-            active={active}
-            setActive={setActive}
-            users={users}
-            socket={socket}
-          />
-        )}
-        <ChatButton setOpenChat={setOpenChat} setActive={setActive} />
+        {openChat && <Chat users={users} socket={socket} />}
+        <ChatButton />
         <div>
           <Navbar />
           <Outlet />

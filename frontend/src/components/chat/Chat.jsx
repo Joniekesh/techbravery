@@ -1,26 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./chat.scss";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import { FaArrowLeftLong, FaFileImage, FaPaperclip } from "react-icons/fa6";
-import { IoSendSharp } from "react-icons/io5";
+import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import ChatBox from "../chatbox/ChatBox";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createMessage, getMessages } from "../../redux/actions/MessageAction";
-import { clearCurrentChat } from "../../redux/reducers/ChatReducer";
+import {
+  clearCurrentChat,
+  setOpenChat,
+} from "../../redux/reducers/ChatReducer";
 import ChatList from "../chatList/ChatList";
 import { clearMessages } from "../../redux/reducers/MessageReducer";
-import { toast } from "react-toastify";
+import Form from "../form/Form";
 
-const Chat = ({ setOpenChat, setActive, users, socket }) => {
-  const [text, setText] = useState("");
-  const [file, setFile] = useState(null);
-  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
-
-  console.log(uploadedImageUrl);
-
+const Chat = ({ users, socket }) => {
   const chatRef = useRef();
 
   const dispatch = useDispatch();
@@ -37,48 +33,7 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
   }, []);
 
   const handleClick = () => {
-    setOpenChat((prev) => !prev);
-    setActive((prev) => !prev);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!file && !text) {
-      return toast.error("Image and/or text is required", { theme: "colored" });
-    }
-
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "upload");
-
-    const response = await fetch(
-      "https://api.cloudinary.com/v1_1/joniekesh/image/upload",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-
-    const data = await response.json();
-    setUploadedImageUrl(data.secure_url);
-
-    let newMessage = {
-      chatId: currentChat?._id,
-      text,
-      img: uploadedImageUrl,
-    };
-
-    dispatch(createMessage(newMessage));
-
-    socket?.emit("sendMessage", {
-      sender: currentUser._id,
-      receiver: friend._id,
-      text,
-    });
-
-    setText("");
-    setFile("");
+    dispatch(setOpenChat());
   };
 
   // console.log(currentChat?._id);
@@ -88,32 +43,34 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
       <div className="chatContainer" data-aos="fade-top">
         <div className="top">
           <div className="groupItems">
-            <span className="icon">
-              <FaArrowLeftLong
-                onClick={() => {
-                  dispatch(clearCurrentChat());
-                  dispatch(clearMessages());
-                }}
-              />
-            </span>
+            {currentUser?.role === "SuperAdmin" && (
+              <span className="icon">
+                <FaArrowLeftLong
+                  onClick={() => {
+                    dispatch(clearCurrentChat());
+                    dispatch(clearMessages());
+                  }}
+                />
+              </span>
+            )}
 
             {friend && (
               <div className="image">
                 <img src="/assets/avatar.jpg" alt="" />
-                {users.some((user) => user.userId === friend?._id) && (
+                {users?.some((user) => user.userId === friend?._id) && (
                   <span className="online"></span>
                 )}
               </div>
             )}
             <div className="texts">
-              {currentUser.role === "SuperAdmin" ? (
+              {currentUser?.role === "SuperAdmin" ? (
                 <span className="name">
                   {friend?.firstname} {friend?.lastname}
                 </span>
               ) : (
                 <span className="name">Support</span>
               )}
-              {currentUser.role !== "SuperAdmin" && (
+              {currentUser?.role !== "SuperAdmin" && (
                 <div className="response">
                   <span className="dot"></span>
                   <span className="replyText">We reply immediately</span>
@@ -125,40 +82,29 @@ const Chat = ({ setOpenChat, setActive, users, socket }) => {
             <IoMdClose onClick={handleClick} />
           </span>
         </div>
+        <div className="chatBox"></div>
+
         {currentUser ? (
-          !currentChat && chats.length > 0 ? (
-            <ChatList currentChat={currentChat} users={users} />
+          // !currentChat && chats.length > 0 ?
+          currentUser?.role === "SuperAdmin" ? (
+            currentChat ? (
+              <div className="majorContent">
+                <div className="chatbox">
+                  <ChatBox socket={socket} />
+                </div>
+                <Form socket={socket} />
+              </div>
+            ) : (
+              <div className="majorContent">
+                <ChatList users={users} />
+              </div>
+            )
           ) : (
             <div className="majorContent">
               <div className="chatbox">
                 <ChatBox socket={socket} />
               </div>
-              <form onSubmit={handleSubmit}>
-                <div className="sendContainer">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                  ></textarea>
-                  <label htmlFor="imageFile" className="imageFile">
-                    <FaPaperclip />
-                  </label>
-                  <input
-                    type="file"
-                    id="imageFile"
-                    style={{ display: "none" }}
-                    onChange={(e) => setFile(e.target.files[0])}
-                  />
-                </div>
-                <button type="submit">
-                  <span>
-                    <IoSendSharp />
-                  </span>
-                </button>
-              </form>
+              <Form socket={socket} />
             </div>
           )
         ) : (

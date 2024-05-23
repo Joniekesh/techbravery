@@ -1,11 +1,9 @@
 import "./login.scss";
 import { getMetaData } from "../../utils/getMetaDate";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/AuthAction";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { Toaster } from "sonner";
 

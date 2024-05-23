@@ -13,3 +13,41 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  /* background-color: teal; Color of the thumb */
+  background-color: #ddd;
+  border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+/* Styling the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: teal; /* Color of the thumb on hover */
+}
+
+/* Styling the scrollbar track when clicked */
+::-webkit-scrollbar-thumb:active {
+  background-color: teal; /* Color of the thumb when clicked */
+}
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+  border-radius: 4px; /* Rounded corners of the track */
+}
+
+/* Styling the scrollbar track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #ddd; /* Color of the track on hover */
+}
+
+/* Styling the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* Color of the scrollbar corner */
+}

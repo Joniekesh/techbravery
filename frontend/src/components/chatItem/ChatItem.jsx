@@ -11,7 +11,7 @@ const ChatItem = ({ current, users }) => {
   const client = current?.members.find(
     (member) => member._id !== currentUser._id
   );
-  console.log(users);
+  console.log(currentChat);
 
   return (
     <div className="chatItem" onClick={() => dispatch(getCurrentChat(current))}>

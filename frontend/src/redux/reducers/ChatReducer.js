@@ -6,6 +6,7 @@ const chatSlice = createSlice({
     chats: [],
     chat: null,
     currentChat: null,
+    openChat: false,
     loading: false,
     error: null,
   },
@@ -25,6 +26,9 @@ const chatSlice = createSlice({
     clearCurrentChat: (state) => {
       state.currentChat = null;
     },
+    setOpenChat: (state) => {
+      state.openChat = !state.openChat;
+    },
     clearChats: (state) => {
       state.chats = [];
     },
@@ -37,6 +41,7 @@ export const {
   getChatsSuccess,
   getChatsFailure,
   getCurrentChat,
+  setOpenChat,
   clearCurrentChat,
   clearChats,
 } = actions;

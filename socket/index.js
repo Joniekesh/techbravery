@@ -5,8 +5,8 @@ const cors = require("cors");
 const server = http.createServer();
 const io = new Server(server, {
   cors: {
-    // origin: "http://localhost:5173",
-    origin: "https://techbravery.netlify.app",
+    origin: "http://localhost:5173",
+    // origin: "https://techbravery.netlify.app",
   },
 });
 
@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
   socket.on("sendMessage", ({ sender, receiver, text }) => {
     const receiverUser = getUser(receiver);
 
-    io.to(receiverUser.socketId).emit("getMessage", { sender, text });
+    io.to(receiverUser?.socketId).emit("getMessage", { sender, text });
   });
 
   socket.on("disconnect", () => {
