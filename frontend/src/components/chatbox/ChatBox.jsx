@@ -45,9 +45,12 @@ const ChatBox = ({ socket }) => {
                   </div>
                 )}
                 <div className="right">
-                  <p className="text">{message.text}</p>
                   {message.img && <img src={message.img} alt="" />}
-                  <span className="time">{format(message.createdAt)}</span>
+                  <p className="text">{message.text}</p>
+                  <span className="time">
+                    {format(message.createdAt)}(
+                    {new Date(message.createdAt).toLocaleString()})
+                  </span>
                 </div>
               </div>
             ))
