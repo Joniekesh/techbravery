@@ -16,6 +16,12 @@ import ChatList from "../chatList/ChatList";
 import { clearMessages } from "../../redux/reducers/MessageReducer";
 import Form from "../form/Form";
 
+// ..
+AOS.init({
+  // throttleDelay: 300,
+  duration: 2000,
+});
+
 const Chat = ({ users, socket }) => {
   const chatRef = useRef();
 

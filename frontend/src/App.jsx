@@ -37,6 +37,8 @@ import { makeRequest } from "./utils/makeRequest";
 import { getCurrentChat } from "./redux/reducers/ChatReducer";
 import Technologies from "./pages/technologies/Technologies";
 import OurTeam from "./pages/ourteam/OurTeam";
+import Projects from "./pages/projects/Projects";
+import Project from "./pages/project/Project";
 
 const App = () => {
   const [socket, setSocket] = useState(null);
@@ -140,6 +142,14 @@ const App = () => {
         {
           path: "/team",
           element: <OurTeam />,
+        },
+        {
+          path: "/project",
+          element: <Projects />,
+        },
+        {
+          path: "/project/:id",
+          element: <Project />,
         },
         {
           path: "/SuperAdmin",

@@ -1,21 +1,144 @@
+@import "../../global.scss";
+
 .features {
-  height: 100vh;
-  width: 100%;
-  padding: 50px;
   background-color: #99b9c4;
+  height: max-content;
+  width: 100%;
+  padding: 20px 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 
-  h1 {
-    text-align: center;
+  @include tablet {
+    padding: 10px;
   }
+
+  .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+
+    h1 {
+      text-align: center;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      background-color: $bgPrimary;
+      color: $textLight;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
   .items {
     display: flex;
     flex-wrap: wrap;
-  }
+    gap: 20px;
 
-  .feature {
-    width: 33%;
+    @include tablet1000 {
+      align-items: center;
+      overflow-x: scroll;
+      flex-wrap: unset;
+    }
+
+    .item {
+      width: 30%;
+      height: 500px;
+      -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+      box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+      background-color: $bgLight;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 10px;
+      gap: 20px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      @include tablet1000 {
+        min-width: 300px;
+      }
+
+      .itemTop {
+        flex: 1;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 90%;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+
+      .itemBottom {
+        flex: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+          position: absolute;
+          top: -20px;
+          left: 0;
+          background-color: $bgPrimary;
+          color: $textLight;
+          padding: 3px;
+          border-radius: 3px;
+          font-size: 12px;
+        }
+
+        h2 {
+          color: $bgPrimary;
+          margin-top: 10px;
+        }
+
+        p {
+          line-height: 1.5;
+          text-align: justify;
+        }
+
+        button {
+          width: 100%;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          background-color: teal;
+          color: white;
+          font-size: 16px;
+          border-radius: 5px;
+          transition: all 0.4s ease;
+
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
+    }
   }
 }
