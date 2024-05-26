@@ -207,7 +207,7 @@ const Menu = ({ setOpenMenu, width }) => {
                           key={item.id}
                           onClick={() => setOpenMenu((prev) => !prev)}
                         >
-                          <Link to="/works">{item.name}</Link>
+                          <Link to={item.url}>{item.name}</Link>
                         </span>
                       ))}
                     </>
@@ -271,13 +271,13 @@ const Menu = ({ setOpenMenu, width }) => {
               {teamToggle && (
                 <>
                   {teams.map((team) => (
-                    <div className="teamItem" key={team.id}>
+                    <Link to={team.url} className="teamItem" key={team.id}>
                       <img src={team.pic} alt="" />
                       <div className="teamContainer">
                         <span className="name">{team.name}</span>
                         <span className="position">{team.position}</span>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </>
               )}

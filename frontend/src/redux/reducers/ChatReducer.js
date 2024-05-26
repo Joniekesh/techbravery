@@ -29,6 +29,9 @@ const chatSlice = createSlice({
     setOpenChat: (state) => {
       state.openChat = !state.openChat;
     },
+    setActivePage: (state, action) => {
+      state.activePage = action.payload;
+    },
     clearChats: (state) => {
       state.chats = [];
     },

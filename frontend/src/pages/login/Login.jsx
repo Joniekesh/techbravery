@@ -1,5 +1,5 @@
 import "./login.scss";
-import { getMetaData } from "../../utils/getMetaDate";
+import { getMetaData } from "../../utils/getMetaData";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/AuthAction";

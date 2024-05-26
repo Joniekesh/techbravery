@@ -64,6 +64,10 @@
             border-radius: 5px;
           }
 
+          &:hover .icon {
+            background-color: rgb(255, 148, 21);
+          }
+
           span {
             font-weight: bold;
           }
@@ -76,7 +80,7 @@
             height: 20px;
             cursor: pointer;
             border-radius: 50%;
-            background-color: gray;
+            background-color: teal;
             font-weight: bold;
           }
         }

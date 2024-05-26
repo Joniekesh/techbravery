@@ -35,6 +35,8 @@ import { io } from "socket.io-client";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
 import { makeRequest } from "./utils/makeRequest";
 import { getCurrentChat } from "./redux/reducers/ChatReducer";
+import Technologies from "./pages/technologies/Technologies";
+import OurTeam from "./pages/ourteam/OurTeam";
 
 const App = () => {
   const [socket, setSocket] = useState(null);
@@ -130,6 +132,14 @@ const App = () => {
         {
           path: "/aboutus",
           element: <AboutUs />,
+        },
+        {
+          path: "/technology",
+          element: <Technologies />,
+        },
+        {
+          path: "/team",
+          element: <OurTeam />,
         },
         {
           path: "/SuperAdmin",

@@ -1,21 +1,93 @@
 @import "../../global.scss";
 
-.link {
-  cursor: pointer;
-  font-size: 20px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+.navLink {
+  position: relative;
 
-  @include tablet1000 {
+  .link {
+    cursor: pointer;
     font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    @include tablet1000 {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: teal;
+    }
+
+    &.active {
+      background-color: teal;
+    }
   }
 
-  &:hover {
-    background-color: teal;
+  .lists {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 40vw;
+    min-height: 30vh;
+    background-color: $bgPrimary;
+    padding: 20px;
+    max-width: 400px;
+    font-size: 13px;
+    z-index: -1;
+    border-radius: 0px 0px 10px 10px;
   }
 
-  &.active {
-    background-color: teal;
+  &:hover .lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .listsContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .listItem {
+      background-color: teal;
+      color: white;
+      padding: 6px;
+      border-radius: 30px;
+      width: max-content;
+      height: max-content;
+
+      &:hover {
+        background-color: rgb(255, 148, 21);
+      }
+    }
+
+    .dropdownList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .dropdownListItem {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: 1pz solid white;
+
+        .name {
+          font-weight: bold;
+          font-size: 17px;
+          color: teal;
+        }
+
+        .title {
+          font-size: 13px;
+
+          &:hover {
+            color: rgb(255, 148, 21);
+          }
+        }
+      }
+    }
   }
 }

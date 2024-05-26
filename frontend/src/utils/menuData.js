@@ -3,6 +3,14 @@ export const aboutus = [
     id: 1,
     name: "About Us",
   },
+  {
+    id: 2,
+    name: "Our History",
+  },
+  {
+    id: 3,
+    name: "Other Information",
+  },
 ];
 
 export const services = [
@@ -189,48 +197,63 @@ export const technologies = [
       {
         id: 1,
         name: "NodeJS",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
-        name: ".NET",
-        url: "/",
+        name: "NextJS",
+        url: "/technology",
       },
       {
         id: 3,
-        name: "PHP",
-        url: "/",
+        name: ".NET",
+        url: "/technology",
       },
       {
         id: 4,
-        name: "Django",
-        url: "/",
+        name: "PHP",
+        url: "/technology",
       },
       {
         id: 5,
+        name: "Django",
+        url: "/technology",
+      },
+      {
+        id: 6,
         name: "Java/SpringBoot",
-        url: "/",
+        url: "/technology",
       },
     ],
   },
   {
     id: 2,
-    name: "FrontEnd",
+    name: "Frontend",
     data: [
       {
         id: 1,
         name: "React",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
-        name: "Angular",
-        url: "/",
+        name: "NextJS",
+        url: "/technology",
       },
       {
         id: 3,
+        name: "Angular",
+        url: "/technology",
+      },
+      {
+        id: 4,
+        name: "Vue",
+        url: "/technology",
+      },
+      {
+        id: 5,
         name: "Full Stack",
-        url: "/",
+        url: "/technology",
       },
     ],
   },
@@ -241,37 +264,37 @@ export const technologies = [
       {
         id: 1,
         name: "Android",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
         name: "iOS",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 3,
         name: "React Native",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 4,
         name: "Java",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 5,
         name: "Flutter",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 6,
         name: "Hybrid",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 7,
         name: "Ionic",
-        url: "/",
+        url: "/technology",
       },
     ],
   },
@@ -282,7 +305,7 @@ export const technologies = [
       {
         id: 1,
         name: "WooCommerce",
-        url: "/",
+        url: "/technology",
       },
     ],
   },
@@ -293,12 +316,12 @@ export const technologies = [
       {
         id: 1,
         name: "WordPress",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
         name: "Drupal",
-        url: "/",
+        url: "/technology",
       },
     ],
   },
@@ -309,17 +332,22 @@ export const technologies = [
       {
         id: 1,
         name: "MongoDB",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
         name: "MySQL",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 3,
         name: "Postgres",
-        url: "/",
+        url: "/technology",
+      },
+      {
+        id: 4,
+        name: "Firebase",
+        url: "/technology",
       },
     ],
   },
@@ -330,12 +358,17 @@ export const technologies = [
       {
         id: 1,
         name: "Amazon Web Services",
-        url: "/",
+        url: "/technology",
       },
       {
         id: 2,
         name: "Google Cloud Platform",
-        url: "/",
+        url: "/technology",
+      },
+      {
+        id: 3,
+        name: "Digital Ocean",
+        url: "/technology",
       },
     ],
   },
@@ -345,12 +378,12 @@ export const works = [
   {
     id: 1,
     name: "Web Applications",
-    url: "/",
+    url: "/works",
   },
   {
     id: 2,
     name: "Android/iOS Applications",
-    url: "/",
+    url: "/works",
   },
 ];
 
@@ -360,35 +393,35 @@ export const teams = [
     name: "Jonie Dev",
     position: "Backend Engineer",
     pic: "/assets/man.jpg",
-    url: "/",
+    url: "/team",
   },
   {
     id: 2,
     name: "Lucy Dev",
     position: "Frontend Engineer",
     pic: "/assets/woman1.jpg",
-    url: "/",
+    url: "/team",
   },
   {
     id: 3,
     name: "Sam Smith",
     position: "Product Analyst",
     pic: "/assets/man2.jpg",
-    url: "/",
+    url: "/team",
   },
   {
     id: 4,
     name: "Thomas Man",
     position: "UI/UX Designer",
     pic: "/assets/man3.jpg",
-    url: "/",
+    url: "/team",
   },
   {
     id: 5,
     name: "Kate Shaw",
     position: "Customer Care Rep",
     pic: "/assets/woman2.jpg",
-    url: "/",
+    url: "/team",
   },
 ];
 
@@ -407,5 +440,389 @@ export const digitalProducts = [
     id: 3,
     name: "Wordpress plugins",
     url: "/store",
+  },
+];
+
+export const combinedData = [
+  {
+    id: 1,
+    url: "/aboutus",
+    data: [
+      {
+        id: 1,
+        name: "About Us",
+      },
+      {
+        id: 2,
+        name: "Our History",
+      },
+      {
+        id: 3,
+        name: "Other Information",
+      },
+    ],
+  },
+  {
+    id: 2,
+    url: "/services",
+    data: [
+      {
+        id: 1,
+        name: "Responsive Website Design",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "UI/UX Design",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "Graphic Design",
+        url: "/",
+      },
+      {
+        id: 4,
+        name: "E-Commerce Development",
+        url: "/",
+      },
+      {
+        id: 5,
+        name: "Website Development",
+        url: "/",
+      },
+      {
+        id: 6,
+        name: "Frontend Development",
+        url: "/",
+      },
+      {
+        id: 7,
+        name: "Backend Development",
+        url: "/",
+      },
+      {
+        id: 8,
+        name: "Search Engine Optimizatio (SEO)",
+        url: "/",
+      },
+      {
+        id: 9,
+        name: "CMS Services",
+        url: "/",
+      },
+      {
+        id: 10,
+        name: "Website Security",
+        url: "/",
+      },
+      {
+        id: 11,
+        name: "Website Redesign",
+        url: "/",
+      },
+      {
+        id: 12,
+        name: "Mobile App Design and Development",
+        url: "/",
+      },
+      {
+        id: 13,
+        name: "Social Media Integration",
+        url: "/",
+      },
+      {
+        id: 14,
+        name: "Web Accessibility",
+        url: "/",
+      },
+      {
+        id: 15,
+        name: "Content Creation",
+        url: "/",
+      },
+      {
+        id: 16,
+        name: "Progressive Web Apps",
+        url: "/",
+      },
+      {
+        id: 17,
+        name: "Startups",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 3,
+    url: "/works",
+    data: [
+      {
+        id: 1,
+        name: "Web Applications",
+        url: "/",
+      },
+      {
+        id: 2,
+        name: "Android/iOS Applications",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 4,
+    url: "/store",
+    data: [
+      {
+        id: 1,
+        name: "Electronic Books",
+        url: "/store",
+      },
+      {
+        id: 2,
+        name: "Tunky Websites",
+        url: "/store",
+      },
+      {
+        id: 3,
+        name: "Wordpress plugins",
+        url: "/store",
+      },
+    ],
+  },
+  {
+    id: 5,
+    url: "/contact",
+    data: [
+      {
+        id: 1,
+        name: "Email",
+        url: "/contact",
+      },
+      {
+        id: 2,
+        name: "Phone",
+        url: "/stcontactore",
+      },
+      {
+        id: 3,
+        name: "Facebook",
+        url: "/contact",
+      },
+      {
+        id: 4,
+        name: "Instagram",
+        url: "/contact",
+      },
+      {
+        id: 5,
+        name: "TikTok",
+        url: "/contact",
+      },
+      {
+        id: 6,
+        name: "WhatsApp",
+        url: "/contact",
+      },
+      {
+        id: 7,
+        name: "Linkedin",
+        url: "/contact",
+      },
+      {
+        id: 8,
+        name: "Discord",
+        url: "/contact",
+      },
+    ],
+  },
+  {
+    id: 6,
+    url: "/technology",
+    type: "technology",
+    data: [
+      {
+        id: 1,
+        name: "Backend",
+        data: [
+          {
+            id: 1,
+            name: "NodeJS",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "NextJS",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: ".NET",
+            url: "/technology",
+          },
+          {
+            id: 4,
+            name: "PHP",
+            url: "/technology",
+          },
+          {
+            id: 5,
+            name: "Django",
+            url: "/technology",
+          },
+          {
+            id: 6,
+            name: "Java/SpringBoot",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Frontend",
+        data: [
+          {
+            id: 1,
+            name: "React",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "NextJS",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: "Angular",
+            url: "/technology",
+          },
+          {
+            id: 4,
+            name: "Vue",
+            url: "/technology",
+          },
+          {
+            id: 5,
+            name: "Full Stack",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "Mobile",
+        data: [
+          {
+            id: 1,
+            name: "Android",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "iOS",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: "React Native",
+            url: "/technology",
+          },
+          {
+            id: 4,
+            name: "Java",
+            url: "/technology",
+          },
+          {
+            id: 5,
+            name: "Flutter",
+            url: "/technology",
+          },
+          {
+            id: 6,
+            name: "Hybrid",
+            url: "/technology",
+          },
+          {
+            id: 7,
+            name: "Ionic",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 4,
+        name: "Ecommerce",
+        data: [
+          {
+            id: 1,
+            name: "WooCommerce",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "CMS",
+        data: [
+          {
+            id: 1,
+            name: "WordPress",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "Drupal",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 6,
+        name: "Databases",
+        data: [
+          {
+            id: 1,
+            name: "MongoDB",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "MySQL",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: "Postgres",
+            url: "/technology",
+          },
+          {
+            id: 4,
+            name: "Firebase",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 7,
+        name: "Cloud Platforms",
+        data: [
+          {
+            id: 1,
+            name: "Amazon Web Services",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "Google Cloud Platform",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: "Digital Ocean",
+            url: "/technology",
+          },
+        ],
+      },
+    ],
   },
 ];

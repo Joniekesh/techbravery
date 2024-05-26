@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { IoNotifications } from "react-icons/io5";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { technologies } from "../../utils/menuData";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -48,8 +49,8 @@ const Navbar = () => {
         <img src="/assets/logo2.jpg" alt="" />
       </Link>
       <div className="links">
-        {links.map((link) => (
-          <NavLink link={link} key={link.id} />
+        {links.map((link, index) => (
+          <NavLink link={link} key={link.id} index={index} />
         ))}
       </div>
       <div className="right">

@@ -19,9 +19,13 @@ const Footer = () => {
             <p>Technologies</p>
             {technologies.map((technology) => (
               <div key={technology.id}>
-                {technology.data.map((item) => (
-                  <span key={item.id}>{item.name}</span>
-                ))}
+                <div className="techList">
+                  {technology.data.map((item) => (
+                    <span className="techlistItem" key={item.id}>
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -51,16 +55,16 @@ const Footer = () => {
           <a href="http://facebook.com" target="_blank">
             <FaFacebook />
           </a>
-          <a href="http://twitter.com">
+          <a href="http://twitter.com" target="_blank">
             <FaSquareXTwitter />
           </a>
-          <a href="http://instagram.com">
+          <a href="http://instagram.com" target="_blank">
             <GrInstagram />
           </a>
-          <a href="http://linkein.com">
+          <a href="http://linkedin.com" target="_blank">
             <FaLinkedin />
           </a>
-          <a href="http://youtube.com">
+          <a href="http://youtube.com" target="_blank">
             <FaYoutube />
           </a>
         </div>

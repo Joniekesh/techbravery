@@ -35,6 +35,13 @@
         p {
           font-weight: bold;
           padding: 5px;
+          color: teal;
+        }
+
+        .techList {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
 
         span {
