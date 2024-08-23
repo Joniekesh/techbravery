@@ -10,7 +10,7 @@ const ChatButton = () => {
 
   const handleClick = () => {
     if (
-      chats.length === 1 &&
+      chats?.length === 1 &&
       !currentChat &&
       currentUser?.role !== "SuperAdmin"
     ) {

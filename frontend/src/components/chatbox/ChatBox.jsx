@@ -29,24 +29,24 @@ const ChatBox = ({ socket }) => {
       ) : (
         <>
           {messages.length > 0 ? (
-            messages.map((message) => (
+            messages?.map((message) => (
               <div
-                key={message._id}
+                key={message?._id}
                 className={
-                  currentUser._id === message.sender
+                  currentUser?._id === message?.sender
                     ? "chatBoxItem current"
                     : "chatBoxItem"
                 }
                 ref={messageRef}
               >
-                {currentUser._id !== message.sender && (
+                {currentUser?._id !== message?.sender && (
                   <div className="left">
                     <img src="/assets/avatar.jpg" alt="" />
                   </div>
                 )}
                 <div className="right">
-                  {message.img && <img src={message.img} alt="" />}
-                  <p className="text">{message.text}</p>
+                  {message?.img && <img src={message?.img} alt="" />}
+                  <p className="text">{message?.text}</p>
                   <span className="time">
                     {format(message.createdAt)}(
                     {new Date(message.createdAt).toLocaleString()})

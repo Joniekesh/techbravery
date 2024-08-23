@@ -31,7 +31,7 @@ const Chat = ({ users, socket }) => {
   const { currentChat, chats } = useSelector((state) => state.chat);
 
   const friend = currentChat?.members.find(
-    (member) => member._id !== currentUser._id
+    (member) => member?._id !== currentUser?._id
   );
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const Chat = ({ users, socket }) => {
             {friend && (
               <div className="image">
                 <img src="/assets/avatar.jpg" alt="" />
-                {users?.some((user) => user.userId === friend?._id) && (
+                {users?.some((user) => user?.userId === friend?._id) && (
                   <span className="online"></span>
                 )}
               </div>
