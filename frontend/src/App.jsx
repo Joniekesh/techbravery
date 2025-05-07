@@ -41,24 +41,12 @@ import Projects from "./pages/projects/Projects";
 import Project from "./pages/project/Project";
 
 const App = () => {
-  const [socket, setSocket] = useState(null);
   const [users, setUsers] = useState([]);
 
   const dispatch = useDispatch();
 
   const { currentUser, loading } = useSelector((state) => state.auth);
   const { openChat, chats } = useSelector((state) => state.chat);
-
-  useEffect(() => {
-    setSocket(io("ws://localhost:8900"));
-  }, []);
-
-  useEffect(() => {
-    socket?.emit("addUser", currentUser?._id);
-    socket?.on("getUsers", (users) => {
-      setUsers(users.filter((user) => user.userId !== null));
-    });
-  }, [currentUser?._id, socket]);
 
   useEffect(() => {
     dispatch(getChats());
@@ -74,7 +62,7 @@ const App = () => {
       <>
         <ToastContainer />
         <Toaster position="top-right" richColors />
-        {openChat && <Chat users={users} socket={socket} />}
+        {openChat && <Chat users={users} />}
         <ChatButton />
         <div>
           <Navbar />

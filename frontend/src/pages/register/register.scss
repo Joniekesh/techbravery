@@ -24,7 +24,38 @@
     }
 
     input {
-      padding: 10px;
+      padding: 14px;
+      font-size: 16px;
+      outline: none;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+
+      &:focus {
+        border: 2px solid teal;
+      }
+    }
+
+    .passwordInput {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+      padding-right: 12px;
+      border-radius: 5px;
+
+      input {
+        border: none;
+        width: 100%;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+      }
     }
 
     .action {
@@ -57,16 +88,22 @@
     }
 
     button {
-      padding: 10px;
+      padding: 14px;
       cursor: pointer;
       border: none;
       background-color: teal;
       color: white;
       transition: all 0.3s ease;
       font-weight: bold;
+      border-radius: 5px;
 
       &:hover {
         transform: scale(1.02);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
       }
     }
   }

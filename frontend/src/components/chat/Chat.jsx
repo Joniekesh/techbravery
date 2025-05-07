@@ -22,7 +22,7 @@ AOS.init({
   duration: 2000,
 });
 
-const Chat = ({ users, socket }) => {
+const Chat = ({ users }) => {
   const chatRef = useRef();
 
   const dispatch = useDispatch();
@@ -96,9 +96,9 @@ const Chat = ({ users, socket }) => {
             currentChat ? (
               <div className="majorContent">
                 <div className="chatbox">
-                  <ChatBox socket={socket} />
+                  <ChatBox />
                 </div>
-                <Form socket={socket} />
+                <Form />
               </div>
             ) : (
               <div className="majorContent">
@@ -108,9 +108,9 @@ const Chat = ({ users, socket }) => {
           ) : (
             <div className="majorContent">
               <div className="chatbox">
-                <ChatBox socket={socket} />
+                <ChatBox />
               </div>
-              <Form socket={socket} />
+              <Form />
             </div>
           )
         ) : (

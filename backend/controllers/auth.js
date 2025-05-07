@@ -33,9 +33,9 @@ export const register = async (req, res, next) => {
       if (superAdmin) {
         const newChat = new Chat({ members: [savedUser._id, superAdmin._id] });
         const createdChat = await newChat.save();
-        return res.status(200).json(createdChat);
+        return res.status(201).json(createdChat);
       } else {
-        return res.status(200).json(savedUser);
+        return res.status(201).json(savedUser);
       }
     }
   } catch (err) {

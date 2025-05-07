@@ -6,7 +6,7 @@ import { IoSendSharp } from "react-icons/io5";
 import { FaPaperclip } from "react-icons/fa6";
 import { createMessage } from "../../redux/actions/MessageAction";
 
-const Form = ({ socket }) => {
+const Form = () => {
   const [text, setText] = useState("");
   const [file, setFile] = useState(null);
 
@@ -56,12 +56,6 @@ const Form = ({ socket }) => {
 
         data.url && dispatch(createMessage(newMessage));
 
-        socket?.emit("sendMessage", {
-          sender: currentUser?._id,
-          receiver: friend?._id,
-          text,
-        });
-
         setText("");
         setFile("");
       } catch (error) {
@@ -74,12 +68,6 @@ const Form = ({ socket }) => {
       };
 
       dispatch(createMessage(newMessage));
-
-      socket?.emit("sendMessage", {
-        sender: currentUser?._id,
-        receiver: friend?._id,
-        text,
-      });
 
       setText("");
       setFile("");

@@ -13,7 +13,7 @@ export const getChats = () => async (dispatch) => {
       dispatch(getChatsSuccess(res.data));
     }
   } catch (err) {
-    dispatch(getChatsFailure(err.response.data));
+    dispatch(getChatsFailure(err?.response?.data));
     console.log(err);
   }
 };

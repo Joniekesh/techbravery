@@ -1,13 +1,15 @@
 import "./login.scss";
 import { getMetaData } from "../../utils/getMetaData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/AuthAction";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Toaster } from "sonner";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
+  const [show, setShow] = useState(false);
   const { currentUser, loading, error } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
@@ -43,7 +45,23 @@ const Login = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Enter email" />
-        <input type="password" placeholder="Enter password" />
+        <div className="passwordInput">
+          <input
+            type={show ? "text" : "password"}
+            placeholder="Enter password"
+          />
+          {show ? (
+            <FaRegEye
+              className="icon"
+              onClick={() => setShow((prev) => !prev)}
+            />
+          ) : (
+            <FaRegEyeSlash
+              className="icon"
+              onClick={() => setShow((prev) => !prev)}
+            />
+          )}
+        </div>
         <div className="rDiv">
           <div className="remember">
             <input type="checkbox" />

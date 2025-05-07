@@ -22,9 +22,9 @@ const authSlice = createSlice({
     registerRequest: (state) => {
       state.loading = true;
     },
-    registerSuccess: (state) => {
+    registerSuccess: (state, action) => {
       state.loading = false;
-      // state.currentUser = action.payload;
+      state.currentUser = action.payload;
     },
     registerFailure: (state, action) => {
       state.loading = false;
