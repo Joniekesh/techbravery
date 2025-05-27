@@ -51,7 +51,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="heroImg">
-          <img src={data[currentSlide].image} alt="" />
+          <img src={data[0].image} alt="" />
         </div>
       </div>
       <Welcome />
