@@ -9,20 +9,12 @@ import Slider from "../../components/slider/Slider";
 const data = [
   {
     id: 1,
-    title: "always fresh & always crispy & always hot",
-    image: "/assets/bg2.jpg",
-    bg: "/assets/bg4.jpg",
-  },
-  {
-    id: 2,
-    title: "we deliver your order wherever you are in NY",
-    image: "/assets/img3.jpg",
+    image: "/assets/img3upd.jpg",
     bg: "/assets/bg.jpg",
   },
   {
-    id: 3,
-    title: "the best pizza to share with your family",
-    image: "/assets/img2.jpg",
+    id: 2,
+    image: "/assets/img2upd.jpg",
     bg: "/assets/img8.jpg",
   },
 ];
