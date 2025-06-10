@@ -4,6 +4,9 @@ $bgLight: white;
 $bgDark: #000;
 $textDark: #333;
 $textLight: #fff;
+$orangeColor: orangered;
+$tealColor: teal;
+$crimsonColor: crimson;
 
 @mixin mobile {
   @media (max-width: 600px) {

@@ -52,7 +52,7 @@
           width: 120px;
           height: 120px;
           border-radius: 50%;
-          border: 2px solid teal;
+          border: 2px solid $tealColor;
           object-fit: cover;
         }
       }
@@ -73,7 +73,7 @@
         hr {
           height: 3px;
           font-weight: bold;
-          background-color: teal;
+          background-color: $tealColor;
         }
 
         .userInfo {

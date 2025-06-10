@@ -31,7 +31,7 @@
       border-radius: 5px;
 
       &:focus {
-        border: 2px solid teal;
+        border: 2px solid $tealColor;
       }
     }
 
@@ -64,7 +64,7 @@
       justify-content: space-between;
 
       .log {
-        border-bottom: 2px solid teal;
+        border-bottom: 2px solid $tealColor;
       }
     }
 
@@ -91,8 +91,8 @@
       padding: 14px;
       cursor: pointer;
       border: none;
-      background-color: teal;
-      color: white;
+      background-color: $tealColor;
+      color: $textLight;
       transition: all 0.3s ease;
       font-weight: bold;
       border-radius: 5px;

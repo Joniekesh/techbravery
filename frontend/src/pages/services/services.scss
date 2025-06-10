@@ -31,11 +31,11 @@
       span {
         font-size: 24px;
         font-weight: bold;
-        color: teal;
+        color: $tealColor;
       }
 
       .visit {
-        border-bottom: 2px solid teal;
+        border-bottom: 2px solid $tealColor;
         color: $bgPrimary;
         font-weight: bold;
       }

@@ -50,7 +50,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="socials">
-        <Link to="/">TechBravery</Link>
         <div className="sociallinks">
           <a href="http://facebook.com" target="_blank">
             <FaFacebook />

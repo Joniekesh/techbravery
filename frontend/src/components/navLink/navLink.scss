@@ -15,11 +15,11 @@
     }
 
     &:hover {
-      background-color: teal;
+      background-color: $tealColor;
     }
 
     &.active {
-      background-color: teal;
+      background-color: $tealColor;
     }
   }
 
@@ -51,15 +51,15 @@
     gap: 20px;
 
     .listItem {
-      background-color: teal;
-      color: white;
+      background-color: $tealColor;
+      color: $textLight;
       padding: 6px;
       border-radius: 30px;
       width: max-content;
       height: max-content;
 
       &:hover {
-        background-color: rgb(255, 148, 21);
+        background-color: $orangeColor;
       }
     }
 
@@ -72,19 +72,19 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        border-bottom: 1pz solid white;
+        border-bottom: 1px solid $textLight;
 
         .name {
           font-weight: bold;
           font-size: 17px;
-          color: teal;
+          color: $tealColor;
         }
 
         .title {
           font-size: 13px;
 
           &:hover {
-            color: rgb(255, 148, 21);
+            color: $orangeColor;
           }
         }
       }

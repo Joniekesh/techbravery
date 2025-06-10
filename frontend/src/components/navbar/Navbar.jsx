@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="/" className="logo">
-        <img src="/assets/logo8.jpg" alt="" />
+        <img src="/logo8.jpg" alt="" />
       </Link>
       <div className="links">
         {links.map((link, index) => (
@@ -69,7 +69,7 @@ const Navbar = () => {
               className="dropdown"
               onClick={() => setToggle((prev) => !prev)}
             >
-              <img src="/assets/myprofilepic.jpg" alt="" />
+              <img src="/myprofilepic.jpg" alt="" />
               <span className="caret">
                 <FaCaretDown />
               </span>

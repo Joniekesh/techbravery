@@ -1,8 +1,10 @@
+@import "../../global.scss";
+
 .orders {
   height: 100vh;
   width: 100vw;
   background-color: #2e475d;
-  color: white;
+  color: $textLight;
   display: flex;
   align-items: center;
   justify-content: center;

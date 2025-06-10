@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .chatItem {
   padding: 10px;
   display: flex;
@@ -9,8 +11,8 @@
   gap: 10px;
 
   &:hover {
-    background-color: teal;
-    color: white;
+    background-color: $tealColor;
+    color: $textLight;
     transform: scale(1.01);
   }
 
@@ -32,7 +34,7 @@
         height: 8px;
         width: 8px;
         border-radius: 50%;
-        background-color: green;
+        background-color: $tealColor;
       }
 
       img {

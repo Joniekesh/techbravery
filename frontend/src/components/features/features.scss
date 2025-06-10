@@ -18,8 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: teal;
-    color: white;
+    background-color: $tealColor;
+    color: $textLight;
     padding: 10px;
 
     h1 {
@@ -128,8 +128,8 @@
           border: none;
           padding: 10px;
           cursor: pointer;
-          background-color: teal;
-          color: white;
+          background-color: $tealColor;
+          color: $textLight;
           font-size: 16px;
           border-radius: 5px;
           transition: all 0.4s ease;

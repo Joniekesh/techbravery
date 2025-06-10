@@ -92,7 +92,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: rgb(255, 148, 21);
+          background-color: $orangeColor;
           padding: 10px;
           height: 100%;
           transition: all 0.8s ease;
@@ -106,7 +106,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: teal;
+          background-color: $tealColor;
           padding: 10px;
           height: 100%;
           transition: all 0.8s ease;
@@ -127,11 +127,11 @@
         }
 
         &:hover .text {
-          background-color: teal;
+          background-color: $tealColor;
         }
 
         &:hover .arrow {
-          background-color: rgb(255, 148, 21);
+          background-color: $orangeColor;
         }
       }
     }
@@ -142,7 +142,7 @@
       font-size: 24px;
       cursor: pointer;
       z-index: 5;
-      color: white;
+      color: $textLight;
 
       @include mobile {
         font-size: 30px;
@@ -188,8 +188,8 @@
           position: absolute;
           top: -10px;
           left: 10px;
-          background-color: rgb(255, 148, 21);
-          color: white;
+          background-color: $orangeColor;
+          color: $textLight;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -205,8 +205,8 @@
       cursor: pointer;
       border: none;
       padding: 10px;
-      background-color: teal;
-      color: white;
+      background-color: $tealColor;
+      color: $textLight;
       border-radius: 5px;
       transition: all 0.3s ease;
 
@@ -219,8 +219,8 @@
       cursor: pointer;
       border: none;
       padding: 5px;
-      background-color: crimson;
-      color: white;
+      background-color: $crimsonColor;
+      color: $textLight;
     }
   }
 
@@ -242,17 +242,17 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      border-bottom: 1px solid teal;
+      border-bottom: 1px solid $tealColor;
       padding: 6px;
       cursor: pointer;
 
       &:hover {
-        background-color: teal;
+        background-color: $tealColor;
       }
     }
 
     &:hover .logoutBtn {
-      background-color: crimson;
+      background-color: $crimsonColor;
     }
   }
 }

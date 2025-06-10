@@ -11,7 +11,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: crimson;
+  background-color: $crimsonColor;
   animation: blink 2s infinite;
 
   @include mobile {

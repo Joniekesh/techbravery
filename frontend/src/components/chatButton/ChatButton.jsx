@@ -21,7 +21,7 @@ const ChatButton = () => {
 
   return (
     <div className="chatButton" onClick={handleClick}>
-      <img src="/assets/chatbtnicon3.jpg" alt="" />
+      <img src="/chatbtnicon3.jpg" alt="" />
     </div>
   );
 };

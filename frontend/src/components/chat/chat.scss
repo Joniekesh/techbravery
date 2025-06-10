@@ -45,7 +45,7 @@
           font-size: 24px;
 
           &:hover {
-            color: crimson;
+            color: $crimsonColor;
           }
         }
 
@@ -65,7 +65,7 @@
             height: 8px;
             width: 8px;
             border-radius: 50%;
-            background-color: green;
+            background-color: $tealColor;
           }
 
           img {
@@ -95,7 +95,7 @@
               width: 8px;
               height: 8px;
               border-radius: 50%;
-              background-color: green;
+              background-color: $tealColor;
             }
 
             .replyText {
@@ -111,7 +111,7 @@
         cursor: pointer;
 
         &:hover {
-          color: crimson;
+          color: $crimsonColor;
         }
       }
     }
@@ -133,7 +133,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-          background-color: orange; /* color of the scroll thumb */
+          background-color: $orangeColor; /* color of the scroll thumb */
           border-radius: 20px; /* roundness of the scroll thumb */
           border: 1px solid #2e475d; /* creates padding around scroll thumb */
         }
@@ -155,8 +155,8 @@
       }
 
       button {
-        background-color: teal;
-        color: white;
+        background-color: $tealColor;
+        color: $textLight;
         border: none;
         padding: 10px;
         cursor: pointer;

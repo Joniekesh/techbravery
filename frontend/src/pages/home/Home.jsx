@@ -9,13 +9,13 @@ import Slider from "../../components/slider/Slider";
 const data = [
   {
     id: 1,
-    image: "/assets/img3upd.jpg",
-    bg: "/assets/bg.jpg",
+    image: "/img3upd.jpg",
+    bg: "/bg.jpg",
   },
   {
     id: 2,
-    image: "/assets/img2upd.jpg",
-    bg: "/assets/img8.jpg",
+    image: "/img2upd.jpg",
+    bg: "/img8.jpg",
   },
 ];
 

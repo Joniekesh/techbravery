@@ -30,9 +30,6 @@
       padding: 10px;
       border-radius: 0 20px 20px 20px;
 
-      .text {
-      }
-
       img {
         width: 98%;
         object-fit: cover;
@@ -51,8 +48,8 @@
     }
 
     &.current .right {
-      background-color: teal;
-      color: white;
+      background-color: $tealColor;
+      color: $textLight;
       border-radius: 20px 0 20px 20px;
     }
 
