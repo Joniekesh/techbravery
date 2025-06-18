@@ -78,3 +78,109 @@ export const portfolios = [
     img: "/portfolioapp.png",
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    name: "Web App Development",
+    desc: "We will diligently develope a stunning secure and responsive cross-browser web applications that will boost your online visibility and income.",
+    img: "/appdev.png",
+  },
+
+  {
+    id: 2,
+    name: "Android/iOS Development",
+    desc: "We will develope secure and responsive Andoid and iOS applications to help you get wider visibility and clients.",
+    img: "/appdev.png",
+  },
+  {
+    id: 3,
+    name: "UI/UX Design",
+    desc: "Whatever your dream or idea is, we will bring it into reality through modern  User Interface design and make the properties, mockups,wireframes and prototypes readily available for the developers to work with.",
+    img: "/appdev.png",
+  },
+  {
+    id: 4,
+    name: "Project Architecture",
+    desc: "Bring your idea and we will architect/design your applications using modern technologies and get the framework ready for your developers to work with prioritizing security, modern technologies and frameworks.",
+    img: "/appdev.png",
+  },
+  {
+    id: 5,
+    name: "Consultation Services",
+    desc: "Book a consultation with us and get expert analysis and suggestion for your next project and trending technological opportunities.",
+    img: "/appdev.png",
+  },
+  {
+    id: 6,
+    name: "Utility SAAS Applications",
+    desc: "We have Web, Android, iOS and Desktop applications that solve real world problems ranging from Fintech, Edutech, Agritech, AI, Bot, E-commerce etc.",
+    img: "/appdev.png",
+  },
+  {
+    id: 7,
+    name: "Startup Incubation",
+    desc: "Are you a startup? We can architect your idea, partner with you, connect you to loan or grant providers and basically take your hand and take you up to a prosperous height.",
+    img: "/appdev.png",
+  },
+  {
+    id: 8,
+    name: "Product Marketing",
+    desc: "Our experienced marketers are always at your beck and call to boost your visibility and income.",
+    img: "/appdev.png",
+  },
+  {
+    id: 9,
+    name: "Tech Varsity",
+    desc: "We organize trainings for enthusiastic fellows that want to delve into tech space. Be it in User Interface Design, Frontend, Backend, Fullstack, Machine Learning, AI, we will train you from the scratch till you become fully a master in the field.",
+    img: "/appdev.png",
+  },
+];
+
+export const products = [
+  {
+    id: 1,
+    name: "TexAfrik",
+    img: "/home_hero.png",
+  },
+  {
+    id: 2,
+    name: "Technomo",
+    img: "/hero-bg.png",
+  },
+  {
+    id: 3,
+    name: "Tech Arena",
+    img: "/feature.png",
+  },
+  {
+    id: 4,
+    name: "Tech POS",
+    img: "/home_cards.png",
+  },
+  {
+    id: 5,
+    name: "Techi Pay",
+    img: "/mockup.png",
+  },
+  {
+    id: 6,
+    name: "Tech Growth",
+    img: "/home_hero.png",
+  },
+  {
+    id: 7,
+    name: "Tech Profit",
+    img: "/hero-bg.png",
+  },
+  {
+    id: 8,
+    name: "Tech Hub",
+    img: "/feature.png",
+  },
+  {
+    id: 9,
+    name: "Tech Varsity",
+    img: "/home_hero.png",
+  },
+];

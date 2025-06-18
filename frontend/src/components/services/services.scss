@@ -1,0 +1,80 @@
+@import "../../global.scss";
+
+.services {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0px;
+  padding: 20px 50px;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .services-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+
+    .services-item {
+      width: 30%;
+      min-width: 300px;
+      height: 400px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-dark);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      @include mobile {
+        width: 100%;
+        height: max-content;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        background-color: var(--color-orange);
+        color: var(--color-white);
+      }
+
+      // img {
+      //   width: 50px;
+      //   height: 50px;
+      //   background-color: $orangeColor;
+      // }
+
+      .item-name {
+        text-align: center;
+        font-weight: 500;
+        color: $bgPrimary;
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      .item-desc {
+        text-align: center;
+      }
+    }
+  }
+}

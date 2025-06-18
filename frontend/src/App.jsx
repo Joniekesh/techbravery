@@ -18,7 +18,6 @@ import Works from "./pages/works/Works";
 import Home from "./pages/home/Home";
 import Quote from "./pages/quote/Quote";
 import AboutUs from "./pages/aboutUs/AboutUs";
-import Login from "./pages/login/Login";
 import SuperAdmin from "./pages/superAdmin/SuperAdmin";
 import Admin from "./pages/admin/Admin";
 import User from "./pages/user/User";
@@ -26,7 +25,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Profile from "./pages/profile/Profile";
 import Orders from "./pages/orders/Orders";
 import ChatButton from "./components/chatButton/ChatButton";
-import Chat from "./components/chat/Chat";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Register from "./pages/register/Register";
 import { getChats } from "./redux/actions/ChatActions";
@@ -39,19 +37,16 @@ import Technologies from "./pages/technologies/Technologies";
 import OurTeam from "./pages/ourteam/OurTeam";
 import Projects from "./pages/projects/Projects";
 import Project from "./pages/project/Project";
+import Product from "./pages/product/Product";
+import useSystemThemeEffect from "./utils/useSystemThemeEffect";
 
 const App = () => {
+  useSystemThemeEffect();
   const [users, setUsers] = useState([]);
 
   const dispatch = useDispatch();
 
   const { currentUser, loading } = useSelector((state) => state.auth);
-  const { openChat, chats } = useSelector((state) => state.chat);
-
-  useEffect(() => {
-    dispatch(getChats());
-    currentUser?.role !== "SuperAdmin" && dispatch(getCurrentChat(chats[0]));
-  }, [dispatch, currentUser]);
 
   const Private = ({ children }) => {
     return !loading && currentUser ? children : <Navigate to="/login" />;
@@ -59,25 +54,15 @@ const App = () => {
 
   const Layout = () => {
     return (
-      <>
-        <ToastContainer />
-        <Toaster position="top-right" richColors />
-        {openChat && <Chat users={users} />}
-        <ChatButton />
-        <div>
-          <Navbar />
-          <Outlet />
-          <Footer />
-        </div>
-      </>
+      <div>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
     );
   };
 
   const router = createBrowserRouter([
-    {
-      path: "/login",
-      element: <Login />,
-    },
     {
       path: "/register",
       element: <Register />,
@@ -140,6 +125,10 @@ const App = () => {
           element: <Project />,
         },
         {
+          path: "/product/:id",
+          element: <Product />,
+        },
+        {
           path: "/SuperAdmin",
           element: (
             <Private>
@@ -185,6 +174,9 @@ const App = () => {
 
   return (
     <div>
+      <ToastContainer />
+      <Toaster position="top-right" richColors />
+      <ChatButton />
       <RouterProvider router={router} />
     </div>
   );

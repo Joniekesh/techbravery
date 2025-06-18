@@ -13,6 +13,7 @@ import storage from "redux-persist/lib/storage";
 import AuthReducer from "../redux/reducers/AuthReducer";
 import MessageReducer from "../redux/reducers/MessageReducer";
 import ChatReducer from "../redux/reducers/ChatReducer";
+import ThemeReducer from "./reducers/ThemeReducer";
 
 const persistConfig = {
   key: "root",
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   auth: AuthReducer,
   message: MessageReducer,
   chat: ChatReducer,
+  theme: ThemeReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

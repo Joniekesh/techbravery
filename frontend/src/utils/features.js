@@ -4,7 +4,7 @@ export const features = [
     title: "Feature One",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img11.jpg",
+    img: "/home_hero.png",
     category: "Web, iOS & Android App",
   },
   {
@@ -12,7 +12,7 @@ export const features = [
     title: "Feature Two",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img2.jpg",
+    img: "/hero-bg.png",
     category: "Web App",
   },
   {
@@ -20,7 +20,7 @@ export const features = [
     title: "Feature Three",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/screen4.jpg",
+    img: "/feature.png",
     category: "Android App",
   },
   {
@@ -28,7 +28,7 @@ export const features = [
     title: "Feature Four",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img5.jpg",
+    img: "/home_cards.png",
     category: "iOS App",
   },
   {
@@ -36,7 +36,7 @@ export const features = [
     title: "Feature Five",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img8.jpg",
+    img: "/mockup.png",
     category: "Desktop App",
   },
   {
@@ -44,7 +44,7 @@ export const features = [
     title: "Feature Six",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img11.jpg",
+    img: "/home_hero.png",
     category: "Web, iOS & Android App",
   },
   {
@@ -52,7 +52,7 @@ export const features = [
     title: "Feature One",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium possimus sit nam ipsam dicta nisi magni fuga placeat voluptate quam, ullam quo culpa, velit ipsa, eligendi amet est. Deserunt!",
     url: "url",
-    img: "/assets/img11.jpg",
+    img: "/img11.jpg",
     category: "Web, iOS & Android App",
   },
 ];

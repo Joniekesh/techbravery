@@ -3,8 +3,13 @@
 .works {
   min-height: calc(100vh - 50px);
   width: 100%;
-  margin-top: 40px;
+  margin-top: 80px;
   line-height: 1.7;
+  padding: 20px 50px;
+
+  @include mobile {
+    padding: 20px;
+  }
 
   .container {
     display: flex;
@@ -12,11 +17,5 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    color: $textDark;
-    padding: 50px;
-
-    @include tablet {
-      padding: 50px 20px 20px 20px;
-    }
   }
 }

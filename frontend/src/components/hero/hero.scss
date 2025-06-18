@@ -1,0 +1,66 @@
+@import "../../global.scss";
+
+.hero {
+  background: url("/hero-bg.png") no-repeat center/cover;
+  // background-color: var(--color-white);
+  .hero-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 20px;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      font-size: 60px;
+      background: linear-gradient(to bottom, var(--color-orange), #525252);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      line-height: 1.6;
+
+      @include tablet {
+        font-size: 50px;
+        margin-top: 30px;
+      }
+
+      span {
+        font-size: 50px;
+      }
+
+      .small-text {
+        font-size: 30px;
+
+        //   @include tablet {
+        //     font-size: 24px;
+        //   }
+      }
+    }
+
+    button {
+      background-color: var(--color-o);
+      color: var(--color-white);
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      width: max-content;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

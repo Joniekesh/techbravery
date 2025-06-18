@@ -14,12 +14,9 @@
       font-size: 16px;
     }
 
-    &:hover {
-      background-color: $tealColor;
-    }
-
+    &:hover,
     &.active {
-      background-color: $tealColor;
+      color: $orangeColor;
     }
   }
 
@@ -29,8 +26,9 @@
     top: 20px;
     left: 0;
     width: 40vw;
-    min-height: 30vh;
-    background-color: $bgPrimary;
+    min-height: 10vh;
+    background-color: $fgColor;
+    color: $textDark;
     padding: 20px;
     max-width: 400px;
     font-size: 13px;
@@ -45,21 +43,18 @@
   }
 
   .listsContainer {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 
     .listItem {
-      background-color: $tealColor;
-      color: $textLight;
-      padding: 6px;
-      border-radius: 30px;
       width: max-content;
-      height: max-content;
+      transition: all 0.5s ease;
 
       &:hover {
-        background-color: $orangeColor;
+        color: $orangeColor;
+        transform: scale(1.03);
       }
     }
 
@@ -73,11 +68,16 @@
         flex-direction: column;
         gap: 10px;
         border-bottom: 1px solid $textLight;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
 
         .name {
           font-weight: bold;
           font-size: 17px;
-          color: $tealColor;
+          color: $bgPrimary;
         }
 
         .title {

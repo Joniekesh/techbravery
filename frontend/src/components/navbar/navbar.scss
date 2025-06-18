@@ -13,8 +13,9 @@
   z-index: 3;
   -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-  background-color: $bgPrimary;
-  color: $textLight;
+  background-color: var(--bg-dark);
+  color: var(--color);
+  font-weight: 700;
 
   @include tablet900 {
     padding: 20px;
@@ -30,6 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 900;
 
     img {
       object-fit: cover;
@@ -41,13 +43,9 @@
   .links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
     @include tablet1000 {
-      gap: 8px;
-    }
-
-    @include tablet900 {
       display: none;
     }
   }
@@ -78,7 +76,7 @@
         font-weight: 500;
         height: 42px;
         overflow: hidden;
-        color: $textLight;
+        color: var(--color-white);
 
         @include tablet900 {
           height: 36px;
@@ -92,7 +90,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: $orangeColor;
+          background-color: var(--color-orange);
           padding: 10px;
           height: 100%;
           transition: all 0.8s ease;
@@ -106,7 +104,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: $tealColor;
+          background-color: var(--color-primary);
           padding: 10px;
           height: 100%;
           transition: all 0.8s ease;
@@ -127,11 +125,11 @@
         }
 
         &:hover .text {
-          background-color: $tealColor;
+          background-color: var(--color-primary);
         }
 
         &:hover .arrow {
-          background-color: $orangeColor;
+          background-color: var(--color-orange);
         }
       }
     }
@@ -141,15 +139,20 @@
       display: none;
       font-size: 24px;
       cursor: pointer;
-      z-index: 5;
-      color: $textLight;
+      z-index: 999;
+      color: var(--color);
+      font-weight: 500;
 
       @include mobile {
         font-size: 30px;
       }
 
-      @include tablet900 {
+      @include tablet1000 {
         display: flex;
+      }
+
+      &:hover {
+        color: var(--color-orange);
       }
     }
 
@@ -188,8 +191,8 @@
           position: absolute;
           top: -10px;
           left: 10px;
-          background-color: $orangeColor;
-          color: $textLight;
+          background-color: var(--color-orange);
+          color: var(--color-white);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -201,17 +204,26 @@
       }
     }
 
+    .theme-switch {
+      display: flex;
+
+      @include tablet1000 {
+        display: none;
+      }
+    }
+
     .authBtn {
       cursor: pointer;
       border: none;
       padding: 10px;
-      background-color: $tealColor;
-      color: $textLight;
+      background-color: var(--color-primary);
+      color: var(--color-white);
       border-radius: 5px;
       transition: all 0.3s ease;
 
       &:hover {
         transform: scale(1.02);
+        background-color: var(--color-orange);
       }
     }
 
@@ -219,7 +231,7 @@
       cursor: pointer;
       border: none;
       padding: 5px;
-      background-color: $crimsonColor;
+      background-color: var(--color-crimson);
       color: $textLight;
     }
   }
@@ -231,7 +243,7 @@
     background-color: #2e475d;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    color: $textLight;
+    color: var(--color);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -242,17 +254,17 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      border-bottom: 1px solid $tealColor;
+      border-bottom: 1px solid var(--color-teal);
       padding: 6px;
       cursor: pointer;
 
       &:hover {
-        background-color: $tealColor;
+        background-color: var(--color-teal);
       }
     }
 
     &:hover .logoutBtn {
-      background-color: $crimsonColor;
+      background-color: var(--color-crimson);
     }
   }
 }

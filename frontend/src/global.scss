@@ -1,12 +1,13 @@
-$fgColor: gray;
+$fgColor: #99b9c4;
 $bgPrimary: #002743;
-$bgLight: white;
+$bgLight: #fff;
 $bgDark: #000;
 $textDark: #333;
 $textLight: #fff;
 $orangeColor: orangered;
 $tealColor: teal;
 $crimsonColor: crimson;
+$borderColor: #ddd;
 
 @mixin mobile {
   @media (max-width: 600px) {
@@ -21,7 +22,7 @@ $crimsonColor: crimson;
 }
 
 @mixin tablet1000 {
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     @content;
   }
 }

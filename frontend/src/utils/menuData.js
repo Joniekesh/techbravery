@@ -206,21 +206,31 @@ export const technologies = [
       },
       {
         id: 3,
-        name: ".NET",
+        name: "NestJS",
         url: "/technology",
       },
       {
         id: 4,
-        name: "PHP",
+        name: "Python",
         url: "/technology",
       },
       {
         id: 5,
-        name: "Django",
+        name: ".NET",
         url: "/technology",
       },
       {
         id: 6,
+        name: "PHP",
+        url: "/technology",
+      },
+      {
+        id: 7,
+        name: "Django",
+        url: "/technology",
+      },
+      {
+        id: 8,
         name: "Java/SpringBoot",
         url: "/technology",
       },
@@ -370,6 +380,37 @@ export const technologies = [
         name: "Digital Ocean",
         url: "/technology",
       },
+      {
+        id: 4,
+        name: "Microsoft Azure",
+        url: "/technology",
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "Collaboration Tools",
+    data: [
+      {
+        id: 1,
+        name: "Github",
+        url: "/technology",
+      },
+      {
+        id: 2,
+        name: "Bitbucket",
+        url: "/technology",
+      },
+      {
+        id: 3,
+        name: "Gitlab",
+        url: "/technology",
+      },
+      {
+        id: 4,
+        name: "Docker",
+        url: "/technology",
+      },
     ],
   },
 ];
@@ -387,43 +428,43 @@ export const works = [
   },
 ];
 
-export const teams = [
-  {
-    id: 1,
-    name: "Jonie Dev",
-    position: "Backend Engineer",
-    pic: "/assets/man.jpg",
-    url: "/team",
-  },
-  {
-    id: 2,
-    name: "Lucy Dev",
-    position: "Frontend Engineer",
-    pic: "/assets/woman1.jpg",
-    url: "/team",
-  },
-  {
-    id: 3,
-    name: "Sam Smith",
-    position: "Product Analyst",
-    pic: "/assets/man2.jpg",
-    url: "/team",
-  },
-  {
-    id: 4,
-    name: "Thomas Man",
-    position: "UI/UX Designer",
-    pic: "/assets/man3.jpg",
-    url: "/team",
-  },
-  {
-    id: 5,
-    name: "Kate Shaw",
-    position: "Customer Care Rep",
-    pic: "/assets/woman2.jpg",
-    url: "/team",
-  },
-];
+// export const teams = [
+//   {
+//     id: 1,
+//     name: "Jonie Dev",
+//     position: "Backend Engineer",
+//     pic: "/assets/man.jpg",
+//     url: "/team",
+//   },
+//   {
+//     id: 2,
+//     name: "Lucy Dev",
+//     position: "Frontend Engineer",
+//     pic: "/assets/woman1.jpg",
+//     url: "/team",
+//   },
+//   {
+//     id: 3,
+//     name: "Sam Smith",
+//     position: "Product Analyst",
+//     pic: "/assets/man2.jpg",
+//     url: "/team",
+//   },
+//   {
+//     id: 4,
+//     name: "Thomas Man",
+//     position: "UI/UX Designer",
+//     pic: "/assets/man3.jpg",
+//     url: "/team",
+//   },
+//   {
+//     id: 5,
+//     name: "Kate Shaw",
+//     position: "Customer Care Rep",
+//     pic: "/assets/woman2.jpg",
+//     url: "/team",
+//   },
+// ];
 
 export const digitalProducts = [
   {
@@ -478,7 +519,7 @@ export const combinedData = [
       },
       {
         id: 3,
-        name: "Graphic Design",
+        name: "Graphics Design",
         url: "/",
       },
       {
@@ -538,16 +579,11 @@ export const combinedData = [
       },
       {
         id: 15,
-        name: "Content Creation",
-        url: "/",
-      },
-      {
-        id: 16,
         name: "Progressive Web Apps",
         url: "/",
       },
       {
-        id: 17,
+        id: 16,
         name: "Startups",
         url: "/",
       },
@@ -565,6 +601,11 @@ export const combinedData = [
       {
         id: 2,
         name: "Android/iOS Applications",
+        url: "/",
+      },
+      {
+        id: 3,
+        name: "UI/UX Design",
         url: "/",
       },
     ],
@@ -808,16 +849,21 @@ export const combinedData = [
         data: [
           {
             id: 1,
-            name: "Amazon Web Services",
+            name: "Amazon Web Services (AWS)",
             url: "/technology",
           },
           {
             id: 2,
-            name: "Google Cloud Platform",
+            name: "Google Cloud Platform (GCP)",
             url: "/technology",
           },
           {
             id: 3,
+            name: "Microsoft Azure",
+            url: "/technology",
+          },
+          {
+            id: 4,
             name: "Digital Ocean",
             url: "/technology",
           },

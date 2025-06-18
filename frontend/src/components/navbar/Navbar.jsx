@@ -16,6 +16,7 @@ import {
 import { IoNotifications } from "react-icons/io5";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { technologies } from "../../utils/menuData";
+import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -82,10 +83,14 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <Link to="/login">
+          <Link to="/register">
             <button className="authBtn">Sign In</button>
           </Link>
         )}
+        <div className="theme-switch">
+          <ThemeSwitcher />
+        </div>
+
         {openMenu ? (
           <span
             className="hamburger"

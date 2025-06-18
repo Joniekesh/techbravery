@@ -12,34 +12,22 @@ AOS.init({
 const Welcome = () => {
   return (
     <div className="welcome">
-      <div className="heading">
-        <h1>Expert Software design, development, support & maintenance!</h1>
-      </div>
-      <div className="desc">
-        <p>
-          Unlock the true potential of your online presence with our premier web
-          development agency. At Techbravery Software Solutions, we pride
-          ourselves on delivering stunning secure and responsive websites that
-          captivate audiences, drive conversions, and elevate your brand to new
-          heights. With our expert team of developers, designers, and digital
-          strategists, we are committed to crafting tailor-made solutions that
-          exceed your expectations.
-        </p>
-      </div>
       <h2>Why Choose Us?</h2>
       <div className="items">
         {items.map((item, i) => (
           <div
-            className="item"
+            className={i % 2 === 0 ? "item reverse" : "item"}
             data-aos={i % 2 === 0 ? "zoom-in" : "fade-right"}
             key={item.id}
           >
+            <div className="right">
+              <div className="img-container">
+                <img src={item.img} alt="" />
+              </div>
+            </div>
             <div className="left">
               <h3>{item.title}:</h3>
               <p>{item.desc}</p>
-            </div>
-            <div className="right">
-              <img src={item.img} alt="" />
             </div>
           </div>
         ))}

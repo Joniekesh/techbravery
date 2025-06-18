@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div className="services">
+    <div className="services-page">
       <div className="container">
         <h1>Our Services</h1>
         <p>

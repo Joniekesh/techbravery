@@ -8,13 +8,14 @@ import {
   digitalProducts,
   industries,
   services,
-  teams,
+  // teams,
   technologies,
   works,
 } from "../../utils/menuData";
 import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 
 const Menu = ({ setOpenMenu, width }) => {
   const [aboutUsToggle, setAboutUsToggle] = useState(false);
@@ -26,18 +27,12 @@ const Menu = ({ setOpenMenu, width }) => {
   const [digitalStoreToggle, setDigitalStoreToggle] = useState(false);
 
   return (
-    <div className="menu" style={{ display: width > 900 && "none" }}>
+    <div className="menu" style={{ display: width > 1100 && "none" }}>
       <div className="container" data-aos="fade-left">
-        <Link
-          to="/"
-          className="top"
-          onClick={() => setOpenMenu((prev) => !prev)}
-        >
-          <span className="homeIcon">
-            <IoHome />
-          </span>
-          <span>TechBravery</span>
-        </Link>
+        <div className="switcher">
+          <ThemeSwitcher />
+        </div>
+
         <div className="menuItems">
           <div className="item">
             <div
@@ -249,7 +244,7 @@ const Menu = ({ setOpenMenu, width }) => {
               </>
             )}
           </div>
-          <div className="item">
+          {/* <div className="item">
             <div
               className="itemTitle"
               onClick={() => {
@@ -282,7 +277,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 </>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
         <button
           className="quoteBtn"

@@ -1,3 +1,4 @@
+import { industries } from "../../utils/menuData";
 import "./quote.scss";
 
 const Quote = () => {
@@ -56,6 +57,12 @@ const Quote = () => {
               <input type="email" placeholder="Your email" />
               <input type="text" placeholder="Your phone" />
               <input type="text" placeholder="Your company" />
+              <select>
+                <option value="">--select--</option>
+                {industries.map((industry) => (
+                  <option key={industry.id}>{industry.name}</option>
+                ))}
+              </select>
               <input type="text" placeholder="Approx. budget" />
               <div className="optional">
                 <span>Optional</span>
@@ -66,7 +73,7 @@ const Quote = () => {
                 ></textarea>
               </div>
               <label htmlFor="fileUpload">
-                <img src="/assets/uploadicon.jpg" alt="" />
+                <img src="/uploadicon.jpg" alt="" />
                 <span>Upload</span>
               </label>
               <input type="file" id="fileUpload" style={{ display: "none" }} />

@@ -1,0 +1,89 @@
+:root {
+  // --bg: #99b9c4;
+  --bg: #f1f1f1;
+
+  --bg-dark: #ffffff;
+  --bg-light: #f9f9f9;
+  --color: #2d3748;
+  --color-white: #ffffff;
+  --border-color: #ddd;
+  --color-primary: #002743;
+  --color-orange: orangered;
+  --color-teal: teal;
+  --color-crimson: crimson;
+  --color-success: green;
+}
+
+[data-theme="dark"] {
+  --bg: #010618;
+  // --bg-dark: #1b2433;
+  --bg-dark: #002743;
+
+  --bg-light: #344153;
+  --color: #f4f4f5;
+  --color-white: #ffffff;
+  --border-color: #ddd;
+  --color-primary: #002743;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-orange);
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color);
+  background-color: var(--bg);
+  overflow-x: hidden;
+  // line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  /* background-color: orangered; Color of the thumb */
+  background-color: gray;
+  border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+/* Styling the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: orangered; /* Color of the thumb on hover */
+}
+
+/* Styling the scrollbar track when clicked */
+::-webkit-scrollbar-thumb:active {
+  background-color: orangered; /* Color of the thumb when clicked */
+}
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+  border-radius: 4px; /* Rounded corners of the track */
+}
+
+/* Styling the scrollbar track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: var(--border-color); /* Color of the track on hover */
+}
+
+/* Styling the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* Color of the scrollbar corner */
+}

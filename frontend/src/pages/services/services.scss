@@ -1,14 +1,15 @@
 @import "../../global.scss";
 
-.services {
+.services-page {
   min-height: calc(100vh - 50px);
-  width: 100%;
-  margin-top: 40px;
+  width: 100vw;
+  margin-top: 80px;
   line-height: 1.7;
+  padding: 20px 50px;
 
-  // background: url("/assets/servicebg3.jpg") center;
-  // background-size: cover;
-  // background-position-x: 100%;
+  @include mobile {
+    padding: 20px;
+  }
 
   .container {
     display: flex;
@@ -16,12 +17,7 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    color: $textDark;
-    padding: 50px;
-
-    @include tablet {
-      padding: 50px 20px 20px 20px;
-    }
+    width: 100%;
 
     h1 {
       margin-bottom: 20px;

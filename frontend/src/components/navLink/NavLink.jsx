@@ -20,14 +20,18 @@ const NavLink = ({ link, index }) => {
         <div className="listsContainer">
           {combinedData[index]?.type !== "technology" ? (
             combinedData[index]?.data.map((item) => (
-              <Link to={combinedData[index]?.url} className="listItem">
+              <Link
+                key={item.id}
+                to={combinedData[index]?.url}
+                className="listItem"
+              >
                 {item.name}
               </Link>
             ))
           ) : (
             <div className="dropdownList">
               {combinedData[index]?.data.map((technology) => (
-                <div className="dropdownListItem">
+                <div key={technology.id} className="dropdownListItem">
                   <span key={technology.id} className="name">
                     {technology.name}
                   </span>

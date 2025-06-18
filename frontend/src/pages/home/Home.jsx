@@ -1,10 +1,15 @@
 import "./home.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Features from "../../components/features/Features";
 import Welcome from "../../components/welcome/Welcome";
 import { useEffect, useState } from "react";
 import Testimonials from "../../components/testimonials/Testimonials";
 import Slider from "../../components/slider/Slider";
+import Hero from "../../components/hero/Hero";
+import Services from "../../components/services/Services";
+import Products from "../../components/products/Products";
+import Partners from "../../components/partners/Partners";
+import Faqs from "../../components/faqs/Faqs";
 
 const data = [
   {
@@ -22,6 +27,8 @@ const data = [
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const interval = setInterval(
       () =>
@@ -33,30 +40,30 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div
-        className="homeContainer"
-        style={{
-          backgroundImage: `url(${data[currentSlide].bg})`,
-          transition: "background-image 5s ease-in-out",
-        }}
-      >
-        <div className="heroText">
-          <p className="title">
-            <span>TechBravery:</span>
-            <br />
-            Delivering Next-Level Software Solutions!
-          </p>
-          <Link to="/quote">
-            <button>Get a Quote</button>
-          </Link>
+      <Hero />
+      <div className="welcome">
+        <div className="heading">
+          <h1>Expert Software design, development, support & maintenance!</h1>
         </div>
-        <div className="heroImg">
-          <img src={data[0].image} alt="" />
+        <div className="desc">
+          <p>
+            Unlock the true potential of your online presence with our premier
+            web development agency. At Techbravery Software Solutions, we pride
+            ourselves on delivering stunning secure and responsive websites that
+            captivate audiences, drive conversions, and elevate your brand to
+            new heights. With our expert team of developers, designers, and
+            digital strategists, we are committed to crafting tailor-made
+            solutions that exceed your expectations.
+          </p>
         </div>
       </div>
+      <Services />
       <Welcome />
       <Features />
+      <Products />
+      <Partners />
       <Testimonials autoplayInterval={2000} />
+      <Faqs />
     </div>
   );
 };

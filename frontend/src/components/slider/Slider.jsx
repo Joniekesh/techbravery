@@ -6,14 +6,14 @@ import TestimonialItem from "../testimonialItem/TestimonialItem";
 const data = [
   {
     id: 1,
-    img: "/assets/myprofilepic.jpg",
+    img: "/myprofilepic.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment: "Another",
   },
   {
     id: 2,
-    img: "/assets/bg1.jpg",
+    img: "/bg1.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment:
@@ -21,7 +21,7 @@ const data = [
   },
   {
     id: 3,
-    img: "/assets/bg2.jpg",
+    img: "/bg2.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment:
@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 4,
-    img: "/assets/bg3.jpg",
+    img: "/bg3.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment:
@@ -37,7 +37,7 @@ const data = [
   },
   {
     id: 5,
-    img: "/assets/bg4.jpg",
+    img: "/bg4.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment:
@@ -45,7 +45,7 @@ const data = [
   },
   {
     id: 6,
-    img: "/assets/bg5.jpg",
+    img: "/bg5.jpg",
     name: "John Smith",
     company: "CEO Own Company",
     comment:
