@@ -21,6 +21,7 @@
     gap: 20px;
     overflow: hidden;
     border-radius: 10px;
+    padding: 20px;
 
     &.login {
       height: 76vh;
@@ -28,6 +29,7 @@
 
     @include mobile {
       height: 100vh;
+      width: 98%;
     }
 
     .register-top {
