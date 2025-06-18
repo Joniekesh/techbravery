@@ -15,8 +15,8 @@ const images = [
 const Product = () => {
   const { state } = useLocation();
 
-  const [currentImage, setCurrentImage] = useState(state.img);
-  const [active, setActive] = useState(state.img);
+  const [currentImage, setCurrentImage] = useState(state?.img);
+  const [active, setActive] = useState(state?.img);
   const [activeTab, setActiveTab] = useState("overview");
 
   console.log(state);
@@ -34,13 +34,13 @@ const Product = () => {
           <div className="images">
             {products.slice(0, 5).map((item) => (
               <img
-                onClick={() => handleClick(item.img)}
+                onClick={() => handleClick(item?.img)}
                 className={
                   active === item.img
                     ? "carousel-image active"
                     : "carousel-image"
                 }
-                src={item.img}
+                src={item?.img}
                 alt=""
               />
             ))}
