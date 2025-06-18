@@ -100,8 +100,8 @@
       justify-content: center;
 
       button {
-        background-color: $orangeColor;
-        color: $textLight;
+        background-color: var(--color-orange);
+        color: var(--color-white);
         border: none;
         padding: 10px;
         cursor: pointer;
