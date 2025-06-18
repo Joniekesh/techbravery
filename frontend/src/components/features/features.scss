@@ -17,8 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // background-color: $bgPrimary;
-    color: $textLight;
+    color: var(--color);
     padding: 10px;
 
     h1 {
@@ -34,7 +33,7 @@
       padding: 10px;
       cursor: pointer;
       background-color: var(--color-orange);
-      color: $textLight;
+      color: var(--color-white);
       border-radius: 5px;
       transition: all 0.4s ease;
 
@@ -48,6 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    overflow: hidden;
 
     @include tablet1000 {
       align-items: center;
@@ -125,7 +125,7 @@
           padding: 10px;
           cursor: pointer;
           background-color: var(--color-orange);
-          color: $textLight;
+          color: var(--color-white);
           font-size: 16px;
           border-radius: 5px;
           transition: all 0.4s ease;
