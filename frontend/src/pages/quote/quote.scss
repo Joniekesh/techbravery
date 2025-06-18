@@ -22,7 +22,6 @@
     flex-direction: column;
     gap: 30px;
     color: var(--color);
-    // padding: 20px;
     border-radius: 10px;
 
     @include mobile {
@@ -46,12 +45,6 @@
       @include tablet900 {
         flex-direction: column;
         width: 100%;
-      }
-
-      @include mobile {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
       }
 
       .left {
@@ -135,7 +128,7 @@
           rgb(0, 37, 84) 11.2%,
           rgba(0, 37, 84, 0.32) 100.2%
         );
-        color: $textLight;
+        color: var(--color-white);
 
         @include mobile {
           width: 100%;
