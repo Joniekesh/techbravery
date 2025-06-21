@@ -17,6 +17,7 @@ import { IoNotifications } from "react-icons/io5";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { technologies } from "../../utils/menuData";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
+import QuoteBtn from "../quoteBtn/QuoteBtn";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -55,14 +56,7 @@ const Navbar = () => {
         ))}
       </div>
       <div className="right">
-        <Link to="/quote" className="rightContainer">
-          <button className="quoteBtn">
-            <div className="text">Get a Quote</div>
-            <div className="arrow">
-              <FaArrowRight />
-            </div>
-          </button>
-        </Link>
+        <QuoteBtn />
 
         {currentUser ? (
           <div className="authenticated">

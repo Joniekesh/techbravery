@@ -8,7 +8,6 @@ import {
   digitalProducts,
   industries,
   services,
-  // teams,
   technologies,
   works,
 } from "../../utils/menuData";
@@ -16,6 +15,7 @@ import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
+import QuoteBtn from "../quoteBtn/QuoteBtn";
 
 const Menu = ({ setOpenMenu, width }) => {
   const [aboutUsToggle, setAboutUsToggle] = useState(false);
@@ -244,52 +244,8 @@ const Menu = ({ setOpenMenu, width }) => {
               </>
             )}
           </div>
-          {/* <div className="item">
-            <div
-              className="itemTitle"
-              onClick={() => {
-                setTeamToggle((prev) => !prev);
-                setWorksToggle(false);
-                setServiceToggle(false);
-                setTechnologyToggle(false);
-                setIndustryToggle(false);
-                setAboutUsToggle(false);
-                setDigitalStoreToggle(false);
-              }}
-            >
-              <span>TEAM MEMBERS</span>
-              <span className="icon">
-                <RxCaretDown />
-              </span>
-            </div>
-            <div className="team">
-              {teamToggle && (
-                <>
-                  {teams.map((team) => (
-                    <Link to={team.url} className="teamItem" key={team.id}>
-                      <img src={team.pic} alt="" />
-                      <div className="teamContainer">
-                        <span className="name">{team.name}</span>
-                        <span className="position">{team.position}</span>
-                      </div>
-                    </Link>
-                  ))}
-                </>
-              )}
-            </div>
-          </div> */}
         </div>
-        <button
-          className="quoteBtn"
-          onClick={() => setOpenMenu((prev) => !prev)}
-        >
-          <Link to="/quote" className="text">
-            Get a Quote
-            <div className="arrow">
-              <FaArrowRight />
-            </div>
-          </Link>
-        </button>
+        <QuoteBtn />
       </div>
     </div>
   );

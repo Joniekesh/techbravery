@@ -1,0 +1,81 @@
+@import "../../global.scss";
+
+.quote-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+
+  @include mobile {
+    display: none;
+  }
+
+  button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 42px;
+    overflow: hidden;
+    color: var(--color-white);
+
+    @include tablet900 {
+      height: 36px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-orange) !important;
+      padding: 10px;
+      height: 100%;
+      transition: all 0.8s ease;
+
+      @include mobile {
+        padding: 8px;
+      }
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-primary);
+      padding: 10px;
+      height: 100%;
+      transition: all 0.8s ease;
+      animation: blink 1s infinite;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    &:hover .text {
+      background-color: var(--color-teal) !important;
+    }
+
+    &:hover .arrow {
+      background-color: var(--color-orange) !important;
+    }
+  }
+}
