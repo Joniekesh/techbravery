@@ -56,7 +56,9 @@ const Navbar = () => {
         ))}
       </div>
       <div className="right">
-        <QuoteBtn />
+        <div className="quote-component111">
+          <QuoteBtn />
+        </div>
 
         {currentUser ? (
           <div className="authenticated">

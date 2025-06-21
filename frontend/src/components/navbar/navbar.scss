@@ -50,6 +50,14 @@
     }
   }
 
+  .quote-component111 {
+    display: flex;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
   .right {
     display: flex;
     align-items: center;
