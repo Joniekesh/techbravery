@@ -1,15 +1,210 @@
+@import "../../global.scss";
+
 .projects {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: #2e475d;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 80px;
 
   .container {
-    margin-top: 50px;
-    max-width: 1200px;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    .project-top {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          var(--color-teal),
+          var(--color-orange)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .search-bar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--color-teal);
+
+      .searches {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include mobile {
+          flex-direction: column;
+        }
+
+        .search-input {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          @include mobile {
+            width: 100%;
+          }
+
+          input {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            outline: none;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            background-color: transparent;
+            color: var(--color);
+
+            &:focus {
+              border: 2px solid var(--color-teal);
+            }
+
+            &::placeholder {
+              color: gray;
+              font-size: 14px;
+            }
+          }
+
+          .search-icon {
+            position: absolute;
+            right: 10px;
+            margin: auto;
+            color: gray;
+          }
+        }
+
+        .select-search {
+          width: 50%;
+          padding: 14px;
+          font-size: 16px;
+          outline: none;
+          border: 2px solid var(--border-color);
+          border-radius: 5px;
+          color: var(--color);
+          cursor: pointer;
+          background-color: var(--bg);
+          color: var(--color);
+
+          @include mobile {
+            width: 100%;
+          }
+
+          &:focus {
+            border: 2px solid var(--color-teal);
+          }
+
+          &::placeholder {
+            color: gray;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .filter-tabs {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+          padding: 10px;
+          width: 150px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          color: var(--color-orange);
+          border: 1px solid var(--border-color);
+          transition: all 0.5s ease;
+
+          &.active,
+          &:hover {
+            background-color: var(--color-teal);
+            color: var(--color-white);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .project {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 300px;
+        padding: 20px;
+        background-color: var(--bg-dark);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: var(--color-teal);
+          transform: scale(1.03);
+          color: var(--color-white);
+
+          .project-name {
+            color: var(--color-white);
+          }
+        }
+
+        .project-name {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--color);
+          opacity: 0.7;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @include mobile {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .success {
+        &:hover {
+          background-color: rgb(255, 166, 0);
+        }
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@
   width: 100vw;
   height: max-content;
   background: url("/assets/img8.jpg") center;
-  margin-top: 70px;
+  margin-top: 80px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -35,6 +35,18 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      gap: 10px;
+
+      h1 {
+        background: linear-gradient(
+          to right,
+          var(--color-teal),
+          var(--color-orange)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .bottom {
@@ -88,7 +100,7 @@
               width: 10px;
               height: 10px;
               border-radius: 50%;
-              background-color: var(--color-orange);
+              background-color: var(--color-teal);
               transform: translateX(-50%);
             }
 
@@ -104,6 +116,7 @@
                 margin-bottom: 5px;
                 font-weight: bold;
                 font-size: 14px;
+                color: var(--color-teal);
               }
 
               span {
@@ -157,7 +170,7 @@
             color: var(--color);
 
             &:focus {
-              border: 2px solid var(--color-orange);
+              border: 2px solid var(--color-teal);
             }
 
             @include mobile {
@@ -191,7 +204,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background-color: var(--color-orange);
+            background-color: var(--color-teal);
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;

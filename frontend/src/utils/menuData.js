@@ -114,7 +114,7 @@ export const industries = [
   },
   {
     id: 3,
-    name: "Healthcare and Life Sciences",
+    name: "Health Care and Life Sciences",
     url: "/",
   },
   {

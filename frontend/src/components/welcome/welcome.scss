@@ -16,6 +16,14 @@
     font-weight: bold;
     font-size: 30px;
     text-align: center;
+    background: linear-gradient(
+      to right,
+      var(--color-teal),
+      var(--color-orange)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .items {
@@ -30,7 +38,7 @@
       gap: 20px;
       padding: 10px;
       border-radius: 10px;
-      border: 1px solid var(--color-orange);
+      border: 1px solid var(--color-teal);
 
       @include tablet {
         flex-direction: column;
@@ -89,7 +97,7 @@
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    border: 2px solid var(--color-orange);
+    border: 2px solid var(--color-teal);
     margin-bottom: 20px;
     border-radius: 10px;
     padding: 4px;
@@ -100,7 +108,7 @@
       justify-content: center;
 
       button {
-        background-color: var(--color-orange);
+        background-color: var(--color-teal);
         color: var(--color-white);
         border: none;
         padding: 10px;
@@ -112,7 +120,11 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $tealColor;
+          background: linear-gradient(
+            to right,
+            var(--color-teal),
+            var(--color-orange)
+          );
         }
       }
     }

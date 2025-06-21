@@ -12,6 +12,14 @@
   h1 {
     text-align: center;
     margin-bottom: 20px;
+    background: linear-gradient(
+      to right,
+      var(--color-teal),
+      var(--color-orange)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .products-list {
@@ -34,7 +42,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: var(--color-orange);
+        background-color: var(--color-teal);
         transform: scale(1.03);
         color: var(--color-white);
 
@@ -50,6 +58,7 @@
         font-weight: 600;
         font-size: 14px;
         color: var(--color);
+        opacity: 0.7;
       }
 
       img {
@@ -60,6 +69,12 @@
 
       @include mobile {
         width: 100%;
+      }
+    }
+
+    .success {
+      &:hover {
+        background-color: var(--color-success);
       }
     }
   }

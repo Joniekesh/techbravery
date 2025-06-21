@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import "./partners.scss";
 
 const data = [
-  "Partner1",
-  "Partner2",
-  "Partner3",
-  "Partner4",
-  "Partner5",
-  "Partner6",
-  "Partner7",
-  "Partner8",
-  "Partner9",
-  "Partner10",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
+  "/appdev.png",
 ];
 
 const Partners = () => {
@@ -33,7 +33,7 @@ const Partners = () => {
       <div className="partners-list">
         {data.map((partner, index) => (
           <div className="partners-list-item" key={index}>
-            {partner}
+            <img src={partner} alt="" />
           </div>
         ))}
       </div>

@@ -15,7 +15,11 @@
       h1 {
         font-size: 50px;
         font-weight: bold;
-        background: linear-gradient(to bottom, var(--color-orange), #bbb);
+        background: linear-gradient(
+          to right,
+          var(--color-teal),
+          var(--color-orange)
+        );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

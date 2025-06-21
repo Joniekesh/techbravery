@@ -26,7 +26,7 @@ const Welcome = () => {
               </div>
             </div>
             <div className="left">
-              <h3>{item.title}:</h3>
+              <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </div>
           </div>

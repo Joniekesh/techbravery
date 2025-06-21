@@ -3,6 +3,7 @@ import { features } from "../../utils/features";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { Link, useNavigate } from "react-router-dom";
+import { products } from "../../mockData";
 
 // ..
 AOS.init({
@@ -20,20 +21,25 @@ const Features = () => {
         <button onClick={() => navigate("/project")}>SEE ALL</button>
       </div>
       <div className="items">
-        {features.slice(0, 6).map((feature, i) => (
+        {products.slice(0, 6).map((product, i) => (
           <Link
-            to={`/project/${feature.id}`}
+            to={`/product/${product.id}`}
+            state={product}
             className="item"
-            key={feature.id}
+            key={product.id}
             data-aos={i % 2 === 0 ? "zoom-in" : "fade-right"}
           >
             <div className="itemTop">
-              <img src={feature.img} alt="" />
+              <img src={product.img} alt="" />
             </div>
             <div className="itemBottom">
-              <span>Category: {feature.category}</span>
-              <h2>{feature.title}</h2>
-              <p>{feature.desc}</p>
+              <span>Category: {product?.platforms}</span>
+              <h2>{product.name}</h2>
+              <p>
+                {product.overview.length > 100
+                  ? product.overview.slice(0, 100) + "..."
+                  : product.overview}
+              </p>
               <button>View Details</button>
             </div>
           </Link>

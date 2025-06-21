@@ -8,10 +8,13 @@ const Hero = () => {
     <div className="hero">
       <div className="hero-container">
         <div className="texts">
-          <span className="big-text">TechBravery:</span>
-          <span className="small-text">
-            Delivering Next-Level <br /> Software Solutions!
-          </span>
+          <span className="big-text">TechBravery</span>
+          <div className="small-texts">
+            <span className="middle">
+              <span className="inner">Delivering</span> Next-Level
+            </span>
+            <span className="bottom">Software Solutions!</span>
+          </div>
         </div>
         <button onClick={() => navigate("/quote")} className="get-quote">
           Get a Quote

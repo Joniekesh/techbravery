@@ -142,45 +142,648 @@ export const products = [
     id: 1,
     name: "TexAfrik",
     img: "/home_hero.png",
+    type: "mobile",
+    industry: "Finance and Banking",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO guaranteed",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Postgre",
+      },
+      {
+        id: 2,
+        name: "NestJs",
+      },
+
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web",
   },
   {
     id: 2,
     name: "Technomo",
     img: "/hero-bg.png",
+    type: "web",
+    industry: "Health Care and Life Sciences",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "MYSQL",
+      },
+      {
+        id: 2,
+        name: "NextJS",
+      },
+
+      {
+        id: 3,
+        name: "Angular",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication and File storage",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+      {
+        id: 7,
+        name: "Docker",
+      },
+    ],
+    platforms: "iOS & Android App",
   },
   {
     id: 3,
     name: "Tech Arena",
     img: "/feature.png",
+    type: "desktop",
+    industry: "E-commerce and Retail",
+
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+      {
+        id: 7,
+        name: "Github for collaboration",
+      },
+      {
+        id: 8,
+        name: "React Context API and ReduxJS Toolkit for state management",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 4,
     name: "Tech POS",
     img: "/home_cards.png",
+    type: "mobile",
+    industry: "E-commerce and Retail",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 5,
     name: "Techi Pay",
     img: "/mockup.png",
+    type: "web",
+    industry: "Technology and Software",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 6,
     name: "Tech Growth",
     img: "/home_hero.png",
+    type: "desktop",
+    industry: "Technology and Software",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 7,
     name: "Tech Profit",
     img: "/hero-bg.png",
+    type: "mobile",
+    industry: "Technology and Software",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 8,
     name: "Tech Hub",
     img: "/feature.png",
+    type: "web",
+    industry: "Technology and Software",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
   {
     id: 9,
     name: "Tech Varsity",
     img: "/home_hero.png",
+    type: "desktop",
+    industry: "Technology and Software",
+    photos: [
+      "/home_hero.png",
+      "/hero-bg.png",
+      "/feature.png",
+      "/home_cards.png",
+      "/mockup.png",
+      "/home_hero.png",
+    ],
+    overview:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ullam perspiciatis rem? Nobis corrupti, ratione voluptatibus totam asperiores obcaecati, fugiat atque blanditiis perferendis voluptate repellat qui, ducimus vel numquam cumque!.",
+    features: [
+      {
+        id: 1,
+        name: "Secure authentication with json web token and bcrypt.",
+      },
+      {
+        id: 2,
+        name: "Sleek responsive design for all break points.",
+      },
+      {
+        id: 3,
+        name: "Cross browser support",
+      },
+      {
+        id: 4,
+        name: "SEO feature",
+      },
+      {
+        id: 5,
+        name: "Admin Dashboard for application management",
+      },
+      {
+        id: 6,
+        name: "Light and dark theme support",
+      },
+    ],
+    techStacks: [
+      {
+        id: 1,
+        name: "Mongo DB",
+      },
+      {
+        id: 2,
+        name: "Express",
+      },
+      {
+        id: 3,
+        name: "React",
+      },
+      {
+        id: 4,
+        name: "Firebase for Google Authentication",
+      },
+      {
+        id: 5,
+        name: "SASS for styling",
+      },
+      {
+        id: 6,
+        name: "React icons",
+      },
+    ],
+    platforms: "Web, iOS & Android App",
   },
 ];

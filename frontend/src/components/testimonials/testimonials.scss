@@ -26,6 +26,17 @@
       flex-direction: column;
       text-align: center;
       gap: 10px;
+
+      h1 {
+        background: linear-gradient(
+          to right,
+          var(--color-teal),
+          var(--color-orange)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 

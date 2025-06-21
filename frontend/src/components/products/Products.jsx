@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Products = () => {
   return (
     <div className="products">
-      <h1>Our Utility Products</h1>
+      <h1>Our Utility Apps</h1>
       <div className="products-list">
-        {products.map((item) => (
+        {products.map((item, index) => (
           <Link
             to={`/product/${item.id}`}
             state={item}
-            className="product"
+            className={index % 2 !== 0 ? "product success" : "product"}
             key={item.id}
           >
             <span className="product-name">{item.name}</span>

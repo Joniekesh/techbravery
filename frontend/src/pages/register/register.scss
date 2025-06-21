@@ -106,7 +106,7 @@
           transition: all 1s ease;
 
           &.active {
-            background-color: var(--color-orange);
+            background-color: var(--color-teal);
             color: var(--color-white);
           }
 
@@ -126,7 +126,7 @@
         color: var(--color);
 
         &:focus {
-          border: 2px solid var(--color-orange);
+          border: 2px solid var(--color-teal);
         }
 
         &::placeholder {
@@ -152,7 +152,7 @@
           border-radius: 5px;
 
           &:focus {
-            border: 2px solid var(--color-orange);
+            border: 2px solid var(--color-teal);
           }
         }
 
@@ -177,7 +177,7 @@
         justify-content: space-between;
 
         .log {
-          border-bottom: 2px solid var(--color-orange);
+          border-bottom: 2px solid var(--color-teal);
           cursor: pointer;
         }
       }
