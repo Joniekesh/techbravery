@@ -698,21 +698,26 @@ export const combinedData = [
           },
           {
             id: 3,
-            name: ".NET",
+            name: "NestJS",
             url: "/technology",
           },
           {
             id: 4,
-            name: "PHP",
+            name: ".NET",
             url: "/technology",
           },
           {
             id: 5,
-            name: "Django",
+            name: "PHP",
             url: "/technology",
           },
           {
             id: 6,
+            name: "Django",
+            url: "/technology",
+          },
+          {
+            id: 7,
             name: "Java/SpringBoot",
             url: "/technology",
           },
@@ -815,6 +820,11 @@ export const combinedData = [
             name: "Drupal",
             url: "/technology",
           },
+          {
+            id: 3,
+            name: "Strapi",
+            url: "/technology",
+          },
         ],
       },
       {
@@ -865,6 +875,32 @@ export const combinedData = [
           {
             id: 4,
             name: "Digital Ocean",
+            url: "/technology",
+          },
+        ],
+      },
+      {
+        id: 8,
+        name: "Collaboration Tools",
+        data: [
+          {
+            id: 1,
+            name: "Github",
+            url: "/technology",
+          },
+          {
+            id: 2,
+            name: "Bitbucket",
+            url: "/technology",
+          },
+          {
+            id: 3,
+            name: "Gitlab",
+            url: "/technology",
+          },
+          {
+            id: 4,
+            name: "Docker",
             url: "/technology",
           },
         ],
