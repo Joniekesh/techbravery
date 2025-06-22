@@ -51,7 +51,7 @@
 
     .bottom {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
 
       @include tablet900 {
@@ -61,6 +61,7 @@
 
       .left {
         flex: 1;
+        height: max-content;
 
         h2 {
           width: 350px;
@@ -100,7 +101,7 @@
               width: 10px;
               height: 10px;
               border-radius: 50%;
-              background-color: var(--color-teal);
+              background-color: var(--color-orange);
               transform: translateX(-50%);
             }
 
@@ -175,6 +176,60 @@
 
             @include mobile {
               width: 100%;
+            }
+          }
+
+          .techs {
+            width: 98%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .techs-title {
+              background-color: var(--bg);
+              color: var(--color);
+              padding: 14px;
+              border-radius: 5px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            .techs-container {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              border: 1px solid var(--border-color);
+              border-radius: 10px;
+
+              .item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: rgba(0, 128, 128, 0.23);
+
+                .tech-name {
+                  font-size: 15px;
+                  font-weight: 500;
+                }
+
+                .check-boxes {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 20px;
+
+                  .check-box {
+                    width: 46%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 12px;
+                  }
+                }
+              }
             }
           }
 

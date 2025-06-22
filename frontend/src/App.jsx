@@ -49,7 +49,7 @@ const App = () => {
   const { currentUser, loading } = useSelector((state) => state.auth);
 
   const Private = ({ children }) => {
-    return !loading && currentUser ? children : <Navigate to="/login" />;
+    return !loading && currentUser ? children : <Navigate to="/auth" />;
   };
 
   const Layout = () => {
@@ -64,7 +64,7 @@ const App = () => {
 
   const router = createBrowserRouter([
     {
-      path: "/register",
+      path: "/auth",
       element: <Register />,
     },
     {
@@ -129,7 +129,7 @@ const App = () => {
           element: <Product />,
         },
         {
-          path: "/SuperAdmin",
+          path: "/superAdmin",
           element: (
             <Private>
               <SuperAdmin />,
@@ -137,7 +137,7 @@ const App = () => {
           ),
         },
         {
-          path: "/Admin",
+          path: "/admin",
           element: (
             <Private>
               <Admin />,
@@ -145,7 +145,7 @@ const App = () => {
           ),
         },
         {
-          path: "/User",
+          path: "/user",
           element: (
             <Private>
               <User />,
@@ -153,7 +153,7 @@ const App = () => {
           ),
         },
         {
-          path: "/Profile",
+          path: "/profile",
           element: (
             <Private>
               <Profile />,
@@ -161,7 +161,7 @@ const App = () => {
           ),
         },
         {
-          path: "/Orders",
+          path: "/orders",
           element: (
             <Private>
               <Orders />,

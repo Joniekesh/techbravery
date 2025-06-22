@@ -245,7 +245,9 @@ const Menu = ({ setOpenMenu, width }) => {
             )}
           </div>
         </div>
-        <QuoteBtn />
+        <div onClick={() => setOpenMenu((prev) => !prev)}>
+          <QuoteBtn />
+        </div>
       </div>
     </div>
   );
