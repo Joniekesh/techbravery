@@ -3,6 +3,7 @@ import { useState } from "react";
 import { industries } from "../../utils/menuData";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
+import Summary from "../../components/summary/Summary";
 
 const frontend = ["React", "NextJS", "Angular", "Vue", "Vanilla"];
 const backend = [
@@ -28,12 +29,25 @@ const designfiles = ["Yes", "No"];
 
 const Quote = () => {
   const [open, setOpen] = useState(false);
+  const [openSummary, setOpenSummary] = useState(false);
+  const [inputs, setInputs] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    company: "",
+    industry: "",
+    budget: "",
+  });
+  const { fullName, email, phone, company, industry, budget } = inputs;
   const [selectedFrontend, setSelectedFrontend] = useState("");
   const [selectedDatabase, setSelectedDatabase] = useState("");
   const [selectedCloud, setSelectedCloud] = useState("");
   const [selectedDesign, setSelectedDesign] = useState("");
-
   const [backendStacks, setBackendStacks] = useState([]);
+
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const frontendFramework = "favoriteFramework";
   const databaseFramework = "favoriteDatabase";
@@ -68,9 +82,25 @@ const Quote = () => {
   // console.log(selectedFrontend);
   console.log(selectedDesign);
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+
+  const data = {
+    ...inputs,
+    selectedFrontend,
+    selectedDatabase,
+    selectedCloud,
+    selectedDesign,
+    backendStacks,
+  };
+
   return (
     <div className="quote">
       <div className="container">
+        {openSummary && (
+          <Summary setOpenSummary={setOpenSummary} inputs={data} />
+        )}
         <div className="top">
           <h1>Get a Quote</h1>
           <p>
@@ -118,18 +148,52 @@ const Quote = () => {
               proposal for you within{" "}
               <span style={{ fontWeight: "bold" }}>24</span> hours
             </p>
-            <form>
-              <input type="text" placeholder="Your name" />
-              <input type="email" placeholder="Your email" />
-              <input type="text" placeholder="Your phone" />
-              <input type="text" placeholder="Your company" />
-              <select>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="text"
+                placeholder="Your name"
+                name="fullName"
+                value={fullName}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                placeholder="Your email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                placeholder="Your phone"
+                name="phone"
+                value={phone}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                placeholder="Your company"
+                name="company"
+                value={company}
+                onChange={handleChange}
+              />
+              <select onChange={handleChange} name="industry" value={industry}>
                 <option value="">--SELECT INDUSTRY--</option>
                 {industries.map((industry) => (
-                  <option key={industry.id}>{industry.name}</option>
+                  <option value={industry.name} key={industry.id}>
+                    {industry.name}
+                  </option>
                 ))}
               </select>
-              <input type="text" placeholder="Approx. budget" />
+              <select onChange={handleChange} name="budget" value={budget}>
+                <option value="">--SELECT BUDGET RANGE--</option>
+                <option value="50-100">$ 50.00 - $ 100.00</option>
+                <option value="100-500">$ 100.00 - $ 500.00</option>
+                <option value="500-1000">$ 500.00 - $ 1,000.00</option>
+                <option value="1000-5000">$ 1,000.00 - $ 5,000.00</option>
+                <option value="5000-10000">$ 5,000.00 - $ 10,000.00</option>
+                <option value="above-10000">Above $ 10,000.00</option>
+              </select>
               <div className="techs">
                 <div
                   className="techs-title"
@@ -248,7 +312,7 @@ const Quote = () => {
                 <span>Upload</span>
               </label>
               <input type="file" id="fileUpload" style={{ display: "none" }} />
-              <button>Send</button>
+              <button onClick={() => setOpenSummary(true)}>Continue</button>
             </form>
           </div>
         </div>

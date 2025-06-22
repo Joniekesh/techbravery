@@ -208,12 +208,12 @@
                 flex-direction: column;
                 gap: 10px;
                 padding: 10px;
-                border-radius: 10px;
-                background-color: rgba(0, 128, 128, 0.23);
+                border-bottom: 1px solid var(--border-color);
 
                 .tech-name {
                   font-size: 15px;
-                  font-weight: 500;
+                  font-weight: 700;
+                  color: var(--color-teal);
                 }
 
                 .check-boxes {
