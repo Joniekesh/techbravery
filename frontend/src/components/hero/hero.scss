@@ -23,6 +23,11 @@
       font-size: 60px;
       color: var(--color-teal);
       margin-top: -50px;
+      background-color: var(--bg);
+      width: max-content;
+      opacity: 0.8;
+      padding: 10px;
+      border-radius: 0px 50px 0px 50px;
 
       @include tablet {
         font-size: 50px;
@@ -62,11 +67,6 @@
 
       &:hover {
         transform: scale(1.02);
-        background: linear-gradient(
-          to right,
-          var(--color-teal),
-          var(--color-orange)
-        );
       }
     }
   }

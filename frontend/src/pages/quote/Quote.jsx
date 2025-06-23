@@ -105,7 +105,8 @@ const Quote = () => {
           <h1>Get a Quote</h1>
           <p>
             You are one step closer to build your perfect product and enhance
-            your online presence
+            your online presence. Please fill out the form below or contact us
+            by clicking the chat button at the bottom right.
           </p>
         </div>
         <div className="bottom">
@@ -146,7 +147,16 @@ const Quote = () => {
             <p>
               Write us a few words about your project and we will prepare a
               proposal for you within{" "}
-              <span style={{ fontWeight: "bold" }}>24</span> hours
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "16px",
+                  color: "var(--color-orange)",
+                }}
+              >
+                24
+              </span>{" "}
+              hours
             </p>
             <form onSubmit={(e) => e.preventDefault()}>
               <input
@@ -307,11 +317,19 @@ const Quote = () => {
                   placeholder="Project details"
                 ></textarea>
               </div>
-              <label htmlFor="fileUpload">
-                <img src="/uploadicon.jpg" alt="" />
-                <span>Upload</span>
-              </label>
-              <input type="file" id="fileUpload" style={{ display: "none" }} />
+              <div className="images-input">
+                <span>Do you have sample images of what you want?</span>
+                <div className="images"></div>
+                <label htmlFor="fileUpload">
+                  <img src="/uploadicon.jpg" alt="" />
+                  <span>Select Images</span>
+                </label>
+                <input
+                  type="file"
+                  id="fileUpload"
+                  style={{ display: "none" }}
+                />
+              </div>
               <button onClick={() => setOpenSummary(true)}>Continue</button>
             </form>
           </div>

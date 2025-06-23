@@ -591,7 +591,7 @@ export const combinedData = [
   },
   {
     id: 3,
-    url: "/works",
+    url: "/project",
     data: [
       {
         id: 1,

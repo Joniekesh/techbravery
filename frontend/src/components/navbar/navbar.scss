@@ -145,14 +145,17 @@
       cursor: pointer;
       border: none;
       padding: 10px;
-      background-color: var(--color-teal);
-      color: var(--color-white);
+      border: 1px solid var(--color-teal);
+      background-color: transparent;
+      color: var(--color-teal);
+      font-weight: 600;
       border-radius: 5px;
       transition: all 0.3s ease;
 
       &:hover {
         transform: scale(1.02);
         background-color: var(--color-teal);
+        color: var(--color-white);
       }
     }
 

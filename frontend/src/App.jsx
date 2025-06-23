@@ -14,7 +14,6 @@ import Footer from "./components/footer/Footer";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
 import Store from "./pages/store/Store";
-import Works from "./pages/works/Works";
 import Home from "./pages/home/Home";
 import Quote from "./pages/quote/Quote";
 import AboutUs from "./pages/aboutUs/AboutUs";
@@ -91,10 +90,6 @@ const App = () => {
         {
           path: "/contact",
           element: <Contact />,
-        },
-        {
-          path: "/works",
-          element: <Works />,
         },
         {
           path: "/store",

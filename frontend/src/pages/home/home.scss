@@ -6,6 +6,10 @@
   margin-top: 80px;
 
   .welcome {
+    @include mobile {
+      padding: 20px;
+    }
+
     .heading {
       display: flex;
       align-items: center;

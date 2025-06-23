@@ -11,7 +11,7 @@ const Products = () => {
           <Link
             to={`/product/${item.id}`}
             state={item}
-            className={index % 2 !== 0 ? "product success" : "product"}
+            className={index % 2 !== 0 ? "product orange" : "product"}
             key={item.id}
           >
             <span className="product-name">{item.name}</span>

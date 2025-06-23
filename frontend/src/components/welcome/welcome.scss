@@ -61,6 +61,7 @@
 
         p {
           line-height: 1.6;
+          color: var(--color-light);
 
           @include mobile {
             text-align: center;
@@ -120,11 +121,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background: linear-gradient(
-            to right,
-            var(--color-teal),
-            var(--color-orange)
-          );
+          transform: scale(1.01);
         }
       }
     }
