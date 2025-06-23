@@ -40,7 +40,7 @@
       h1 {
         background: linear-gradient(
           to right,
-          var(--color-teal),
+          var(--color-primary),
           var(--color-orange)
         );
         background-clip: text;
@@ -117,7 +117,7 @@
                 margin-bottom: 5px;
                 font-weight: bold;
                 font-size: 14px;
-                color: var(--color-teal);
+                color: var(--color-primary);
               }
 
               span {
@@ -166,7 +166,7 @@
             color: var(--color);
 
             &:focus {
-              border: 2px solid var(--color-teal);
+              border: 2px solid var(--color-primary);
             }
 
             &::placeholder {
@@ -216,7 +216,7 @@
                 .tech-name {
                   font-size: 15px;
                   font-weight: 700;
-                  color: var(--color-teal);
+                  color: var(--color-primary);
                 }
 
                 .check-boxes {
@@ -246,7 +246,7 @@
               font-size: 15px;
               font-weight: bold;
               margin: 10px 0;
-              color: var(--color-teal);
+              color: var(--color-primary);
             }
 
             textarea {
@@ -266,43 +266,126 @@
             gap: 10px;
 
             .images {
-              height: 200px;
+              min-height: 200px;
               border-radius: 10px;
               padding: 10px;
               border: 2px dotted var(--border-color);
               background-color: var(--bg);
-            }
-
-            label {
-              width: max-content;
               display: flex;
               align-items: center;
-              align-self: flex-end;
-              gap: 10px;
-              border: 1px solid var(--color-teal);
-              padding: 10px;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.5s ease;
+              justify-content: center;
+              flex-direction: column;
+              gap: 3px;
 
-              &:hover {
-                transform: scale(1.01);
+              .img-list {
+                display: flex;
+                align-items: flex-start;
+                // justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .img-list-item {
+                  position: relative;
+
+                  img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    border: 2px solid var(--color-primary);
+                  }
+
+                  span {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    cursor: pointer;
+
+                    color: var(--color-orange);
+                    cursor: pointer;
+                    font-size: 20px;
+                    padding: 12px;
+                    background-color: rgba(255, 166, 0, 0.534);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                      transform: scale(1.02);
+                      background-color: var(--color-orange);
+                      color: var(--color-white);
+                    }
+                  }
+                }
+              }
+            }
+
+            .buttons {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              align-self: flex-end;
+
+              label {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+                border: 1px solid var(--color-primary);
+                color: var(--color-primary);
+                font-weight: 500;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+
+                &:hover {
+                  transform: scale(1.01);
+                }
+
+                img {
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
               }
 
-              img {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                object-fit: cover;
+              .upload-btn {
+                width: 100px;
+                height: 40px;
+                padding: 10px;
+                border: 1px solid var(--color-primary);
+                color: var(--color-primary);
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: transparent;
+                transition: all 0.5s ease;
+
+                &:hover {
+                  transform: scale(1.01);
+                }
+
+                &:disabled {
+                  cursor: not-allowed;
+                  opacity: 0.5;
+                }
               }
             }
           }
 
-          button {
+          .continue-btn {
             width: 100%;
             height: 40px;
             padding: 10px;
-            background-color: var(--color-teal);
+            background-color: var(--color-primary);
             color: var(--color-white);
             border: none;
             border-radius: 5px;

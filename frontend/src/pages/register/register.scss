@@ -38,7 +38,7 @@
       width: 500px;
       height: 500px;
       border-radius: 50%;
-      background-color: var(--color-primary);
+      background-color: var(--color-main);
       z-index: -1;
     }
 
@@ -106,7 +106,7 @@
           transition: all 1s ease;
 
           &.active {
-            background-color: var(--color-teal);
+            background-color: var(--color-primary);
             color: var(--color-white);
           }
 
@@ -126,7 +126,7 @@
         color: var(--color);
 
         &:focus {
-          border: 2px solid var(--color-teal);
+          border: 2px solid var(--color-primary);
         }
 
         &::placeholder {
@@ -152,7 +152,7 @@
           border-radius: 5px;
 
           &:focus {
-            border: 2px solid var(--color-teal);
+            border: 2px solid var(--color-primary);
           }
         }
 
@@ -177,7 +177,7 @@
         justify-content: space-between;
 
         .log {
-          border-bottom: 2px solid var(--color-teal);
+          border-bottom: 2px solid var(--color-primary);
           cursor: pointer;
         }
       }
@@ -212,7 +212,7 @@
         padding: 14px;
         cursor: pointer;
         border: none;
-        background-color: var(--color-teal);
+        background-color: var(--color-primary);
         color: var(--color-white);
         transition: all 0.3s ease;
         font-weight: bold;

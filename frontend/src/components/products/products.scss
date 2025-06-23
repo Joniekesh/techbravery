@@ -14,7 +14,7 @@
     margin-bottom: 20px;
     background: linear-gradient(
       to right,
-      var(--color-teal),
+      var(--color-primary),
       var(--color-orange)
     );
     background-clip: text;
@@ -42,7 +42,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: var(--color-teal);
+        background-color: var(--color-primary);
         transform: scale(1.03);
         color: var(--color-white);
 

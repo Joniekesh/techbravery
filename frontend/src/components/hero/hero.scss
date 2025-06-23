@@ -21,7 +21,7 @@
       display: flex;
       flex-direction: column;
       font-size: 60px;
-      color: var(--color-teal);
+      color: var(--color-primary);
       margin-top: -50px;
       background-color: var(--bg);
       width: max-content;
@@ -53,7 +53,7 @@
     }
 
     button {
-      background-color: var(--color-teal);
+      background-color: var(--color-primary);
       color: var(--color-white);
       border: none;
       padding: 10px 20px;

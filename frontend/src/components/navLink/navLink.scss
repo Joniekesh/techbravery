@@ -15,7 +15,7 @@
 
     &:hover,
     &.active {
-      color: var(--color-teal);
+      color: var(--color-primary);
       // font-weight: 500;
     }
   }
@@ -71,7 +71,7 @@
         .name {
           font-weight: bold;
           font-size: 17px;
-          color: var(--color-teal);
+          color: var(--color-primary);
         }
 
         .title {

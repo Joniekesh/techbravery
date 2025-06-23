@@ -156,7 +156,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 {industries.map((industry) => (
                   <Link
                     key={industry.id}
-                    to="/works"
+                    to="/project"
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}
                   >
@@ -233,7 +233,7 @@ const Menu = ({ setOpenMenu, width }) => {
               <>
                 {works.map((work) => (
                   <Link
-                    to="/works"
+                    to="/project"
                     key={work.id}
                     className="title"
                     onClick={() => setOpenMenu((prev) => !prev)}

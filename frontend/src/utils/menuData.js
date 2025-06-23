@@ -419,12 +419,17 @@ export const works = [
   {
     id: 1,
     name: "Web Applications",
-    url: "/works",
+    url: "/project",
   },
   {
     id: 2,
     name: "Android/iOS Applications",
-    url: "/works",
+    url: "/project",
+  },
+  {
+    id: 3,
+    name: "UI / UX Design",
+    url: "/project",
   },
 ];
 

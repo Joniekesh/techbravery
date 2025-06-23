@@ -48,7 +48,7 @@
           transition: all 0, 3s ease;
 
           &:hover {
-            color: var(--color-teal);
+            color: var(--color-primary);
           }
 
           span {
@@ -61,7 +61,7 @@
             justify-content: center;
             font-size: 30px;
             cursor: pointer;
-            color: var(--color-teal);
+            color: var(--color-primary);
             font-weight: 700;
           }
         }
@@ -75,7 +75,7 @@
           color: rgb(168, 168, 168);
 
           &:hover {
-            color: var(--color-teal);
+            color: var(--color-primary);
           }
         }
 
@@ -148,7 +148,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--color-teal);
+        background-color: var(--color-primary);
         padding: 10px;
         height: 100%;
         transition: all 0.8s ease;
@@ -158,7 +158,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--color-primary);
+        background-color: var(--color-main);
         padding: 10px;
         height: 100%;
         transition: all 0.8s ease;
@@ -175,11 +175,11 @@
       }
 
       &:hover .text {
-        background-color: var(--color-primary);
+        background-color: var(--color-main);
       }
 
       &:hover .arrow {
-        background-color: var(--color-teal);
+        background-color: var(--color-primary);
       }
     }
   }

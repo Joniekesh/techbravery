@@ -6,8 +6,8 @@
   --color-light: #666666;
   --color-white: #ffffff;
   --border-color: #d1d5db;
-  --color-primary: #002743;
-  --color-teal: teal;
+  --color-main: #002743;
+  --color-primary: teal;
   --color-orange: orange;
   --color-crimson: crimson;
   --color-success: green;
@@ -21,12 +21,12 @@
   --color-light: #94a3b8;
   --color-white: #ffffff;
   --border-color: #33536b;
-  --color-primary: #002743;
+  --color-main: #002743;
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-teal);
+  scrollbar-color: var(--color-primary);
   scroll-behavior: smooth;
 }
 
@@ -62,12 +62,12 @@ a {
 
 /* Styling the scrollbar track on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-teal); /* Color of the thumb on hover */
+  background-color: var(--color-primary); /* Color of the thumb on hover */
 }
 
 /* Styling the scrollbar track when clicked */
 ::-webkit-scrollbar-thumb:active {
-  background-color: var(--color-teal); /* Color of the thumb when clicked */
+  background-color: var(--color-primary); /* Color of the thumb when clicked */
 }
 
 /* Styling the scrollbar track */

@@ -30,6 +30,7 @@ const designfiles = ["Yes", "No"];
 const Quote = () => {
   const [open, setOpen] = useState(false);
   const [openSummary, setOpenSummary] = useState(false);
+  const [files, setFiles] = useState([]);
   const [inputs, setInputs] = useState({
     fullName: "",
     email: "",
@@ -48,6 +49,8 @@ const Quote = () => {
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  console.log(files[0]);
 
   const frontendFramework = "favoriteFramework";
   const databaseFramework = "favoriteDatabase";
@@ -80,11 +83,20 @@ const Quote = () => {
 
   // console.log(selectedDatabase);
   // console.log(selectedFrontend);
-  console.log(selectedDesign);
+  console.log([...files]);
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   // };
+
+  const handleFiles = (e) => {
+    setFiles(e.target.files);
+  };
+
+  const removeImage = (img) => {
+    setFiles([...files].filter((file) => file.name !== img.name));
+    console.log(img);
+  };
 
   const data = {
     ...inputs,
@@ -319,18 +331,50 @@ const Quote = () => {
               </div>
               <div className="images-input">
                 <span>Do you have sample images of what you want?</span>
-                <div className="images"></div>
-                <label htmlFor="fileUpload">
-                  <img src="/uploadicon.jpg" alt="" />
-                  <span>Select Images</span>
-                </label>
+                <div className="images">
+                  {files && files.length > 0 ? (
+                    <div className="img-list">
+                      {[...files]?.map((f) => (
+                        <div className="img-list-item">
+                          <img key={f} src={`/${f.name}`} />
+                          <span onClick={() => removeImage(f)}>x</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <>
+                      <span>Drag and drop images here</span>
+                      or
+                      <span>Click to select</span>
+                    </>
+                  )}
+                </div>
+                <div className="buttons">
+                  <label htmlFor="fileUpload">
+                    <img src="/uploadicon.jpg" alt="" />
+                    <span>
+                      {files.length > 0 ? "Add More" : "Select Images"}
+                    </span>
+                  </label>
+                  <button disabled={files.length === 0} className="upload-btn">
+                    Upload
+                  </button>
+                </div>
+
                 <input
                   type="file"
                   id="fileUpload"
                   style={{ display: "none" }}
+                  multiple
+                  onChange={handleFiles}
                 />
               </div>
-              <button onClick={() => setOpenSummary(true)}>Continue</button>
+              <button
+                className="continue-btn"
+                onClick={() => setOpenSummary(true)}
+              >
+                Continue
+              </button>
             </form>
           </div>
         </div>

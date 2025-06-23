@@ -17,7 +17,7 @@
     text-align: center;
     background: linear-gradient(
       to right,
-      var(--color-teal),
+      var(--color-primary),
       var(--color-orange)
     );
     background-clip: text;
@@ -62,7 +62,7 @@
 
       &:hover {
         transform: scale(1.02);
-        // background-color: var(--color-teal);
+        // background-color: var(--color-primary);
         // color: var(--color-white);
       }
 
