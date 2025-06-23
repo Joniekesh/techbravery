@@ -57,7 +57,7 @@ const Product = () => {
                 onClick={() => setActiveTab("stacks")}
                 className={activeTab === "stacks" && "active-tab"}
               >
-                Tech Stacks
+                Stacks
               </button>
               <button
                 onClick={() => setActiveTab("platforms")}
