@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 const TestimonialItem = ({ item }) => {
   return (
     <div className="slide">
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
       <div className="testimonialContainer">
         <div className="top">
           <div className="left">
@@ -30,12 +28,10 @@ const TestimonialItem = ({ item }) => {
                 <FaStar />
               </span>
             </div>
-            <hr />
             <div className="userInfo">
               <span className="name">{item.name}</span>
               <span className="org">{item.company}</span>
             </div>
-            <hr />
           </div>
         </div>
         <div className="bottom">

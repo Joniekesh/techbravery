@@ -9,7 +9,7 @@ const Testimonials = () => {
       <div className="container">
         <div className="top">
           <h1>What our Clients say about us!</h1>
-          <p>
+          <p className="t-paragraph">
             Our clients send us bunch of smiles with our services and we love
             them.
           </p>

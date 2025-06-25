@@ -61,8 +61,7 @@
 
           &:hover,
           &.active {
-            background-color: green;
-            border: 2px solid var(--color-primary);
+            background-color: var(--color-primary);
           }
         }
       }
@@ -97,6 +96,28 @@
           .product-platform {
             font-size: 14px;
             color: var(--color-primary);
+          }
+        }
+
+        .status {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px;
+          border-radius: 5px;
+          font-size: 14px;
+
+          .status-title {
+            color: var(--color-light);
+          }
+
+          .status-value {
+            font-weight: 600;
+            font-size: 20px;
+
+            &.completed {
+              color: var(--color-success);
+            }
           }
         }
 

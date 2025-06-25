@@ -38,6 +38,7 @@ import Projects from "./pages/projects/Projects";
 import Project from "./pages/project/Project";
 import Product from "./pages/product/Product";
 import useSystemThemeEffect from "./utils/useSystemThemeEffect";
+import NotFound from "./pages/notFound/NotFound";
 
 const App = () => {
   useSystemThemeEffect();
@@ -65,6 +66,10 @@ const App = () => {
     {
       path: "/auth",
       element: <Register />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
     {
       path: "/forgotpassword",

@@ -21,9 +21,9 @@ const Footer = () => {
               <div key={technology.id}>
                 <div className="techList">
                   {technology.data.map((item) => (
-                    <span className="techlistItem" key={item.id}>
+                    <Link to="/technology" className="item-name" key={item.id}>
                       {item.name}
-                    </span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -32,19 +32,25 @@ const Footer = () => {
           <div className="items">
             <p>Industries</p>
             {industries.map((industry) => (
-              <span key={industry.id}>{industry.name}</span>
+              <span className="item-name" key={industry.id}>
+                {industry.name}
+              </span>
             ))}
           </div>
           <div className="items">
             <p>Services</p>
             {services.map((service) => (
-              <span key={service.id}>{service.name}</span>
+              <Link className="item-name" to="/services" key={service.id}>
+                {service.name}
+              </Link>
             ))}
           </div>
           <div className="items">
             <p>Our Works</p>
             {works.map((work) => (
-              <span key={work.id}>{work.name}</span>
+              <Link to="/project" className="item-name" key={work.id}>
+                {work.name}
+              </Link>
             ))}
           </div>
         </div>

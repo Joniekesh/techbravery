@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Testimonials from "../../components/testimonials/Testimonials";
 import Slider from "../../components/slider/Slider";
 import Hero from "../../components/hero/Hero";
-import Services from "../../components/services/Services";
+import Service from "../../components/service/Service";
 import Products from "../../components/products/Products";
 import Partners from "../../components/partners/Partners";
 import Faqs from "../../components/faqs/Faqs";
@@ -49,15 +49,15 @@ const Home = () => {
           <p>
             Unlock the true potential of your online presence with our premier
             web development agency. At Techbravery Software Solutions, we pride
-            ourselves on delivering stunning secure and responsive websites that
-            captivate audiences, drive conversions, and elevate your brand to
-            new heights. With our expert team of developers, designers, and
+            ourselves on delivering stunning, secure and responsive websites
+            that captivate audiences, drive conversions, and elevate your brand
+            to new heights. With our expert team of developers, designers, and
             digital strategists, we are committed to crafting tailor-made
             solutions that exceed your expectations.
           </p>
         </div>
       </div>
-      <Services />
+      <Service />
       <Welcome />
       <Features />
       <Products />

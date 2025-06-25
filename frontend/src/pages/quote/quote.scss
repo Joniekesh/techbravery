@@ -300,12 +300,11 @@
                     top: -10px;
                     right: -10px;
                     cursor: pointer;
-
-                    color: var(--color-orange);
+                    color: var(--color-white);
                     cursor: pointer;
                     font-size: 20px;
                     padding: 12px;
-                    background-color: rgba(255, 166, 0, 0.534);
+                    background-color: var(--color-orange);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -317,8 +316,6 @@
 
                     &:hover {
                       transform: scale(1.02);
-                      background-color: var(--color-orange);
-                      color: var(--color-white);
                     }
                   }
                 }
@@ -330,6 +327,11 @@
               align-items: center;
               gap: 20px;
               align-self: flex-end;
+
+              @include mobile {
+                align-self: unset;
+                justify-content: space-between;
+              }
 
               label {
                 width: max-content;

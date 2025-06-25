@@ -8,8 +8,6 @@ const Product = () => {
   const [active, setActive] = useState(state?.img);
   const [activeTab, setActiveTab] = useState("overview");
 
-  console.log(state);
-
   const handleClick = (img) => {
     setCurrentImage(img);
     setActive(img);
@@ -38,6 +36,18 @@ const Product = () => {
             <div className="titles">
               <h1 className="product-title">{state?.name}</h1>
               <span className="product-platform">({state?.platforms})</span>
+            </div>
+            <div className="status">
+              <span className="status-title">Status:</span>
+              <span
+                className={
+                  state?.status === "Completed"
+                    ? "status-value completed"
+                    : "status-value"
+                }
+              >
+                {state?.status}
+              </span>
             </div>
 
             <div className="top-nav">

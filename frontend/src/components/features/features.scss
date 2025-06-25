@@ -62,7 +62,7 @@
     gap: 20px;
     overflow: hidden;
 
-    @include tablet1000 {
+    @include tablet11000 {
       align-items: center;
       overflow-x: scroll;
       flex-wrap: unset;
@@ -86,7 +86,7 @@
         transform: scale(1.02);
       }
 
-      @include tablet1000 {
+      @include tablet11000 {
         min-width: 300px;
       }
 

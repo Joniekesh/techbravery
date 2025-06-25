@@ -45,7 +45,7 @@
     align-items: center;
     gap: 10px;
 
-    @include tablet1000 {
+    @include tablet11000 {
       display: none;
     }
   }
@@ -76,7 +76,7 @@
         font-size: 30px;
       }
 
-      @include tablet1000 {
+      @include tablet11000 {
         display: flex;
       }
 
@@ -136,7 +136,7 @@
     .theme-switch {
       display: flex;
 
-      @include tablet1000 {
+      @include tablet11000 {
         display: none;
       }
     }
@@ -164,7 +164,7 @@
       border: none;
       padding: 5px;
       background-color: var(--color-crimson);
-      color: $textLight;
+      color: var(--color-white);
     }
   }
 

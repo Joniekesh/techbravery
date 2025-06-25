@@ -1,10 +1,10 @@
 @import "../../global.scss";
 
 .testimonials {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   background-color: #2e475d;
-  color: $textLight;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $tealColor;
+    background-color: var(--color-primary);
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
   }
 }

@@ -5,80 +5,12 @@ import { Link } from "react-router-dom";
 import { industries } from "../../utils/menuData";
 import { products } from "../../mockData";
 
-const projects = [
-  {
-    id: 1,
-    name: "TexAfrik",
-    type: "mobile",
-    img: "/home_hero.png",
-    industry: "Technology and Software",
-  },
-  {
-    id: 2,
-    name: "Technomo",
-    type: "web",
-    img: "/hero-bg.png",
-    industry: "Finance and Banking",
-  },
-  {
-    id: 3,
-    name: "Tech Arena",
-    type: "desktop",
-    img: "/feature.png",
-    industry: "Health Care and Life Sciences",
-  },
-  {
-    id: 4,
-    name: "Tech POS",
-    type: "mobile",
-    img: "/home_hero.png",
-    industry: "E-commerce and Retail",
-  },
-  {
-    id: 5,
-    name: "Techi Pay",
-    type: "web",
-    img: "/home_cards.png",
-    industry: "Technology and Software",
-  },
-  {
-    id: 6,
-    name: "Tech Growth",
-    type: "desktop",
-    img: "/mockup.png",
-    industry: "Media and Entertainment",
-  },
-  {
-    id: 7,
-    name: "Tech Profit",
-    type: "mobile",
-    img: "/home_hero.png",
-    industry: "Travel and Hospitality",
-  },
-  {
-    id: 8,
-    name: "Tech Hub",
-    type: "web",
-    img: "/hero-bg.png",
-    industry: "Real Estate and Property",
-  },
-  {
-    id: 9,
-    name: "Tech Varsity",
-    type: "desktop",
-    img: "/feature.png",
-    industry: "Manufacturing and Engineering",
-  },
-];
-
 const Projects = () => {
   const [search, setSearch] = useState("");
   const [industry, setIndustry] = useState("");
 
   const [activeTab, setActiveTab] = useState("all");
   const [projectList, setProjectList] = useState(products);
-
-  console.log(industry);
 
   useEffect(() => {
     if (search) {
@@ -174,19 +106,21 @@ const Projects = () => {
             </div>
           </div>
           <div className="projects-list">
-            {projectList.length === 0
-              ? "no item matched your search"
-              : projectList.map((p, index) => (
-                  <Link
-                    to={`/product/${p.id}`}
-                    state={p}
-                    className={index % 2 !== 0 ? "project success" : "project"}
-                    key={p.id}
-                  >
-                    <span className="project-name">{p.name}</span>
-                    <img src={p.img} alt="" />
-                  </Link>
-                ))}
+            {projectList.length === 0 ? (
+              <span className="no-match">No item matches your search</span>
+            ) : (
+              projectList.map((p, index) => (
+                <Link
+                  to={`/product/${p.id}`}
+                  state={p}
+                  className={index % 2 !== 0 ? "project success" : "project"}
+                  key={p.id}
+                >
+                  <span className="project-name">{p.name}</span>
+                  <img src={p.img} alt="" />
+                </Link>
+              ))
+            )}
           </div>
         </div>
       </div>

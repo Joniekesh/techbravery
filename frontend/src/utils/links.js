@@ -14,11 +14,11 @@ export const links = [
     name: "Our Works",
     url: "/project",
   },
-  {
-    id: 4,
-    name: "Store",
-    url: "/store",
-  },
+  // {
+  //   id: 4,
+  //   name: "Store",
+  //   url: "/store",
+  // },
   {
     id: 5,
     name: "Contact",

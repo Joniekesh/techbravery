@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .hero {
-  // background: url("/bg-new.jpg") no-repeat center/cover;
   background: url("/hero-bg.png") no-repeat center/cover;
 
   .hero-container {
@@ -22,7 +21,6 @@
       flex-direction: column;
       font-size: 60px;
       color: var(--color-primary);
-      margin-top: -50px;
       background-color: var(--bg);
       width: max-content;
       opacity: 0.8;
@@ -30,7 +28,7 @@
       border-radius: 0px 50px 0px 50px;
 
       @include tablet {
-        font-size: 50px;
+        font-size: 40px;
       }
 
       .big-text {
@@ -42,6 +40,10 @@
         display: flex;
         flex-direction: column;
         font-weight: 700;
+
+        @include tablet {
+          font-size: 30px;
+        }
 
         .middle {
           .inner {

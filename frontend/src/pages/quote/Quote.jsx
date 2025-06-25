@@ -1,10 +1,8 @@
 import "./quote.scss";
 import { useState } from "react";
 import { industries } from "../../utils/menuData";
-import { FaArrowDown } from "react-icons/fa";
-import { FaArrowUp } from "react-icons/fa";
-import Summary from "../../components/summary/Summary";
-
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { toast, Toaster } from "sonner";
 const frontend = ["React", "NextJS", "Angular", "Vue", "Vanilla"];
 const backend = [
   "NodeJS",
@@ -14,9 +12,12 @@ const backend = [
   "PHP",
   "Django",
   "Python",
+  "Java",
+  "Kotlin",
   "Java/SpringBoot",
 ];
 const database = ["MongoDB", "MYSQL", "Postgre", "Firebase"];
+const appplatforms = ["Web App", "Android App", "Apple App", "Desktop App"];
 
 const cloudplatforms = [
   "Amazon Web Services (AWS)",
@@ -29,7 +30,6 @@ const designfiles = ["Yes", "No"];
 
 const Quote = () => {
   const [open, setOpen] = useState(false);
-  const [openSummary, setOpenSummary] = useState(false);
   const [files, setFiles] = useState([]);
   const [inputs, setInputs] = useState({
     fullName: "",
@@ -45,6 +45,7 @@ const Quote = () => {
   const [selectedCloud, setSelectedCloud] = useState("");
   const [selectedDesign, setSelectedDesign] = useState("");
   const [backendStacks, setBackendStacks] = useState([]);
+  const [selectedAppPlatforms, setSelectedAppPlatforms] = useState([]);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -53,7 +54,10 @@ const Quote = () => {
   console.log(files[0]);
 
   const frontendFramework = "favoriteFramework";
+  const backendFramework = "favoriteBackendFramework";
   const databaseFramework = "favoriteDatabase";
+  const appPlatform = "favoriteAppPlatform";
+
   const cloudFramework = "favoriteCloud";
   const designFile = "favoriteDesign";
 
@@ -68,6 +72,7 @@ const Quote = () => {
   const handleCloudChange = (e) => {
     setSelectedCloud(e.target.value);
   };
+
   const handleDesignChange = (e) => {
     setSelectedDesign(e.target.value);
   };
@@ -81,13 +86,16 @@ const Quote = () => {
     }
   };
 
-  // console.log(selectedDatabase);
-  // console.log(selectedFrontend);
-  console.log([...files]);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
+  const handlePlatformChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setSelectedAppPlatforms([...selectedAppPlatforms, value]);
+    } else {
+      setSelectedAppPlatforms(
+        selectedAppPlatforms.filter((item) => item !== value)
+      );
+    }
+  };
 
   const handleFiles = (e) => {
     setFiles(e.target.files);
@@ -100,19 +108,30 @@ const Quote = () => {
 
   const data = {
     ...inputs,
+    selectedAppPlatforms,
     selectedFrontend,
     selectedDatabase,
     selectedCloud,
     selectedDesign,
     backendStacks,
+    files,
+  };
+
+  console.log(data);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!fullName || !email || !industry || !budget) {
+      return toast.error("Full name, email, industry and range are required!");
+    }
   };
 
   return (
     <div className="quote">
+      <Toaster position="top-right" richColors />
+
       <div className="container">
-        {openSummary && (
-          <Summary setOpenSummary={setOpenSummary} inputs={data} />
-        )}
         <div className="top">
           <h1>Get a Quote</h1>
           <p>
@@ -170,13 +189,14 @@ const Quote = () => {
               </span>{" "}
               hours
             </p>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Your name"
                 name="fullName"
                 value={fullName}
                 onChange={handleChange}
+                required
               />
               <input
                 type="email"
@@ -184,6 +204,7 @@ const Quote = () => {
                 name="email"
                 value={email}
                 onChange={handleChange}
+                required
               />
               <input
                 type="text"
@@ -200,28 +221,38 @@ const Quote = () => {
                 onChange={handleChange}
               />
               <select onChange={handleChange} name="industry" value={industry}>
-                <option value="">--SELECT INDUSTRY--</option>
+                <option required value="">
+                  --SELECT INDUSTRY--
+                </option>
                 {industries.map((industry) => (
                   <option value={industry.name} key={industry.id}>
                     {industry.name}
                   </option>
                 ))}
               </select>
-              <select onChange={handleChange} name="budget" value={budget}>
+              <select
+                required
+                onChange={handleChange}
+                name="budget"
+                value={budget}
+              >
                 <option value="">--SELECT BUDGET RANGE--</option>
                 <option value="50-100">$ 50.00 - $ 100.00</option>
                 <option value="100-500">$ 100.00 - $ 500.00</option>
                 <option value="500-1000">$ 500.00 - $ 1,000.00</option>
                 <option value="1000-5000">$ 1,000.00 - $ 5,000.00</option>
                 <option value="5000-10000">$ 5,000.00 - $ 10,000.00</option>
-                <option value="above-10000">Above $ 10,000.00</option>
+                <option value="10000-100000">$ 10,000.00 - $ 100,000.00</option>
+                <option value="above-100000">Above $ 100,000.00</option>
               </select>
               <div className="techs">
                 <div
                   className="techs-title"
                   onClick={() => setOpen((prev) => !prev)}
                 >
-                  <span>Choose prefered technologies and stacks</span>
+                  <span>
+                    Choose prefered technologies, stacks and platforms
+                  </span>
                   {open ? <FaArrowUp /> : <FaArrowDown />}
                 </div>
                 {open && (
@@ -253,7 +284,7 @@ const Quote = () => {
                             <input
                               type="checkbox"
                               onChange={handleBackendChange}
-                              name="backend"
+                              name={backendFramework}
                               value={b}
                               checked={backendStacks.includes(b)}
                               className="check-box"
@@ -274,6 +305,24 @@ const Quote = () => {
                               name={databaseFramework}
                               value={d}
                               checked={selectedDatabase === d}
+                              className="check-box"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="item">
+                      <span className="tech-name">App Platforms</span>
+                      <div className="check-boxes">
+                        {appplatforms.map((a) => (
+                          <div className="check-box" key={a}>
+                            <span className="stack-name">{a}</span>
+                            <input
+                              type="checkbox"
+                              onChange={handlePlatformChange}
+                              name={appPlatform}
+                              value={a}
+                              checked={selectedAppPlatforms.includes(a)}
                               className="check-box"
                             />
                           </div>
@@ -334,8 +383,8 @@ const Quote = () => {
                 <div className="images">
                   {files && files.length > 0 ? (
                     <div className="img-list">
-                      {[...files]?.map((f) => (
-                        <div className="img-list-item">
+                      {[...files]?.map((f, index) => (
+                        <div key={index} className="img-list-item">
                           <img key={f} src={`/${f.name}`} />
                           <span onClick={() => removeImage(f)}>x</span>
                         </div>
@@ -345,7 +394,17 @@ const Quote = () => {
                     <>
                       <span>Drag and drop images here</span>
                       or
-                      <span>Click to select</span>
+                      <label
+                        style={{
+                          cursor: "pointer",
+                          color: "var(--color-primary)",
+                          fontWeight: 600,
+                        }}
+                        label
+                        htmlFor="fileUpload"
+                      >
+                        Click to select
+                      </label>
                     </>
                   )}
                 </div>
@@ -369,12 +428,7 @@ const Quote = () => {
                   onChange={handleFiles}
                 />
               </div>
-              <button
-                className="continue-btn"
-                onClick={() => setOpenSummary(true)}
-              >
-                Continue
-              </button>
+              <button className="continue-btn">SEND</button>
             </form>
           </div>
         </div>

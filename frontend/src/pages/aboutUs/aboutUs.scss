@@ -12,7 +12,6 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    // color: $textDark;
     padding: 50px;
 
     @include tablet {
@@ -23,7 +22,7 @@
       span {
         font-size: 24px;
         font-weight: bold;
-        color: $tealColor;
+        color: var(--color-teal);
       }
     }
   }

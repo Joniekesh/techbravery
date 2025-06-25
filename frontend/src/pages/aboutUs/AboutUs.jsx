@@ -21,11 +21,8 @@ const AboutUs = () => {
           truly address their needs. We believe that collaboration is the key to
           success, and we work closely with our clients throughout the entire
           development process, ensuring transparency, communication, and a
-          shared vision. At <span>Techbravery</span>, we are not just a service
-          provider; we are your strategic partner, invested in your success.
-          Discover more about our history, team members, and values on our About
-          Us page and experience the difference of working with a dedicated and
-          experienced software development agency.
+          shared vision. We are not just a service provider; we are your
+          strategic partner, invested in your success.
         </p>
       </div>
     </div>

@@ -47,7 +47,7 @@
           gap: 10px;
         }
 
-        span {
+        .item-name {
           font-size: 12px;
           cursor: pointer;
 
@@ -60,7 +60,7 @@
   }
 
   .socials {
-    background-color: $bgDark;
+    background-color: var(--bg-dark);
     padding: 20px 50px;
     display: flex;
     align-items: center;
@@ -93,8 +93,10 @@
       }
 
       a {
+        color: var(--color);
+
         &:hover {
-          color: $tealColor;
+          color: var(--color-primary);
         }
       }
     }

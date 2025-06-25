@@ -91,19 +91,19 @@ export const services = [
     id: 2,
     name: "Android/iOS Development",
     desc: "We will develope secure and responsive Andoid and iOS applications to help you get wider visibility and clients.",
-    img: "/appdev.png",
+    img: "/design.png",
   },
   {
     id: 3,
     name: "UI/UX Design",
     desc: "Whatever your dream or idea is, we will bring it into reality through modern  User Interface design and make the properties, mockups,wireframes and prototypes readily available for the developers to work with.",
-    img: "/appdev.png",
+    img: "/development.png",
   },
   {
     id: 4,
     name: "Project Architecture",
     desc: "Bring your idea and we will architect/design your applications using modern technologies and get the framework ready for your developers to work with prioritizing security, modern technologies and frameworks.",
-    img: "/appdev.png",
+    img: "/marketing.png",
   },
   {
     id: 5,
@@ -115,19 +115,19 @@ export const services = [
     id: 6,
     name: "Utility SAAS Applications",
     desc: "We have Web, Android, iOS and Desktop applications that solve real world problems ranging from Fintech, Edutech, Agritech, AI, Bot, E-commerce etc.",
-    img: "/appdev.png",
+    img: "/design.png",
   },
   {
     id: 7,
     name: "Startup Incubation",
     desc: "Are you a startup? We can architect your idea, partner with you, connect you to loan or grant providers and basically take your hand and take you up to a prosperous height.",
-    img: "/appdev.png",
+    img: "/development.png",
   },
   {
     id: 8,
     name: "Product Marketing",
     desc: "Our experienced marketers are always at your beck and call to boost your visibility and income.",
-    img: "/appdev.png",
+    img: "/marketing.png",
   },
   {
     id: 9,
@@ -143,6 +143,7 @@ export const products = [
     name: "TexAfrik",
     img: "/home_hero.png",
     type: "mobile",
+    status: "Completed",
     industry: "Finance and Banking",
     photos: [
       "/home_hero.png",
@@ -214,6 +215,7 @@ export const products = [
     name: "Technomo",
     img: "/hero-bg.png",
     type: "web",
+    status: "Completed",
     industry: "Health Care and Life Sciences",
     photos: [
       "/home_hero.png",
@@ -290,6 +292,7 @@ export const products = [
     img: "/feature.png",
     type: "desktop",
     industry: "E-commerce and Retail",
+    status: "In development",
 
     photos: [
       "/home_hero.png",
@@ -369,6 +372,7 @@ export const products = [
     name: "Tech POS",
     img: "/home_cards.png",
     type: "mobile",
+    status: "Completed",
     industry: "E-commerce and Retail",
     photos: [
       "/home_hero.png",
@@ -440,6 +444,7 @@ export const products = [
     name: "Techi Pay",
     img: "/mockup.png",
     type: "web",
+    status: "In development",
     industry: "Technology and Software",
     photos: [
       "/home_hero.png",
@@ -511,6 +516,7 @@ export const products = [
     name: "Tech Growth",
     img: "/home_hero.png",
     type: "desktop",
+    status: "Completed",
     industry: "Technology and Software",
     photos: [
       "/home_hero.png",
@@ -581,6 +587,7 @@ export const products = [
     name: "Tech Profit",
     img: "/hero-bg.png",
     type: "mobile",
+    status: "In development",
     industry: "Technology and Software",
     photos: [
       "/home_hero.png",
@@ -621,26 +628,30 @@ export const products = [
     techStacks: [
       {
         id: 1,
-        name: "Mongo DB",
+        name: "NodeJS",
       },
       {
         id: 2,
-        name: "Express",
+        name: "Mongo DB",
       },
       {
         id: 3,
-        name: "React",
+        name: "Express",
       },
       {
         id: 4,
-        name: "Firebase for Google Authentication",
+        name: "React",
       },
       {
         id: 5,
-        name: "SASS for styling",
+        name: "Firebase for Google Authentication",
       },
       {
         id: 6,
+        name: "SASS for styling",
+      },
+      {
+        id: 7,
         name: "React icons",
       },
     ],
@@ -651,6 +662,7 @@ export const products = [
     name: "Tech Hub",
     img: "/feature.png",
     type: "web",
+    status: "Completed",
     industry: "Technology and Software",
     photos: [
       "/home_hero.png",
@@ -721,6 +733,7 @@ export const products = [
     name: "Tech Varsity",
     img: "/home_hero.png",
     type: "desktop",
+    status: "In development",
     industry: "Technology and Software",
     photos: [
       "/home_hero.png",

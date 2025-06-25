@@ -246,16 +246,25 @@ const Register = () => {
                 />
               )}
             </div>
-
+            <Link
+              style={{
+                borderBottom: "1px solid var(--color-primary)",
+                width: "max-content",
+              }}
+              to="/forgotpassword"
+            >
+              Forgot Password?
+            </Link>
+            <button type="submit" disabled={isEmptylogin}>
+              {loading ? "Loading..." : "LOGIN"}
+            </button>
             <div className="action">
               <span>Dont't Have an Account?</span>
               <div onClick={() => setIsSignUp(true)} className="log">
                 Register
               </div>
             </div>
-            <button type="submit" disabled={isEmptylogin}>
-              {loading ? "Loading..." : "LOGIN"}
-            </button>
+
             <span className="or">OR</span>
             <div className="google">
               <img src="/googleIcon.png" alt="" />

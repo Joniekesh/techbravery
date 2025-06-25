@@ -10,6 +10,7 @@ import {
   services,
   technologies,
   works,
+  contacts,
 } from "../../utils/menuData";
 import { RxCaretDown } from "react-icons/rx";
 import { useState } from "react";
@@ -25,6 +26,7 @@ const Menu = ({ setOpenMenu, width }) => {
   const [technologyToggle, setTechnologyToggle] = useState(false);
   const [industryToggle, setIndustryToggle] = useState(false);
   const [digitalStoreToggle, setDigitalStoreToggle] = useState(false);
+  const [contactsToggle, setContactsToggle] = useState(false);
 
   return (
     <div className="menu" style={{ display: width > 1100 && "none" }}>
@@ -45,6 +47,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTechnologyToggle(false);
                 setIndustryToggle(false);
                 setDigitalStoreToggle(false);
+                setContactsToggle(false);
               }}
             >
               <span>WHO WE ARE</span>
@@ -78,6 +81,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
                 setDigitalStoreToggle(false);
+                setContactsToggle(false);
               }}
             >
               <span>OUR SERVICES</span>
@@ -104,6 +108,74 @@ const Menu = ({ setOpenMenu, width }) => {
             <div
               className="itemTitle"
               onClick={() => {
+                setWorksToggle((prev) => !prev);
+                setServiceToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
+                setContactsToggle(false);
+              }}
+            >
+              <span>OUR WORKS</span>
+              <span className="icon">
+                <RxCaretDown />
+              </span>
+            </div>
+            {worksToggle && (
+              <>
+                {works.map((work) => (
+                  <Link
+                    to="/project"
+                    key={work.id}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {work.name}
+                  </Link>
+                ))}
+              </>
+            )}
+          </div>
+
+          <div className="item">
+            <div
+              className="itemTitle"
+              onClick={() => {
+                setContactsToggle((prev) => !prev);
+                setServiceToggle(false);
+                setTeamToggle(false);
+                setTechnologyToggle(false);
+                setIndustryToggle(false);
+                setAboutUsToggle(false);
+                setDigitalStoreToggle(false);
+              }}
+            >
+              <span>CONTACTS</span>
+              <span className="icon">
+                <RxCaretDown />
+              </span>
+            </div>
+            {contactsToggle && (
+              <>
+                {contacts.map((contact) => (
+                  <Link
+                    to={contact.url}
+                    key={contact.id}
+                    className="title"
+                    onClick={() => setOpenMenu((prev) => !prev)}
+                  >
+                    {contact.name}
+                  </Link>
+                ))}
+              </>
+            )}
+          </div>
+          {/* <div className="item">
+            <div
+              className="itemTitle"
+              onClick={() => {
                 setDigitalStoreToggle((prev) => !prev);
                 setWorksToggle(false);
                 setTeamToggle(false);
@@ -111,6 +183,8 @@ const Menu = ({ setOpenMenu, width }) => {
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
                 setServiceToggle(false);
+                setContactsToggle(false)
+
               }}
             >
               <span>DIGITAL STORE</span>
@@ -132,7 +206,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 ))}
               </>
             )}
-          </div>
+          </div> */}
           <div className="item">
             <div
               className="itemTitle"
@@ -144,6 +218,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setTechnologyToggle(false);
                 setAboutUsToggle(false);
                 setDigitalStoreToggle(false);
+                setContactsToggle(false);
               }}
             >
               <span>INDUSTRIES</span>
@@ -177,6 +252,7 @@ const Menu = ({ setOpenMenu, width }) => {
                 setIndustryToggle(false);
                 setAboutUsToggle(false);
                 setDigitalStoreToggle(false);
+                setContactsToggle(false);
               }}
             >
               <span>TECHNOLOGIES</span>
@@ -207,39 +283,6 @@ const Menu = ({ setOpenMenu, width }) => {
                       ))}
                     </>
                   </>
-                ))}
-              </>
-            )}
-          </div>
-          <div className="item">
-            <div
-              className="itemTitle"
-              onClick={() => {
-                setWorksToggle((prev) => !prev);
-                setServiceToggle(false);
-                setTeamToggle(false);
-                setTechnologyToggle(false);
-                setIndustryToggle(false);
-                setAboutUsToggle(false);
-                setDigitalStoreToggle(false);
-              }}
-            >
-              <span>OUR WORKS</span>
-              <span className="icon">
-                <RxCaretDown />
-              </span>
-            </div>
-            {worksToggle && (
-              <>
-                {works.map((work) => (
-                  <Link
-                    to="/project"
-                    key={work.id}
-                    className="title"
-                    onClick={() => setOpenMenu((prev) => !prev)}
-                  >
-                    {work.name}
-                  </Link>
                 ))}
               </>
             )}

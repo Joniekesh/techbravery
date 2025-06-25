@@ -184,6 +184,56 @@ export const industries = [
   },
   {
     id: 17,
+    name: "Cryptocurrency and Blockchain",
+    url: "/",
+  },
+  {
+    id: 18,
+    name: "Legal",
+    url: "/",
+  },
+  {
+    id: 19,
+    name: "Medical and Pharmaceutical",
+    url: "/",
+  },
+  {
+    id: 20,
+    name: "Marketing and Advertising",
+    url: "/",
+  },
+  {
+    id: 21,
+    name: "Religion and Spirituality",
+    url: "/",
+  },
+  {
+    id: 22,
+    name: "Sports and Fitness",
+    url: "/",
+  },
+  {
+    id: 23,
+    name: "Telecommunications",
+    url: "/",
+  },
+  {
+    id: 24,
+    name: "Art and Design",
+    url: "/",
+  },
+  {
+    id: 25,
+    name: "Beauty and Cosmetics",
+    url: "/",
+  },
+  {
+    id: 26,
+    name: "Cybersecurity",
+    url: "/",
+  },
+  {
+    id: 27,
     name: "Chat Solutions",
     url: "/",
   },
@@ -433,6 +483,49 @@ export const works = [
   },
 ];
 
+export const contacts = [
+  {
+    id: 1,
+    name: "Email",
+    url: "/contact",
+  },
+  {
+    id: 2,
+    name: "Phone",
+    url: "/contact",
+  },
+  {
+    id: 3,
+    name: "Facebook",
+    url: "/contact",
+  },
+  {
+    id: 4,
+    name: "Instagram",
+    url: "/contact",
+  },
+  {
+    id: 5,
+    name: "TikTok",
+    url: "/contact",
+  },
+  {
+    id: 6,
+    name: "WhatsApp",
+    url: "/contact",
+  },
+  {
+    id: 7,
+    name: "Linkedin",
+    url: "/contact",
+  },
+  {
+    id: 8,
+    name: "Discord",
+    url: "/contact",
+  },
+];
+
 // export const teams = [
 //   {
 //     id: 1,
@@ -615,27 +708,27 @@ export const combinedData = [
       },
     ],
   },
-  {
-    id: 4,
-    url: "/store",
-    data: [
-      {
-        id: 1,
-        name: "Electronic Books",
-        url: "/store",
-      },
-      {
-        id: 2,
-        name: "Tunky Websites",
-        url: "/store",
-      },
-      {
-        id: 3,
-        name: "Wordpress plugins",
-        url: "/store",
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   url: "/store",
+  //   data: [
+  //     {
+  //       id: 1,
+  //       name: "Electronic Books",
+  //       url: "/store",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Tunky Websites",
+  //       url: "/store",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Wordpress plugins",
+  //       url: "/store",
+  //     },
+  //   ],
+  // },
   {
     id: 5,
     url: "/contact",

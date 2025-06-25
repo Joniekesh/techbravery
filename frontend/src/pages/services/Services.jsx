@@ -1,3 +1,4 @@
+import { services } from "../../mockData";
 import "./services.scss";
 import { Link } from "react-router-dom";
 
@@ -26,14 +27,23 @@ const Services = () => {
           relationships with our clients, and our services are designed to
           provide ongoing support and maintenance to ensure your software
           operates smoothly and efficiently. Explore our{" "}
-          <Link className="visit" to="/works">
+          <Link className="visit" to="/project">
             Works{" "}
           </Link>
-          page to check our project catalogues and choose a product that suits
-          your needs. From there we can get in touch and discuss about how we
-          can help you unlock your business's true potential through innovative
-          software solutions.
+          page to check out our project catalogues and choose a product that
+          suits your needs. From there we can get in touch and discuss about how
+          we can help you unlock your business's true potential through
+          innovative software solutions.
         </p>
+        <div className="services-items">
+          {services.map((item) => (
+            <div key={item.id} className="services-item">
+              <img src={item.img} alt="" />
+              <span className="item-name">{item.name}</span>
+              <p className="item-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
