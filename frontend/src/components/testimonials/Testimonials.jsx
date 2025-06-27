@@ -1,6 +1,4 @@
 import "./testimonials.scss";
-import { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa6";
 import Slider from "../slider/Slider";
 
 const Testimonials = () => {

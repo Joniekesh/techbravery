@@ -1,7 +1,28 @@
 @import "../../global.scss";
 
 .faqs {
-  min-height: 100vh;
-  width: 100vw;
-  padding: 20px 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  .faqs-title {
+    text-align: center;
+    margin-bottom: 32px;
+
+    background: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-orange)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .faqs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }

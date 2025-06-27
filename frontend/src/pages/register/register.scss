@@ -24,7 +24,7 @@
     padding: 20px;
 
     &.login {
-      height: 76vh;
+      height: 77vh;
     }
 
     @include mobile {
@@ -172,6 +172,7 @@
       }
 
       .action {
+        font-size: 14px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -183,10 +184,12 @@
       }
 
       .or {
+        font-size: 10px;
         text-align: center;
       }
 
       .google {
+        font-size: 14px;
         display: flex;
         align-items: center;
         justify-content: center;

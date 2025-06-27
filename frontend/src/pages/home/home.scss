@@ -36,31 +36,15 @@
     }
 
     .desc {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 10px 10px 10px;
-      font-size: 22px;
-      border-radius: 50px 0 50px 0;
-      background-color: rgba(0, 128, 128, 0.34);
-      font-weight: 500;
+      line-height: 1.6;
+      color: var(--color);
+      border-radius: 0px 50px 0px 50px;
+      padding: 20px;
+      font-size: 20px;
 
-      p {
-        line-height: 1.6;
-
-        @include tablet {
-          width: 100%;
-        }
-      }
-    }
-
-    @keyframes move {
-      from {
-        transform: translateY(-10px);
-      }
-      to {
-        transform: translateY(10px);
-      }
+      border: 5px solid transparent;
+      background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+        var(--border-color) border-box;
     }
   }
 }

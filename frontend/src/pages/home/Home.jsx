@@ -1,41 +1,33 @@
 import "./home.scss";
-import { Link, useNavigate } from "react-router-dom";
 import Features from "../../components/features/Features";
 import Welcome from "../../components/welcome/Welcome";
-import { useEffect, useState } from "react";
 import Testimonials from "../../components/testimonials/Testimonials";
-import Slider from "../../components/slider/Slider";
 import Hero from "../../components/hero/Hero";
 import Service from "../../components/service/Service";
 import Products from "../../components/products/Products";
 import Partners from "../../components/partners/Partners";
 import Faqs from "../../components/faqs/Faqs";
-
-const data = [
-  {
-    id: 1,
-    image: "/img3upd.jpg",
-    bg: "/bg.jpg",
-  },
-  {
-    id: 2,
-    image: "/img2upd.jpg",
-    bg: "/img8.jpg",
-  },
-];
+import { useEffect, useRef } from "react";
 
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const navigate = useNavigate();
+  const boxRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1)),
-      7000
-    );
-    return () => clearInterval(interval);
+    const boxElement = boxRef.current;
+
+    if (!boxElement) return;
+
+    const updateAnimation = () => {
+      const currentAngle = parseFloat(
+        boxElement.style.getPropertyValue("--angle") || "0"
+      );
+
+      const newAngle = (currentAngle + 0.5) % 360;
+
+      boxElement.style.setProperty("--angle", `${newAngle}deg`);
+      requestAnimationFrame(updateAnimation);
+    };
+    requestAnimationFrame(updateAnimation);
   }, []);
 
   return (
@@ -45,16 +37,23 @@ const Home = () => {
         <div className="heading">
           <h1>Expert Software design, development, support & maintenance!</h1>
         </div>
-        <div className="desc">
-          <p>
-            Unlock the true potential of your online presence with our premier
-            web development agency. At Techbravery Software Solutions, we pride
-            ourselves on delivering stunning, secure and responsive websites
-            that captivate audiences, drive conversions, and elevate your brand
-            to new heights. With our expert team of developers, designers, and
-            digital strategists, we are committed to crafting tailor-made
-            solutions that exceed your expectations.
-          </p>
+        <div
+          style={{
+            "--angle": "0deg",
+            "--border-color":
+              "linear-gradient(var(--angle),#4169e1,#e6a960,#5f9261,orangered,#ffe86e,#9747ff,teal,orange,#4b0082)",
+            // "linear-gradient(var(--angle),#008080,#4b0082,#4169e1,#2ecc71,#36454f,#ff6f61,#ffd700)",
+          }}
+          ref={boxRef}
+          className="desc"
+        >
+          Unlock the true potential of your online presence with our premier web
+          development agency. At Techbravery Software Solutions, we pride
+          ourselves on delivering stunning, secure and responsive websites that
+          captivate audiences, drive conversions, and elevate your brand to new
+          heights. With our expert team of developers, designers, and digital
+          strategists, we are committed to crafting tailor-made solutions that
+          exceed your expectations.
         </div>
       </div>
       <Service />

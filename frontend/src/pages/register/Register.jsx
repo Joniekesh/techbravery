@@ -250,6 +250,7 @@ const Register = () => {
               style={{
                 borderBottom: "1px solid var(--color-primary)",
                 width: "max-content",
+                fontSize: "14px",
               }}
               to="/forgotpassword"
             >

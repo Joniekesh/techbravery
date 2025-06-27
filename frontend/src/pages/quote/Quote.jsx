@@ -1,7 +1,9 @@
 import "./quote.scss";
 import { useState } from "react";
 import { industries } from "../../utils/menuData";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+// import { FaArrowDown, FaCaretDown, FaCaretUp, FaArrowUp } from "react-icons/fa";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa6";
+
 import { toast, Toaster } from "sonner";
 const frontend = ["React", "NextJS", "Angular", "Vue", "Vanilla"];
 const backend = [
@@ -253,7 +255,7 @@ const Quote = () => {
                   <span>
                     Choose prefered technologies, stacks and platforms
                   </span>
-                  {open ? <FaArrowUp /> : <FaArrowDown />}
+                  {open ? <FaCaretUp /> : <FaCaretDown />}
                 </div>
                 {open && (
                   <div className="techs-container">
