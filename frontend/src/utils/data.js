@@ -20,7 +20,7 @@ export const items = [
   {
     id: 4,
     title: "Cutting-Edge Technologies",
-    desc: "Our team stays ahead of the curve by keeping up with the latest industry trends and technologies. We leverage the power of AI, ML, Cloud Computes, CI/CD Automation, Platform-Specific Enhancements, HTML5, CSS3, JavaScript/TypeScript frameworks, and CMS platforms to deliver cutting-edge websites that are both visually stunning and technologically advanced.",
+    desc: "Our team stays ahead of the curve by keeping up with the latest industry trends and technologies. We leverage the power of AI, ML, Cloud Computes, CI/CD Automation, Platform-Specific Enhancements, Intelligent Personalization and Analytics, 3D Immersive Interfaces, and Component Driven Development to deliver cutting-edge applications that are both visually stunning and technologically advanced.",
     img: "/img8.jpg",
   },
   {
