@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./projects.scss";
-import { HiMiniComputerDesktop } from "react-icons/hi2";
+import { FiSearch } from "react-icons/fi";
+
 import { Link } from "react-router-dom";
 import { industries } from "../../utils/menuData";
 import { products } from "../../mockData";
@@ -62,7 +63,7 @@ const Projects = () => {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
-                <HiMiniComputerDesktop className="search-icon" />
+                <FiSearch className="search-icon" />
               </div>
               <select
                 className="select-search"

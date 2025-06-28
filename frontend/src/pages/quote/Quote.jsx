@@ -3,6 +3,7 @@ import { useState } from "react";
 import { industries } from "../../utils/menuData";
 // import { FaArrowDown, FaCaretDown, FaCaretUp, FaArrowUp } from "react-icons/fa";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa6";
+import { FiImage } from "react-icons/fi";
 
 import { toast, Toaster } from "sonner";
 const frontend = ["React", "NextJS", "Angular", "Vue", "Vanilla"];
@@ -48,12 +49,13 @@ const Quote = () => {
   const [selectedDesign, setSelectedDesign] = useState("");
   const [backendStacks, setBackendStacks] = useState([]);
   const [selectedAppPlatforms, setSelectedAppPlatforms] = useState([]);
+  const [dragActive, setDragActive] = useState(false);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  console.log(files[0]);
+  // console.log(files[0]);
 
   const frontendFramework = "favoriteFramework";
   const backendFramework = "favoriteBackendFramework";
@@ -100,12 +102,55 @@ const Quote = () => {
   };
 
   const handleFiles = (e) => {
-    setFiles(e.target.files);
+    e.preventDefault();
+
+    const files = Array.from(e.target.files);
+    const imageFiles = files.filter((file) => file.type.startsWith("image/"));
+
+    const imageURLs = imageFiles.map((file) => ({
+      file,
+      url: URL.createObjectURL(file),
+    }));
+
+    setFiles((prev) => [...prev, ...imageURLs]);
   };
 
-  const removeImage = (img) => {
-    setFiles([...files].filter((file) => file.name !== img.name));
-    console.log(img);
+  const handleDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+
+    const files = Array.from(e.dataTransfer.files);
+
+    const imageFiles = files.filter((file) => file.type.startsWith("image/"));
+
+    const imageURLs = imageFiles.map((file) => ({
+      file,
+      url: URL.createObjectURL(file),
+    }));
+
+    setFiles((prev) => [...prev, ...imageURLs]);
+  };
+
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleDragEnter = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(true);
+  };
+
+  const removeImage = (url) => {
+    setFiles(files.filter((file) => file.url !== url));
   };
 
   const data = {
@@ -119,7 +164,7 @@ const Quote = () => {
     files,
   };
 
-  console.log(data);
+  console.log(files);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -191,7 +236,7 @@ const Quote = () => {
               </span>{" "}
               hours
             </p>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Your name"
@@ -380,21 +425,35 @@ const Quote = () => {
                   placeholder="Project details"
                 ></textarea>
               </div>
-              <div className="images-input">
+              <div
+                onDragEnter={handleDragEnter}
+                onSubmit={(e) => e.preventDefault()}
+                onDrop={handleDrop}
+                onDragLeave={handleDragLeave}
+                onDragOver={handleDragOver}
+                className="images-input"
+              >
                 <span>Do you have sample images of what you want?</span>
-                <div className="images">
+                <div className={dragActive ? "images drag-active" : "images"}>
                   {files && files.length > 0 ? (
                     <div className="img-list">
-                      {[...files]?.map((f, index) => (
+                      {files?.map((f, index) => (
                         <div key={index} className="img-list-item">
-                          <img key={f} src={`/${f.name}`} />
-                          <span onClick={() => removeImage(f)}>x</span>
+                          <img key={f} src={f.url} />
+                          <span onClick={() => removeImage(f.url)}>x</span>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <>
+                    <div className="drag">
                       <span>Drag and drop images here</span>
+                      <FiImage
+                        style={{
+                          margin: "10px 0",
+                          fontSize: "60px",
+                          opacity: 0.2,
+                        }}
+                      />
                       or
                       <label
                         style={{
@@ -407,17 +466,17 @@ const Quote = () => {
                       >
                         Click to select
                       </label>
-                    </>
+                    </div>
                   )}
                 </div>
                 <div className="buttons">
                   <label htmlFor="fileUpload">
                     <img src="/uploadicon.jpg" alt="" />
                     <span>
-                      {files.length > 0 ? "Add More" : "Select Images"}
+                      {files?.length > 0 ? "Add More" : "Select Images"}
                     </span>
                   </label>
-                  <button disabled={files.length === 0} className="upload-btn">
+                  <button disabled={files?.length === 0} className="upload-btn">
                     Upload
                   </button>
                 </div>
@@ -430,7 +489,9 @@ const Quote = () => {
                   onChange={handleFiles}
                 />
               </div>
-              <button className="continue-btn">SEND</button>
+              <button type="submit" className="continue-btn">
+                SEND
+              </button>
             </form>
           </div>
         </div>

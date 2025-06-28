@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Toaster } from "sonner";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
@@ -14,9 +14,9 @@ import Footer from "./components/footer/Footer";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
 import Store from "./pages/store/Store";
-import Home from "./pages/home/Home";
+// import Home from "./pages/home/Home";
 import Quote from "./pages/quote/Quote";
-import AboutUs from "./pages/aboutUs/AboutUs";
+// import AboutUs from "./pages/aboutUs/AboutUs";
 import SuperAdmin from "./pages/superAdmin/SuperAdmin";
 import Admin from "./pages/admin/Admin";
 import User from "./pages/user/User";
@@ -39,6 +39,9 @@ import Project from "./pages/project/Project";
 import Product from "./pages/product/Product";
 import useSystemThemeEffect from "./utils/useSystemThemeEffect";
 import NotFound from "./pages/notFound/NotFound";
+
+const Home = lazy(() => import("./pages/home/Home"));
+const AboutUs = lazy(() => import("./pages/aboutUs/AboutUs"));
 
 const App = () => {
   useSystemThemeEffect();
@@ -86,7 +89,11 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <Home />
+            </Suspense>
+          ),
         },
         {
           path: "/services",
@@ -106,7 +113,11 @@ const App = () => {
         },
         {
           path: "/aboutus",
-          element: <AboutUs />,
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <AboutUs />
+            </Suspense>
+          ),
         },
         {
           path: "/technology",

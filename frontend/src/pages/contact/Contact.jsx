@@ -1,5 +1,6 @@
 import "./contact.scss";
-import { HiMiniComputerDesktop } from "react-icons/hi2";
+import { FiMapPin, FiPhone, FiMail, FiImage, FiClock } from "react-icons/fi";
+
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter, FaLinkedin } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
@@ -35,7 +36,7 @@ const Contact = () => {
           <div className="contact-left">
             <div className="contact-items">
               <div className="contact-item">
-                <HiMiniComputerDesktop className="contact-icon" />
+                <FiMapPin className="contact-icon" />
                 <div className="details">
                   <span className="contact-title">HEAD OFFICE</span>
                   <span className="contact-name">
@@ -44,14 +45,14 @@ const Contact = () => {
                 </div>
               </div>
               <div className="contact-item">
-                <HiMiniComputerDesktop className="contact-icon" />
+                <FiMail className="contact-icon" />
                 <div className="details">
                   <span className="contact-title">EMAIL SUPPORT</span>
                   <span className="contact-name">support@techbravery.com</span>
                 </div>
               </div>
               <div className="contact-item">
-                <HiMiniComputerDesktop className="contact-icon" />
+                <FiPhone className="contact-icon" />
                 <div className="details">
                   <span className="contact-title">LET'S TALK</span>
                   <span className="contact-name">Phone +1 234567890</span>
@@ -59,7 +60,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="contact-item">
-                <HiMiniComputerDesktop className="contact-icon" />
+                <FiClock className="contact-icon" />
                 <div className="details">
                   <span className="contact-title">WORKING HOURS</span>
                   <span className="contact-name">Monday - Friday</span>
