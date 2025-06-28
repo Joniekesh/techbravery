@@ -1,5 +1,5 @@
 import "./contact.scss";
-import { FiMapPin, FiPhone, FiMail, FiImage, FiClock } from "react-icons/fi";
+import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter, FaLinkedin } from "react-icons/fa6";
@@ -21,8 +21,6 @@ const Contact = () => {
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-
-  console.log(inputs);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

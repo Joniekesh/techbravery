@@ -141,6 +141,7 @@ const Quote = () => {
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    setDragActive(true);
   };
 
   const handleDragEnter = (e) => {

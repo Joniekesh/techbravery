@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./slider.scss";
-import { FaStar } from "react-icons/fa6";
 import TestimonialItem from "../testimonialItem/TestimonialItem";
 
 const data = [
