@@ -1,10 +1,8 @@
 @import "../../global.scss";
 
 .faqs-item {
-  background: var(--bg-dark);
   border: 1px solid var(--color-primary);
   border-radius: 8px;
-  padding: 16px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -16,13 +14,21 @@
   &.active {
     background-color: var(--bg);
 
+    .faqs-question {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+
     .faqs-answer {
+      padding: 16px 24px;
+
       max-height: 500px;
-      padding-top: 10px;
+      // padding-top: 10px;
     }
   }
 
   .faqs-question {
+    padding: 16px 24px;
     color: var(--color);
     font-size: 18px;
     font-weight: 500;
