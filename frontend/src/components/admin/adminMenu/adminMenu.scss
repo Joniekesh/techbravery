@@ -1,0 +1,33 @@
+@import "../../../global.scss";
+
+.admin-menu {
+  flex: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  .admin-menu-wrapper {
+    padding: 20px;
+    min-width: 270px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet11000 {
+      min-width: 30px;
+      padding: 5px;
+    }
+
+    .ad-theme-switcher {
+      width: max-content;
+      color: var(--color);
+    }
+  }
+}

@@ -207,7 +207,8 @@ const Quote = () => {
                   <p>2. Together we discuss it</p>
                   <span>
                     Let's get acquainted and discuss all the possible variants
-                    and options. Google Hangout or Skype usually works great.{" "}
+                    and options. Google Meet, Discord or Skype usually works
+                    great.{" "}
                   </span>
                 </div>
               </li>
@@ -421,10 +422,11 @@ const Quote = () => {
               <div className="optional">
                 <span>Optional</span>
                 <textarea
+                  style={{ width: "98%" }}
                   cols="30"
                   rows="8"
-                  placeholder="Project details"
-                ></textarea>
+                  placeholder="Briefly describe what you want us to build"
+                />
               </div>
               <div
                 onDragEnter={handleDragEnter}
@@ -477,6 +479,14 @@ const Quote = () => {
                       {files?.length > 0 ? "Add More" : "Select Images"}
                     </span>
                   </label>
+                  {files.length > 0 && (
+                    <button
+                      onClick={() => setFiles([])}
+                      className="upload-btn clear"
+                    >
+                      Clear All
+                    </button>
+                  )}
                   <button disabled={files?.length === 0} className="upload-btn">
                     Upload
                   </button>
@@ -484,6 +494,7 @@ const Quote = () => {
 
                 <input
                   type="file"
+                  accept="image/*"
                   id="fileUpload"
                   style={{ display: "none" }}
                   multiple

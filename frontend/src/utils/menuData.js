@@ -383,6 +383,11 @@ export const technologies = [
         name: "Drupal",
         url: "/technology",
       },
+      {
+        id: 3,
+        name: "Strapi",
+        url: "/technology",
+      },
     ],
   },
   {

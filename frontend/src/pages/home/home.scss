@@ -41,10 +41,16 @@
       border-radius: 0px 50px 0px 50px;
       padding: 20px;
       font-size: 20px;
-
       border: 5px solid transparent;
       background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
         var(--border-color) border-box;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
     }
   }
 }

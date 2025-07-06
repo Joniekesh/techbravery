@@ -8,6 +8,7 @@ import Products from "../../components/products/Products";
 import Partners from "../../components/partners/Partners";
 import Faqs from "../../components/faqs/Faqs";
 import { useEffect, useRef } from "react";
+import Packages from "../../components/packages/Packages";
 
 const Home = () => {
   const boxRef = useRef(null);
@@ -42,7 +43,6 @@ const Home = () => {
             "--angle": "0deg",
             "--border-color":
               "linear-gradient(var(--angle),#4169e1,#e6a960,#5f9261,orangered,#ffe86e,#9747ff,teal,orange,#4b0082)",
-            // "linear-gradient(var(--angle),#008080,#4b0082,#4169e1,#2ecc71,#36454f,#ff6f61,#ffd700)",
           }}
           ref={boxRef}
           className="desc"
@@ -55,10 +55,12 @@ const Home = () => {
           strategists, we are committed to crafting tailor-made solutions that
           exceed your expectations.
         </div>
+        <img src="/big-bg2.jpg" alt="" />
       </div>
       <Service />
       <Welcome />
       <Features />
+      <Packages />
       <Products />
       <Partners />
       <Testimonials autoplayInterval={2000} />

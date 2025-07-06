@@ -14,6 +14,7 @@ import AuthReducer from "../redux/reducers/AuthReducer";
 import MessageReducer from "../redux/reducers/MessageReducer";
 import ChatReducer from "../redux/reducers/ChatReducer";
 import ThemeReducer from "./reducers/ThemeReducer";
+import UtilsReducer from "./reducers/UtilsReducer";
 
 const persistConfig = {
   key: "root",
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
   message: MessageReducer,
   chat: ChatReducer,
   theme: ThemeReducer,
+  utils: UtilsReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

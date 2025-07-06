@@ -18,11 +18,11 @@ import Home from "./pages/home/Home";
 import Quote from "./pages/quote/Quote";
 import AboutUs from "./pages/aboutUs/AboutUs";
 import SuperAdmin from "./pages/superAdmin/SuperAdmin";
-import Admin from "./pages/admin/Admin";
+import Admin from "./pages/admin/admin/Admin";
 import User from "./pages/user/User";
 import { useDispatch, useSelector } from "react-redux";
 import Profile from "./pages/profile/Profile";
-import Orders from "./pages/orders/Orders";
+import Orders from "./pages/admin/orders/Orders";
 import ChatButton from "./components/chatButton/ChatButton";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import Register from "./pages/register/Register";
@@ -39,6 +39,12 @@ import Project from "./pages/project/Project";
 import Product from "./pages/product/Product";
 import useSystemThemeEffect from "./utils/useSystemThemeEffect";
 import NotFound from "./pages/notFound/NotFound";
+import AdminHeader from "./components/admin/adminHeader/AdminHeader";
+import AdminMenu from "./components/admin/adminMenu/AdminMenu";
+import Analytics from "./pages/admin/analytics/Analytics";
+import Users from "./pages/admin/users/Users";
+import AdminProjects from "./pages/admin/adminProjects/AdminProjects";
+import Quotations from "./pages/admin/quotations/Quotations";
 
 // const Home = lazy(() => import("./pages/home/Home"));
 // const AboutUs = lazy(() => import("./pages/aboutUs/AboutUs"));
@@ -61,6 +67,18 @@ const App = () => {
         <Navbar />
         <Outlet />
         <Footer />
+      </div>
+    );
+  };
+
+  const AdminLayout = () => {
+    return (
+      <div className="admin-route">
+        <AdminMenu />
+        <div className="admin-content">
+          <AdminHeader />
+          <Outlet />
+        </div>
       </div>
     );
   };
@@ -89,11 +107,7 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: (
-            // <Suspense fallback={<div>Loading...</div>}>
-            <Home />
-            // </Suspense>
-          ),
+          element: <Home />,
         },
         {
           path: "/services",
@@ -113,11 +127,7 @@ const App = () => {
         },
         {
           path: "/aboutus",
-          element: (
-            // <Suspense fallback={<div>Loading...</div>}>
-            <AboutUs />
-            // </Suspense>
-          ),
+          element: <AboutUs />,
         },
         {
           path: "/technology",
@@ -139,45 +149,48 @@ const App = () => {
           path: "/product/:id",
           element: <Product />,
         },
-        {
-          path: "/superAdmin",
-          element: (
-            <Private>
-              <SuperAdmin />,
-            </Private>
-          ),
-        },
-        {
-          path: "/admin",
-          element: (
-            <Private>
-              <Admin />,
-            </Private>
-          ),
-        },
+
         {
           path: "/user",
-          element: (
-            <Private>
-              <User />,
-            </Private>
-          ),
+          element: <User />,
         },
         {
           path: "/profile",
-          element: (
-            <Private>
-              <Profile />,
-            </Private>
-          ),
+          element: <Profile />,
+        },
+      ],
+    },
+    {
+      path: "/admin",
+      element: <AdminLayout />,
+      children: [
+        {
+          path: "/admin",
+          element: <Admin />,
         },
         {
-          path: "/orders",
-          element: (
-            <Private>
-              <Orders />,
-            </Private>
-          ),
+          path: "super-admin",
+          element: <SuperAdmin />,
+        },
+        {
+          path: "analytics",
+          element: <Analytics />,
+        },
+        {
+          path: "users",
+          element: <Users />,
+        },
+        {
+          path: "projects",
+          element: <AdminProjects />,
+        },
+        {
+          path: "orders",
+          element: <Orders />,
+        },
+        {
+          path: "quotations",
+          element: <Quotations />,
         },
       ],
     },

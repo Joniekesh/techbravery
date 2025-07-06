@@ -17,8 +17,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 import QuoteBtn from "../quoteBtn/QuoteBtn";
+import getWindowDimensions from "../../utils/getWindowDimensions";
 
-const Menu = ({ setOpenMenu, width }) => {
+const Menu = ({ setOpenMenu }) => {
   const [aboutUsToggle, setAboutUsToggle] = useState(false);
   const [serviceToggle, setServiceToggle] = useState(false);
   const [worksToggle, setWorksToggle] = useState(false);
@@ -27,6 +28,8 @@ const Menu = ({ setOpenMenu, width }) => {
   const [industryToggle, setIndustryToggle] = useState(false);
   const [digitalStoreToggle, setDigitalStoreToggle] = useState(false);
   const [contactsToggle, setContactsToggle] = useState(false);
+
+  const { width } = getWindowDimensions();
 
   return (
     <div className="menu" style={{ display: width > 1100 && "none" }}>

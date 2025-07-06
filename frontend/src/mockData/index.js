@@ -800,3 +800,41 @@ export const products = [
     platforms: "Web, iOS & Android App",
   },
 ];
+
+export const adminMenu = [
+  {
+    id: 1,
+    name: "Dashboard",
+    url: "/admin",
+  },
+  {
+    id: 2,
+    name: "Analytics",
+    url: "/admin/analytics",
+  },
+  {
+    id: 3,
+    name: "Customers",
+    url: "/admin/users",
+  },
+  {
+    id: 4,
+    name: "Projects",
+    url: "/admin/projects",
+  },
+  {
+    id: 5,
+    name: "Orders",
+    url: "/admin/orders",
+  },
+  {
+    id: 6,
+    name: "Quotations",
+    url: "/admin/quotations",
+  },
+  {
+    id: 7,
+    name: "Logout",
+    url: "",
+  },
+];

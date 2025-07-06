@@ -1,0 +1,29 @@
+@import "../../../global.scss";
+
+.admin-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &.admin-menu-active {
+    transform: scale(1.02);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+  }
+
+  .menu-name {
+    @include tablet11000 {
+      display: none;
+    }
+  }
+}

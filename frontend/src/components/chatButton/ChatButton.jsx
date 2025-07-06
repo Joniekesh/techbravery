@@ -1,5 +1,6 @@
-import { useState } from "react";
 import "./chatButton.scss";
+import { useState } from "react";
+import { BiSolidMessageSquare } from "react-icons/bi";
 
 const ChatButton = () => {
   const [open, setOPen] = useState(false);
@@ -41,7 +42,8 @@ const ChatButton = () => {
         )}
         {!open && (
           <div className="toggle-btn" onClick={() => setOPen((prev) => !prev)}>
-            <img src="/chatbtnicon.jpg" alt="" />
+            {/* <BiSolidMessageSquare /> */}
+            <img src="/chatbtnicon5.jpg" alt="" />
           </div>
         )}
       </div>
