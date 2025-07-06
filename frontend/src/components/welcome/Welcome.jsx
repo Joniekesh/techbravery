@@ -62,10 +62,9 @@ const Welcome = () => {
           }}
           ref={boxRef}
         >
-          Don't settle for a mediocre online presence. Partner with Tech Bravery
-          Software Solutions and take your business to new heights. Contact us
-          today for a free consultation and let us help you leave a lasting
-          impression in the digital world!
+          Don't settle for a mediocre online presence. Contact us today for a
+          free consultation and let us help you leave a lasting impression in
+          the digital world!
         </p>
         <Link to="/quote" className="btn">
           <button>Get a Quote</button>
