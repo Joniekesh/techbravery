@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { items } from "../../utils/data";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 // ..
 AOS.init({
   // throttleDelay: 300,
@@ -10,6 +11,26 @@ AOS.init({
 });
 
 const Welcome = () => {
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    const boxElement = boxRef.current;
+
+    if (!boxElement) return;
+
+    const updateAnimation = () => {
+      const currentAngle = parseFloat(
+        boxElement.style.getPropertyValue("--angle") || "0"
+      );
+
+      const newAngle = (currentAngle + 0.5) % 360;
+
+      boxElement.style.setProperty("--angle", `${newAngle}deg`);
+      requestAnimationFrame(updateAnimation);
+    };
+    requestAnimationFrame(updateAnimation);
+  }, []);
+
   return (
     <div className="welcome">
       <h2>Why Choose Us?</h2>
@@ -33,7 +54,14 @@ const Welcome = () => {
         ))}
       </div>
       <div className="summary">
-        <p>
+        <p
+          style={{
+            "--angle": "0deg",
+            "--border-color":
+              "linear-gradient(var(--angle),#4169e1,#e6a960,#5f9261,orangered,#ffe86e,#9747ff,teal,orange,#4b0082)",
+          }}
+          ref={boxRef}
+        >
           Don't settle for a mediocre online presence. Partner with Tech Bravery
           Software Solutions and take your business to new heights. Contact us
           today for a free consultation and let us help you leave a lasting

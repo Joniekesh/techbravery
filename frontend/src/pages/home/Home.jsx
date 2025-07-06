@@ -55,7 +55,7 @@ const Home = () => {
           strategists, we are committed to crafting tailor-made solutions that
           exceed your expectations.
         </div>
-        <img src="/big-bg3.jpg" alt="" />
+        <img src="/big-bg2.jpg" alt="" />
       </div>
       <Service />
       <Welcome />
